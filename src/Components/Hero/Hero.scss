@@ -10,6 +10,7 @@ $md-dsk: 1200px;
 .h {
   height: 100vh;
   padding-top: 100px;
+  overflow: hidden;
   &__wrapper {
     height: 100%;
     .h-text {
@@ -40,7 +41,7 @@ $md-dsk: 1200px;
       .h-desc-l-three,
       .h-desc-l-four {
         letter-spacing: 2px;
-        font-weight: 500;
+        font-weight: 700;
         text-align: left !important;
       }
 
@@ -48,50 +49,148 @@ $md-dsk: 1200px;
         margin-top: 20px;
       }
       .h-desc-l-two {
-        margin-left: 40px;
+        margin-left: 20px;
       }
 
       .h-desc-l-three {
-        margin-left: 80px;
+        margin-left: 40px;
       }
 
       .h-desc-l-four {
-        margin-left: 120px;
+        margin-left: 60px;
       }
     }
 
     .h-desc-wrap {
       width: fit-content;
     }
-    .h-strt-btn {
-      background-color: black;
-      color: #ffffff;
-      display: inline-block;
-      position: fixed;
-      bottom: 0;
-      z-index: 5;
-      right: 50%;
-      left: 50%;
-      transform: translate(-50%);
-      height: 8.44rem;
-      border-radius: 50%;
+
+    .ro {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 8.44rem;
-      .strt-prj {
-        font-size: 0.8rem;
-      }
-    }
+      .h-strt-btn {
+        background-color: black;
+        color: #ffffff;
+        display: inline-block;
 
-    .con {
-      width: 100%;
-      background-color: red;
+        bottom: 0;
+        z-index: 5;
+        right: 50%;
+        left: 50%;
+        transform: translateX(-50px);
+        height: 8.44rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 8.44rem;
+        .strt-prj {
+          font-size: 0.8rem;
+        }
+      }
     }
   }
 }
 
+//Image interactions
+.right-img,
+.image-webDev {
+  position: absolute;
+  left: -250px;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 25%;
+}
+
+.image-webDev {
+  opacity: 0;
+  transition: 600ms ease;
+}
+
+.image-ecommerce {
+  position: absolute;
+  bottom: 0;
+  object-fit: cover;
+  width: 400px;
+  height: auto;
+}
+
+//Bounce Attractions
+.bounce-attr {
+  width: 100%;
+  height: 71px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .bounce {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+  }
+}
+.svgs {
+  position: absolute;
+  left: 22%;
+  top: 35%;
+}
+
+.setDisp {
+  opacity: 1;
+}
+
+.setOpa {
+  opacity: 0;
+}
+
 //Animation start up for hero big text and description
+
+.bounce-in-top {
+  animation: bounce-in-top 5s both infinite;
+}
+
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-100px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
 .puff-in-center {
   -webkit-animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
     both;
@@ -193,33 +292,20 @@ $md-dsk: 1200px;
   }
 }
 
-.fade-in-one {
-  -webkit-animation: fade-in-one 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s
-    both;
-  animation: fade-in-one 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 1.2 both;
+.slide-in-left {
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 1.5s;
 }
 
-@-webkit-keyframes fade-in-one {
+@keyframes slide-in-left {
   0% {
-    -webkit-transform: translateX(50px) translateY(50px);
-    transform: translateX(50px) translateY(50px);
+    transform: translateX(-1000px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0) translateY(0);
-    transform: translateX(0) translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-@keyframes fade-in-one {
-  0% {
-    -webkit-transform: translateX(50px) translateY(50px);
-    transform: translateX(50px) translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) translateY(0);
-    transform: translateX(0) translateY(0);
-    opacity: 1;
-  }
+
+@media (max-width: 450px) {
 }

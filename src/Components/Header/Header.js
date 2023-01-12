@@ -3,7 +3,7 @@ import SideNav from "../SideNav/SideNav";
 import "./Header.scss";
 
 function Header({ title, sub }) {
-  const [navToggle, setNavToggle] = useState(false);
+  const [navToggle, setNavToggle] = useState(true);
   const logoAnimation = useRef(null);
   const navBtn = useRef(null);
 
