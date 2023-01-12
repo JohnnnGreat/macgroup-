@@ -1,11 +1,19 @@
 import React, { useState, useRef } from "react";
+import SideNav from "../SideNav/SideNav";
 import "./Header.scss";
+
 function Header({ title, sub }) {
   const [navToggle, setNavToggle] = useState(false);
   const logoAnimation = useRef(null);
+  const navBtn = useRef(null);
+
   const handleNavToggle = () => {
     console.log(navToggle);
     setNavToggle(!navToggle);
+
+    navToggle
+      ? navBtn.current.classList.add("x-btn")
+      : navBtn.current.classList.remove("x-btn");
   };
 
   /*
@@ -17,7 +25,6 @@ function Header({ title, sub }) {
   };
 
   const handleHoverAnimRemove = () => {
-    logoAnimation.current.classList.remove("animation-side-up");
     logoAnimation.current.classList.add("animation-slide-default");
   };
   return (
@@ -52,11 +59,14 @@ function Header({ title, sub }) {
             </div>
           </div>
         </div>
-        <div onClick={handleNavToggle} className="header-navBtn">
+        <div
+          onClick={handleNavToggle}
+          ref={navBtn}
+          className="header__wrapper__navBtn"
+        >
           <div className="nav-line"></div>
           <div className="nav-line"></div>
         </div>
-        {/* {navToggle ? <SideMenu /> : null} */}
       </div>
     </div>
   );

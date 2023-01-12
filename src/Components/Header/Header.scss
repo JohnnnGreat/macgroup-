@@ -22,8 +22,13 @@ $Nav-cls-clr-s: #aaa3a3;
 $md-dsk: 1200px;
 
 .header {
-  background-color: $pri-bg-clr;
+  background-color: #e7e7e796;
+  backdrop-filter: blur(10px);
   height: 4.69rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
   &__wrapper {
     max-width: 75rem;
     margin: 0 auto;
@@ -32,6 +37,7 @@ $md-dsk: 1200px;
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    padding: 0 1.2rem;
     &__logo {
       display: flex;
       align-items: center;
@@ -51,7 +57,7 @@ $md-dsk: 1200px;
             font-size: 1.55rem;
             height: 100%;
             font-weight: 700;
-            letter-spacing: 10px;
+            letter-spacing: 6px;
             display: flex;
             align-items: center;
           }
@@ -68,6 +74,30 @@ $md-dsk: 1200px;
         }
       }
     }
+    &__navBtn {
+      background-color: $nav-cl-bg;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      cursor: pointer;
+      position: relative;
+      .nav-line {
+        width: 26px;
+        height: 2px;
+        background-color: $Nav-cls-clr-f;
+        transition: 300ms ease;
+        transform-origin: 50% 50%;
+      }
+
+      .nav-line:nth-child(2) {
+        background-color: $Nav-cls-clr-s;
+        margin-top: 5px;
+      }
+    }
   }
 }
 
@@ -78,11 +108,40 @@ $md-dsk: 1200px;
 }
 
 @keyframes move-up {
+  0% {
+    transform: translateY(0%);
+  }
   100% {
     transform: translateY(-100%);
   }
 }
 
 .animation-slide-default {
-  animation: move-back 900ms ease-in-out forwards;
+  animation: move-back 900ms ease-in-out;
+}
+
+@keyframes move-back {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+//Side Nav controller
+.x-btn {
+  display: flex;
+  position: relative;
+
+  .nav-line:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    rotate: 45deg;
+  }
+
+  .nav-line:nth-child(2) {
+    rotate: -45deg;
+    background-color: $Nav-cls-clr-f;
+  }
 }
