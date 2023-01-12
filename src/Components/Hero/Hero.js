@@ -43,7 +43,8 @@ function Hero() {
           src={process.env.PUBLIC_URL + "./AssetsFolder/webdev.webp"}
           alt="Website development"
         />
-
+      </div>
+      <div className="newImage">
         <img
           className="image-ecommerce"
           src={process.env.PUBLIC_URL + "./AssetsFolder/Ecommerce.jpeg"}
@@ -56,8 +57,8 @@ function Hero() {
           <h1 className="h-text-s fade-in-bottom">SOLUTIONS</h1>
         </div>
         <div className="h-desc">
-          <div className="h-desc-wrap">
-            <h1 className="h-desc-l-one fade-in-one">
+          <div className="h-desc-wrap ">
+            <h1 className="h-desc-l-one">
               WE ARE A FULL-SERVICE DIGITAL AGENCY OFFERING A S WIDE RANGE
             </h1>
             <h1 className="h-desc-l-two">
