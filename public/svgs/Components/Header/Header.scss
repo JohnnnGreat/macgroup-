@@ -1,0 +1,15 @@
+$initial_screensize: 90px;
+$code_screensize: 75px;
+$difference-in-val: 15px;
+
+.header {
+  .header-wrapper {
+    max-width: calc(1200px / 16px) + rem;
+    margin: auto;
+  }
+  .header-logo {
+    font-weight: 100;
+    font-size: calc(40px - 15px) + rem;
+    letter-spacing: 200%;
+  }
+}
