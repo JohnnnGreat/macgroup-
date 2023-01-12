@@ -2,7 +2,23 @@ $initial_screensize: 90px;
 $code_screensize: 75px;
 $difference-in-val: 15px;
 
+//colors options
+
+//primary  background color
+$pri-bg-clr: #e7e7e7;
+
+//Primary header text color
+$pri-hd-clr: #2a2a2a;
+
+//Nav circle background color
+$nav-cl-bg: #040404;
+
+//Close changes color
+$Nav-cls-clr-f: #ffffff;
+$Nav-cls-clr-s: #aaa3a3;
+
 .header {
+  width: calc(100px / 16px) + rem;
   .header-wrapper {
     max-width: calc(1200px / 16px) + rem;
     margin: auto;

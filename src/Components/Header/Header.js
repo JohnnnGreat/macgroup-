@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./Header.scss";
-function Header({ title }) {
+function Header(...props) {
   const [navToggle, setNavToggle] = useState(false);
 
   const handleNavToggle = () => {
@@ -27,7 +27,10 @@ function Header({ title }) {
               fill="#181818"
             />
           </svg>
-          <h1>{title}</h1>
+          <div className="header-text">
+            <h1>{title}</h1>
+            <h2>{sub}</h2>
+          </div>
         </div>
         <div onClick={handleNavToggle} className="header-navBtn">
           <div className="nav-line"></div>
