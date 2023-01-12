@@ -1,16 +1,29 @@
 import React, { useState, useRef } from "react";
 import "./Header.scss";
-function Header(...props) {
+function Header({ title, sub }) {
   const [navToggle, setNavToggle] = useState(false);
-
+  const logoAnimation = useRef(null);
   const handleNavToggle = () => {
     console.log(navToggle);
     setNavToggle(!navToggle);
   };
+
+  /*
+  Handles Logo animation Effects on Home Page
+  */
+  const handleHoverAnimEnter = () => {
+    logoAnimation.current.classList.remove("animation-slide-default");
+    logoAnimation.current.classList.add("animation-side-up");
+  };
+
+  const handleHoverAnimRemove = () => {
+    logoAnimation.current.classList.remove("animation-side-up");
+    logoAnimation.current.classList.add("animation-slide-default");
+  };
   return (
     <div className="header">
-      <div className="header-wrapper">
-        <div className="header-logo">
+      <div className="header__wrapper">
+        <div className="header__wrapper__logo">
           <svg
             width="44"
             height="32"
@@ -27,16 +40,23 @@ function Header(...props) {
               fill="#181818"
             />
           </svg>
-          <div className="header-text">
-            <h1>{title}</h1>
-            <h2>{sub}</h2>
+          <div className="logo-wrap">
+            <div
+              onMouseEnter={handleHoverAnimEnter}
+              onMouseLeave={handleHoverAnimRemove}
+              ref={logoAnimation}
+              className="logo-text"
+            >
+              <h1 className="logo-title">{title}</h1>
+              <h2 className="logo-sub">{sub}</h2>
+            </div>
           </div>
         </div>
         <div onClick={handleNavToggle} className="header-navBtn">
           <div className="nav-line"></div>
           <div className="nav-line"></div>
         </div>
-        {navToggle ? <SideMenu /> : null}
+        {/* {navToggle ? <SideMenu /> : null} */}
       </div>
     </div>
   );

@@ -3,8 +3,6 @@
   src: url("../public/fonts/HelveticaNowText-Black.ttf") format("truetype");
   src: url("../public/fonts/HelveticaNowText-Medium.ttf") format("truetype");
   src: url("../public/fonts/HelveticaNowText-Light.ttf") format("truetype");
-  src: url("../public/fonts/HelveticaNowText-Regular.ttf") format("truetype");
-  src: url("../public/fonts/HelveticaNowText-Bold.ttf") format("truetype");
 }
 
 body {

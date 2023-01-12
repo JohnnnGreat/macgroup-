@@ -3,7 +3,7 @@ $code_screensize: 75px;
 $difference-in-val: 15px;
 
 //colors options
-
+//===========================================================
 //primary  background color
 $pri-bg-clr: #e7e7e7;
 
@@ -17,17 +17,72 @@ $nav-cl-bg: #040404;
 $Nav-cls-clr-f: #ffffff;
 $Nav-cls-clr-s: #aaa3a3;
 
+//BreakPoints
+
+$md-dsk: 1200px;
+
 .header {
-  width: calc(100px / 16px) + rem;
-  .header-wrapper {
-    max-width: calc(1200px / 16px) + rem;
-    margin: auto;
+  background-color: $pri-bg-clr;
+  height: 4.69rem;
+  &__wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: calc(20px / 16px) + rem;
+      height: 100%;
+      svg {
+      }
+      .logo-wrap {
+        height: calc(4.69 / 2) + rem;
+        overflow: hidden;
+        .logo-text {
+          cursor: pointer;
+          height: 100%;
+          .logo-title {
+            color: $pri-hd-clr;
+            font-size: 1.55rem;
+            height: 100%;
+            font-weight: 700;
+            letter-spacing: 10px;
+            display: flex;
+            align-items: center;
+          }
+
+          .logo-sub {
+            color: $pri-hd-clr;
+            font-size: 1.125rem;
+            font-weight: 200;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
   }
-  .header-logo {
-    font-weight: 100;
-    font-size: calc(40px - 15px) + rem;
-    letter-spacing: 200%;
-    font: HelveticaNow Text Light;
-    color: red;
+}
+
+//Logo animation classlists declarations
+
+.animation-side-up {
+  animation: move-up 900ms ease-in-out forwards;
+}
+
+@keyframes move-up {
+  100% {
+    transform: translateY(-100%);
   }
+}
+
+.animation-slide-default {
+  animation: move-back 900ms ease-in-out forwards;
 }
