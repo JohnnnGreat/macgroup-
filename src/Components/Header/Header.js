@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import SideNav from "../SideNav/SideNav";
+// import SideNav from "../SideNav/SideNav";
 import "./Header.scss";
 
 function Header({ title, sub }) {

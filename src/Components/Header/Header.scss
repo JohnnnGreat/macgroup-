@@ -52,6 +52,11 @@ $md-dsk: 1200px;
         .logo-text {
           cursor: pointer;
           height: 100%;
+
+          .logo-title,
+          .logo-sub {
+            user-select: none;
+          }
           .logo-title {
             color: $pri-hd-clr;
             font-size: 1.55rem;
@@ -143,17 +148,22 @@ $md-dsk: 1200px;
   .nav-line:nth-child(2) {
     rotate: -45deg;
     background-color: $Nav-cls-clr-f;
+    transform-origin: 50%;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 460px) {
   .logo-title {
     font-size: 1.2rem !important;
   }
 
+  .logo-sub {
+    font-size: 0.8rem !important;
+  }
+
   .header__wrapper__navBtn {
-    min-width: 32px;
-    min-height: 32px;
+    min-width: 40px;
+    min-height: 40px;
   }
 
   .nav-line {

@@ -8,9 +8,10 @@ $hero-dsc-ft: 0.75rem;
 
 $md-dsk: 1200px;
 .h {
-  height: 100vh;
+  height: auto;
   padding-top: 100px;
   overflow: hidden;
+  padding-bottom: 40px;
   &__wrapper {
     height: 100%;
     .h-text {
@@ -24,8 +25,11 @@ $md-dsk: 1200px;
         letter-spacing: 10px;
       }
 
+      .h-text-f {
+        font-weight: 900 !important;
+      }
       .h-text-s {
-        font-weight: 500;
+        font-weight: 400 !important;
       }
     }
     .h-desc {
@@ -36,29 +40,20 @@ $md-dsk: 1200px;
 
       align-items: flex-end;
       justify-content: flex-end;
-      .h-desc-l-one,
-      .h-desc-l-two,
-      .h-desc-l-three,
-      .h-desc-l-four {
+      height: fit-content;
+
+      .h-desc-l-one {
         letter-spacing: 2px;
-        font-weight: 700;
+        font-weight: 500;
         text-align: left !important;
         user-select: none;
+        max-width: 500px;
+        font-size: 16px;
+        line-height: 2;
       }
 
       .h-desc-l-one {
         margin-top: 20px;
-      }
-      .h-desc-l-two {
-        margin-left: 20px;
-      }
-
-      .h-desc-l-three {
-        margin-left: 40px;
-      }
-
-      .h-desc-l-four {
-        margin-left: 60px;
       }
     }
 
@@ -71,11 +66,15 @@ $md-dsk: 1200px;
       display: flex;
       align-items: center;
       justify-content: center;
+      position: fixed;
+      top: 50%;
+      z-index: 3;
       .h-strt-btn {
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.781);
         color: #ffffff;
-        display: inline-block;
-
+        display: block;
+        cursor: pointer;
+        backdrop-filter: blur(2px);
         bottom: 0;
         z-index: 5;
         right: 50%;
@@ -89,6 +88,7 @@ $md-dsk: 1200px;
         width: 8.44rem;
         .strt-prj {
           font-size: 0.8rem;
+          user-select: none;
         }
       }
     }
@@ -128,23 +128,42 @@ $md-dsk: 1200px;
 //Bounce Attractions
 .bounce-attr {
   width: 100%;
-  height: 71px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+
   .bounce {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color: rgb(0, 0, 0);
-    position: absolute;
   }
 }
 .svgs {
   position: absolute;
   left: 22%;
-  top: 35%;
+  top: 60%;
+  animation: svg 1s linear infinite;
+}
+
+@keyframes svg {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(40px);
+  }
+
+  75% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 .setDisp {
@@ -314,13 +333,22 @@ $md-dsk: 1200px;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 460px) {
+  .h {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .h-text {
-    padding-top: 100px;
+    padding-top: 50px;
+
     .h-text-f,
     .h-text-s {
-      font-size: 1.8rem !important;
-      color: red;
+      font-size: 3rem !important;
+      text-align: left !important;
+    }
+
+    .h-text-f {
+      font-weight: 900 !important;
     }
   }
 
@@ -338,19 +366,17 @@ $md-dsk: 1200px;
   }
 
   .h-desc-l-one {
-    margin-top: 50px !important;
+    margin-top: 30px !important;
   }
-  .h-desc-l-one,
-  .h-desc-l-two,
-  .h-desc-l-three,
-  .h-desc-l-four {
+  .h-desc-l-one {
     color: #000000;
     margin-left: 0 !important;
-    font-size: 7px !important;
-    color: rgb(37, 37, 37);
-    letter-spacing: 0;
-    line-height: 1.2rem;
-    font-variant: small-caps;
+    font-size: 1rem !important;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0 !important;
+    line-height: 2;
+
+    font-weight: 500 !important;
   }
   .svgs {
     display: none;
