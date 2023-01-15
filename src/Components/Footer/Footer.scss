@@ -177,6 +177,7 @@
           a {
             color: #c6bfbf;
             text-decoration: none;
+            font-size: 0.8rem;
             &:hover {
               color: #ffffff;
             }
@@ -187,7 +188,7 @@
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 567px) {
   .footer-grid {
     grid-template-columns: 1fr !important;
 
@@ -195,6 +196,21 @@
     .services-f {
       margin-top: 2rem !important;
       margin-bottom: 10px !important;
+    }
+  }
+
+  .logo-grid {
+    grid-template-columns: 1fr !important;
+
+    .logo-t {
+      font-size: 40px !important;
+    }
+
+    .logo-s {
+      font-size: 15px !important;
+      width: 100%;
+      margin-top: 10px;
+      text-align: left !important;
     }
   }
 

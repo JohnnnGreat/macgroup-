@@ -67,13 +67,13 @@ function Footer() {
             <h1 className="legal-t">Legal</h1>
             <ul>
               <li>
-                <a href="">Career</a>
+                <a href="/">Career</a>
               </li>
               <li>
-                <a href="">Privacy Policy</a>
+                <a href="/">Privacy Policy</a>
               </li>
               <li>
-                <a href="">Terms and Conditions</a>
+                <a href="/">Terms and Conditions</a>
               </li>
             </ul>
           </div>

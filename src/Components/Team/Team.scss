@@ -160,7 +160,7 @@ $ft-clr: #2f2f2f;
         .first-section,
         .second-section {
           h1 {
-            font-size: 53px;
+            font-size: 50px;
           }
         }
 
@@ -176,7 +176,7 @@ $ft-clr: #2f2f2f;
         width: 100%;
 
         p {
-          max-width: 100%;
+          width: 100%;
         }
       }
     }
@@ -200,7 +200,60 @@ $ft-clr: #2f2f2f;
       .sub {
         font-size: 14px !important;
         letter-spacing: 0;
-        color: red;
+      }
+    }
+  }
+}
+
+@media (min-width: 567px) and (max-width: 800px) {
+  .team {
+    padding-top: calc(60px / 16px) + rem;
+    height: fit-content;
+    &__wrapper {
+      &__bg-text {
+        .first-section,
+        .second-section {
+          h1 {
+            font-size: 80px;
+          }
+        }
+
+        .second-section {
+          h1 {
+            left: 10%;
+          }
+        }
+      }
+
+      .desc {
+        margin-top: calc(120px / 16px) + rem;
+        width: 100%;
+
+        p {
+          width: 100%;
+        }
+      }
+    }
+    .team-bar {
+      margin-top: 1rem;
+    }
+
+    .contact {
+      .start-project {
+        h1 {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .contact {
+      .cont-us {
+        font-size: 3rem !important;
+      }
+
+      .sub {
+        font-size: 14px !important;
+        letter-spacing: 0;
       }
     }
   }

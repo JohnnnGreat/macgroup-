@@ -11,7 +11,7 @@ function Brief() {
       <div className="brief__wrapper">
         <div className="brief__wrapper__bg-text">
           <div className="first-section">
-            <h1 data-aos="fade-up" data-aos-duration="2000">
+            <h1 data-aos="fade-right" data-aos-duration="2000">
               Read Our
             </h1>
           </div>
@@ -26,7 +26,11 @@ function Brief() {
           </div>
         </div>
         <div className="brief__wrapper__main">
-          <div data-aos="fade-right" className="first-sec">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            className="first-sec"
+          >
             <div className="circle-text">
               <h1>Who Are</h1>
             </div>

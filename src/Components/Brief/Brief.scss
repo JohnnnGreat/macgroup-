@@ -1,4 +1,4 @@
-$bg-clr: #2f2f2f;
+$bg-clr: #2c2a2a;
 
 .brief {
   height: 140vh;
@@ -72,7 +72,7 @@ $bg-clr: #2f2f2f;
         color: #c6bfbf;
         line-height: 2.1;
         letter-spacing: 0.5px;
-        text-transform: uppercase;
+        text-transform: capitalize;
 
         .text-one {
           font-weight: 100;
@@ -127,7 +127,7 @@ $bg-clr: #2f2f2f;
     transform: translateX(-100%);
   }
 }
-@media (max-width: 460px) {
+@media (max-width: 567px) {
   .brief {
     padding-top: calc(60px / 16px) + rem;
     padding-bottom: 20px;

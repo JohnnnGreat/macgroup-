@@ -44,8 +44,7 @@ $md-dsk: 1200px;
       justify-content: center;
       column-gap: calc(20px / 16px) + rem;
       height: 100%;
-      svg {
-      }
+
       .logo-wrap {
         height: calc(4.69 / 2) + rem;
         overflow: hidden;
@@ -146,13 +145,17 @@ $md-dsk: 1200px;
   }
 
   .nav-line:nth-child(2) {
+    position: absolute;
     rotate: -45deg;
+    top: 50%;
+    transform: translate(-50% -50%);
     background-color: $Nav-cls-clr-f;
     transform-origin: 50%;
+    margin-top: 0;
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 567px) {
   .logo-title {
     font-size: 1.2rem !important;
   }

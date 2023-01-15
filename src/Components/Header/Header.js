@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-// import SideNav from "../SideNav/SideNav";
+import SideNav from "../SideNav/SideNav";
 import "./Header.scss";
 
 function Header({ title, sub }) {
@@ -67,6 +67,7 @@ function Header({ title, sub }) {
           <div className="nav-line"></div>
           <div className="nav-line"></div>
         </div>
+        {navToggle ? null : <SideNav />}
       </div>
     </div>
   );

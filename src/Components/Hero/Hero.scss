@@ -1,6 +1,6 @@
 //Font color for both hero and description text respectively
-$hero-bg-clr: #010101;
-$hero-dsc-clr: #414141;
+$hero-bg-clr: #070707;
+$hero-dsc-clr: #000000;
 
 //Font text-color for both hero and description text respectively
 $hero-bg-ft: 7.1rem;
@@ -13,6 +13,8 @@ $md-dsk: 1200px;
   overflow: hidden;
   padding-bottom: 40px;
   &__wrapper {
+    max-width: 75rem;
+    margin: auto;
     height: 100%;
     .h-text {
       width: 100%;
@@ -30,17 +32,47 @@ $md-dsk: 1200px;
       }
       .h-text-s {
         font-weight: 400 !important;
+        color: rgb(34, 34, 34);
       }
     }
     .h-desc {
       color: $hero-dsc-clr;
       font-size: 0.4rem;
       display: flex;
-      flex-direction: column;
-
-      align-items: flex-end;
-      justify-content: flex-end;
+      align-items: center;
+      justify-content: space-around;
       height: fit-content;
+      flex-wrap: wrap;
+
+      .h-strt-btn {
+        background-color: #4b4b4b;
+        padding: 1.2rem 1rem;
+
+        .strt-prj {
+          font-size: 1rem;
+          color: #ffffff;
+          font-weight: 500;
+        }
+      }
+      .desc-line {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        height: 100%;
+        margin-top: 40px;
+        .line-show {
+          height: 10px;
+          border-radius: 10px;
+          width: 50%;
+          background-color: #808080;
+        }
+
+        h1 {
+          font-size: 1rem;
+          letter-spacing: 1px;
+          color: #808080;
+        }
+      }
 
       .h-desc-l-one {
         letter-spacing: 2px;
@@ -60,38 +92,15 @@ $md-dsk: 1200px;
     .h-desc-wrap {
       width: fit-content;
     }
+  }
 
-    .ro {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      top: 50%;
-      z-index: 3;
-      .h-strt-btn {
-        background-color: rgba(0, 0, 0, 0.781);
-        color: #ffffff;
-        display: block;
-        cursor: pointer;
-        backdrop-filter: blur(2px);
-        bottom: 0;
-        z-index: 5;
-        right: 50%;
-        left: 50%;
-        transform: translateX(-50px);
-        height: 8.44rem;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 8.44rem;
-        .strt-prj {
-          font-size: 0.8rem;
-          user-select: none;
-        }
-      }
-    }
+  .t-overlay {
+    position: fixed;
+    top: 0;
+    font-size: 30rem;
+    color: #dbdbdbab;
+    z-index: -3;
+    font-weight: 500;
   }
 }
 
@@ -333,7 +342,11 @@ $md-dsk: 1200px;
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 567px) {
+  .t-overlay {
+    font-size: 6rem !important;
+    top: 50% !important;
+  }
   .h {
     padding-left: 10px;
     padding-right: 10px;
@@ -344,6 +357,85 @@ $md-dsk: 1200px;
     .h-text-f,
     .h-text-s {
       font-size: 3rem !important;
+      text-align: left !important;
+    }
+
+    .h-text-f {
+      font-weight: 900 !important;
+    }
+
+    .moveRight {
+      font-size: 55px;
+    }
+  }
+
+  .right-img,
+  .image-webDev {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -50px;
+    border-radius: 40%;
+    top: -20px;
+    z-index: -1;
+    display: none;
+    color: #000000;
+  }
+
+  .h-desc {
+    justify-content: flex-start !important;
+
+    .h-strt-btn {
+      margin-top: 20px;
+    }
+  }
+  .h-desc-l-one {
+    margin-top: 30px !important;
+  }
+  .h-desc-l-one {
+    color: #000000;
+    margin-left: 0 !important;
+    font-size: 1rem !important;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0 !important;
+    line-height: 2;
+
+    font-weight: 500 !important;
+  }
+  .svgs {
+    display: none;
+  }
+
+  .ro {
+    justify-content: flex-end !important;
+    padding-right: 20px;
+  }
+
+  .newImage {
+    display: none;
+  }
+
+  .h-desc {
+    align-items: center !important;
+  }
+
+  .bounce-attr {
+    justify-content: flex-end !important;
+    padding-right: 85px;
+  }
+}
+
+@media (min-width: 567px) and (max-width: 800px) {
+  .h {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .h-text {
+    padding-top: 50px;
+
+    .h-text-f,
+    .h-text-s {
+      font-size: 4rem !important;
       text-align: left !important;
     }
 
@@ -365,6 +457,13 @@ $md-dsk: 1200px;
     color: #000000;
   }
 
+  .h-desc {
+    justify-content: flex-start !important;
+
+    .h-strt-btn {
+      margin-top: 20px;
+    }
+  }
   .h-desc-l-one {
     margin-top: 30px !important;
   }
