@@ -174,3 +174,152 @@ $bg-clr: #2c2a2a;
     }
   }
 }
+
+@media (min-width: 567px) and (max-width: 667px) {
+  .brief {
+    padding-top: calc(60px / 16px) + rem;
+    padding-bottom: 20px;
+    height: fit-content;
+    &__wrapper {
+      padding: 0 20px;
+
+      &__bg-text {
+        .first-section,
+        .second-section {
+          h1 {
+            font-size: 70px;
+          }
+        }
+        .second-section {
+          background-color: rgb(69, 102, 74) !important;
+
+          h1 {
+            left: 50%;
+          }
+        }
+      }
+
+      &__main {
+        grid-template-columns: 1fr;
+        margin-top: 6rem;
+        align-items: flex-start !important;
+        .first-sec {
+          justify-content: flex-start;
+          .circle-text {
+            width: 120px;
+            height: 120px;
+
+            h1 {
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+        .second-sec {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 667px) and (max-width: 920px) {
+  .brief {
+    padding-top: calc(60px / 16px) + rem;
+    padding-bottom: 20px;
+    height: fit-content;
+    &__wrapper {
+      padding: 0 20px;
+
+      &__bg-text {
+        .first-section,
+        .second-section {
+          h1 {
+            font-size: 90px;
+          }
+        }
+        .second-section {
+          background-color: rgb(69, 102, 74) !important;
+
+          h1 {
+            left: 40%;
+          }
+        }
+      }
+
+      &__main {
+        grid-template-columns: 1fr;
+        margin-top: 6rem;
+        align-items: flex-start !important;
+        .first-sec {
+          justify-content: flex-start;
+          .circle-text {
+            width: 120px;
+            height: 120px;
+
+            h1 {
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+        .second-sec {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 920px) and (max-width: 1180px) {
+  .brief {
+    padding-top: calc(60px / 16px) + rem;
+    padding-bottom: 20px;
+    height: fit-content;
+    &__wrapper {
+      padding: 0 20px;
+
+      &__bg-text {
+        .first-section,
+        .second-section {
+          h1 {
+            font-size: 90px;
+          }
+        }
+        .second-section {
+          background-color: rgb(69, 102, 74) !important;
+
+          h1 {
+            left: 40%;
+          }
+        }
+      }
+
+      &__main {
+        margin-top: 6rem;
+        align-items: flex-start !important;
+        .first-sec {
+          justify-content: flex-start;
+          .circle-text {
+            width: 120px;
+            height: 120px;
+
+            h1 {
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+        .second-sec {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .brief {
+    height: fit-content;
+  }
+}

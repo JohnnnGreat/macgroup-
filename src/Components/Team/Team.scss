@@ -151,7 +151,16 @@ $ft-clr: #2f2f2f;
 }
 
 //Mobile Screen
-@media (max-width: 460px) {
+
+@media (max-width: 420px) {
+  .first-section,
+  .second-section {
+    h1 {
+      font-size: 40px !important;
+    }
+  }
+}
+@media (max-width: 567px) {
   .team {
     padding-top: calc(60px / 16px) + rem;
 
@@ -204,8 +213,60 @@ $ft-clr: #2f2f2f;
     }
   }
 }
+@media (min-width: 920px) and (max-width: 1180px) {
+  .team {
+    padding-top: calc(60px / 16px) + rem;
+    height: fit-content !important;
+    &__wrapper {
+      &__bg-text {
+        .first-section,
+        .second-section {
+          h1 {
+            font-size: 80px;
+          }
+        }
 
-@media (min-width: 567px) and (max-width: 800px) {
+        .second-section {
+          h1 {
+            left: 30%;
+          }
+        }
+      }
+
+      .desc {
+        margin-top: calc(120px / 16px) + rem;
+        width: 100%;
+
+        p {
+          width: 100%;
+        }
+      }
+    }
+    .team-bar {
+      margin-top: 1rem;
+    }
+
+    .contact {
+      .start-project {
+        h1 {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .contact {
+      .cont-us {
+        font-size: 3rem !important;
+      }
+
+      .sub {
+        font-size: 14px !important;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+@media (min-width: 667px) and (max-width: 920px) {
   .team {
     padding-top: calc(60px / 16px) + rem;
     height: fit-content;
@@ -215,6 +276,59 @@ $ft-clr: #2f2f2f;
         .second-section {
           h1 {
             font-size: 80px;
+          }
+        }
+
+        .second-section {
+          h1 {
+            left: 10%;
+          }
+        }
+      }
+
+      .desc {
+        margin-top: calc(120px / 16px) + rem;
+        width: 100%;
+
+        p {
+          width: 100%;
+        }
+      }
+    }
+    .team-bar {
+      margin-top: 1rem;
+    }
+
+    .contact {
+      .start-project {
+        h1 {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .contact {
+      .cont-us {
+        font-size: 3rem !important;
+      }
+
+      .sub {
+        font-size: 14px !important;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+@media (min-width: 567px) and (max-width: 667px) {
+  .team {
+    padding-top: calc(60px / 16px) + rem;
+    height: fit-content;
+    &__wrapper {
+      &__bg-text {
+        .first-section,
+        .second-section {
+          h1 {
+            font-size: 50px;
           }
         }
 

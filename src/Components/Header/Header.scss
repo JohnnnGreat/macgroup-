@@ -108,7 +108,7 @@ $md-dsk: 1200px;
 //Logo animation classlists declarations
 
 .animation-side-up {
-  animation: move-up 900ms ease-in-out forwards;
+  animation: move-up 300ms ease-in-out forwards;
 }
 
 @keyframes move-up {
@@ -121,7 +121,7 @@ $md-dsk: 1200px;
 }
 
 .animation-slide-default {
-  animation: move-back 900ms ease-in-out;
+  animation: move-back 400ms ease-in-out;
 }
 
 @keyframes move-back {
