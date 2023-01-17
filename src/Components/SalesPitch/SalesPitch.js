@@ -1,4 +1,4 @@
-
+import gsap from 'gsap';
 import './SalesPitch.scss';
 const SalesPitch = () => {
     return (

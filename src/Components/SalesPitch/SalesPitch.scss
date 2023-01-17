@@ -63,6 +63,9 @@
                 font-size: calc((18/16)*1rem);
                 line-height: calc((32/16)*1rem);
             }
+            @media screen and (max-width: 640px) {
+                font-size: calc((18/16)*1rem);
+            }
         }
     }
 
