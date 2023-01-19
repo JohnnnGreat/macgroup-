@@ -9,3 +9,22 @@ body {
   font-family: HelveticaNow;
   background-color: #e7e7e7;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(53, 53, 53);
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(214, 214, 214);
+  border-radius: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}

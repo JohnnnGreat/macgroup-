@@ -1,24 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./SideNav.scss";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 function SideNav() {
+  const navSideBar = useRef(null);
+  const removeSideNav = () => {
+    navSideBar.current.classList.add("remove");
+  };
   return (
-    <div className="side-nav">
+    <div ref={navSideBar} onClick={removeSideNav} className="side-nav">
       <ul>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/Blog">Services</Link>
+          <Link to="/services">Services</Link>
         </li>
         <li>
-          <a href="/">Blog</a>
+          <NavLink to="/blog">Blog</NavLink>
         </li>
         <li>
-          <a href="/">Team</a>
+          <NavLink to="/team">Team</NavLink>
         </li>
         <li>
-          <a href="/">About</a>
+          <NavLink to="/pricing">Pricing</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
         </li>
       </ul>
 

@@ -1,0 +1,118 @@
+* {
+  user-select: none;
+}
+
+$pri-clr: #ecdddd;
+.service {
+  background-size: contain;
+  background-color: #ecdddd;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-position-x: 100%;
+  background-position-y: 100%;
+  overflow: hidden;
+  .service__wrapper {
+    max-width: 75rem;
+    margin: auto;
+    padding: 30px;
+    position: relative;
+    .service__hero {
+      display: flex;
+      align-items: center;
+      margin-top: 80px;
+      position: relative;
+      &__first {
+        display: flex;
+        rotate: 90deg;
+        align-items: center;
+        column-gap: 0.8rem;
+
+        width: fit-content;
+        height: fit-content;
+        .line {
+          width: calc(200px / 16px) + rem;
+          background-color: $pri-clr;
+          height: 0.5px;
+        }
+
+        .title {
+          font-size: 17px;
+          color: $pri-clr;
+          letter-spacing: 5px;
+          font-weight: 500;
+        }
+      }
+
+      &__second {
+        .tag {
+          font-size: 6.6rem;
+          color: $pri-clr;
+          font-weight: 500;
+        }
+        .bold-s {
+          font-weight: 800;
+        }
+      }
+    }
+  }
+
+  .service-main {
+    background-color: red;
+    height: 100vh;
+  }
+}
+
+.bg-overlay {
+  position: absolute;
+  font-size: 300px;
+  top: 50%;
+  mix-blend-mode: overlay;
+  -webkit-text-stroke-width: 0.002px;
+  -webkit-text-stroke-color: rgba(218, 218, 218, 0.247);
+  color: rgba(0, 0, 0, 0);
+}
+.bg {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(31, 31, 31);
+  border-bottom-left-radius: 600px;
+  border-bottom-right-radius: 600px;
+}
+
+.intrs-yellow {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: rgb(233, 10, 114);
+  position: absolute;
+  border-radius: 50%;
+  animation: blink 900ms ease infinite;
+  opacity: 1;
+  transform-origin: 50% 50%;
+}
+.intrs-pink {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  background-color: rgb(233, 218, 10);
+  position: absolute;
+  border-radius: 50%;
+  animation: blink 800ms 800ms ease infinite;
+  opacity: 1;
+  transform-origin: 50% 50%;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes blink {
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

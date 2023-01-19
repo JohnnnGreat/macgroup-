@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import "./Brief.scss";
 import AOS from "aos";
-
+import { Link } from "react-router-dom";
+// import { Link, animateScroll as scroll } from "react-scroll";
 function Brief() {
   useEffect(() => {
     AOS.init();
@@ -50,7 +51,16 @@ function Brief() {
               clients achieve their objectives.
             </p>
             <div data-aos="fade-up" data-aos-duration="2000" className="btn">
-              <a href="/">Read More</a>
+              <Link
+                activeClass="active"
+                to="/team"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Read More
+              </Link>
             </div>
           </div>
         </div>
