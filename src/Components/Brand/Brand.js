@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./Brand.scss";
 import AOS from "aos";
+import { Link } from "react-router-dom";
 //Brand section components
 
 const Brand = () => {
@@ -164,7 +165,7 @@ const Brand = () => {
           >
             Check our services
           </h1>
-          <a
+          <Link
             data-aos="fade-left"
             data-aos-duration="2000"
             data-aos-delay="200"
@@ -172,11 +173,16 @@ const Brand = () => {
             className="more-sevices"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            href="/"
+            activeClass="active"
+            to="/services"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
           >
             <div ref={showOverLay} className="black-overlay"></div>
             More Services
-          </a>
+          </Link>
         </div>
       </div>
     </div>

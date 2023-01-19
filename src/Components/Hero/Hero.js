@@ -29,7 +29,7 @@ function Hero() {
   }, [isVisible]);
 
   return (
-    <div className="h">
+    <div className="h" id="hero">
       <div className="image-res slide-in-left">
         <img
           className="right-img"

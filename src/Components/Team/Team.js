@@ -7,7 +7,7 @@ function Team() {
     AOS.init();
   }, []);
   return (
-    <div className="team">
+    <div className="team" id="team">
       <div className="team__wrapper">
         <div className="team__wrapper__bg-text">
           <div className="first-section">

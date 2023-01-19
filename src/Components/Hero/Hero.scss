@@ -3,7 +3,7 @@ $hero-bg-clr: #070707;
 $hero-dsc-clr: #000000;
 
 //Font text-color for both hero and description text respectively
-$hero-bg-ft: 7.1rem;
+$hero-bg-ft: 6rem;
 $hero-dsc-ft: 0.75rem;
 
 $md-dsk: 1200px;
@@ -77,11 +77,11 @@ $md-dsk: 1200px;
       .h-desc-l-one {
         letter-spacing: 2px;
         font-weight: 500;
-        text-align: left !important;
+        text-align: justify !important;
         user-select: none;
         max-width: 500px;
         font-size: 16px;
-        line-height: 2;
+        line-height: 1.6;
       }
 
       .h-desc-l-one {
