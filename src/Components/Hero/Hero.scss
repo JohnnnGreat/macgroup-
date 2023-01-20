@@ -61,7 +61,7 @@ $md-dsk: 1200px;
         height: 100%;
         margin-top: 40px;
         .line-show {
-          height: 10px;
+          height: 5px;
           border-radius: 10px;
           width: 50%;
           background-color: #808080;
@@ -98,9 +98,12 @@ $md-dsk: 1200px;
     position: fixed;
     top: 0;
     font-size: 30rem;
-    color: #dbdbdbab;
-    z-index: -3;
+    position: absolute;
     font-weight: 500;
+    mix-blend-mode: overlay;
+    -webkit-text-stroke-width: 0.002px;
+    -webkit-text-stroke-color: rgba(218, 218, 218, 0.247);
+    color: rgba(0, 0, 0, 0);
   }
 }
 

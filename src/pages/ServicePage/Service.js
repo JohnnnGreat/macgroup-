@@ -22,19 +22,26 @@ function Service() {
         </div>
       </div>
 
-      <div className="service-main">
-        <div className="service__main__wrapper">
-          <h1 className="main-text">
-            LET’S KNOW THE SERVICE OF INTERESTT TO YOU.
-          </h1>
-          <p className="main-desc">
-            WE ARE A BIG DIGITAL COMPANY THAT HELPS BRINGS TO REALITY DIGITAL
-            SOLUTIONS.
-          </p>
-        </div>
-      </div>
+      <Main />
     </div>
   );
 }
+
+//Main Services Component
+const Main = () => {
+  return (
+    <div className="service-main">
+      <div className="service__main__wrapper">
+        <h1 className="main-text">
+          LET’S KNOW THE SERVICE OF INTERESTT TO YOU.
+        </h1>
+        <p className="main-desc">
+          WE ARE A BIG DIGITAL COMPANY THAT HELPS BRINGS TO REALITY DIGITAL
+          SOLUTIONS.
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export default Service;
