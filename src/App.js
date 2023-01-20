@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/services" element={<ServicePage />}></Route>
         </Routes>
       </div>
-      {/* <Footer /> */}{" "}
+      <Footer />
     </BrowserRouter>
   );
 }
