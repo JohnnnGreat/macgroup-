@@ -12,8 +12,8 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <SalesPitch />
-      <Copy />
+      {/* <SalesPitch />
+      <Copy /> */}
       <Websites />
       <Brand />
       <Brief />

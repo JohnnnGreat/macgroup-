@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="service__hero">
           <div className="intrs-yellow"></div>
           <div className="intrs-pink"></div>
-          <div className="id">
+          <div className="id-s">
             <div className="line"></div>
             <h1 className="title">SERVICE</h1>
           </div>
@@ -60,11 +60,11 @@ const Main = () => {
           data-aos-duration="2000"
           className="main-text"
         >
-          LET’S KNOW THE SERVICE THAT INTEREST TO YOU.
+          Discover the services that interest you.
         </h1>
         <p data-aos="fade-left" data-aos-duration="2000" className="main-desc">
-          WE ARE A BIG DIGITAL COMPANY THAT HELPS BRINGS TO REALITY DIGITAL
-          SOLUTIONS.
+          We are a leading digital company that helps bring your digital
+          solutions to reality.
         </p>
       </div>
       <svg

@@ -34,9 +34,8 @@ function Hero() {
         <div className="h-value">
           <h1 className="h-value__main">Our Value</h1>
           <p className="h-value__desc">
-            e are a full-service digital agency offering a wide range of
-            services, including custom app development, web design and
-            development,
+            We specialize in delivering custom digital solutions to enhance your
+            business's online presence and drive growth.
           </p>
         </div>
         <div className="h-text slide-in-blurred-bottom">
