@@ -1,76 +1,72 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./Hero.scss";
 import "../Hero/imageOne.jpg";
-
+import { NavLink } from "react-router-dom";
+import ArrowDownwardSharpIcon from "@mui/icons-material/ArrowDownwardSharp";
 function Hero() {
   //State to change image
+  // const imageLoading = useRef();
+  // const [isVisible, setIsVisible] = useState(false);
+  // useEffect(() => {
+  //   (function () {
+  //     setTimeout(() => {
+  //       setIsVisible(true);
 
-  const imageLoading = useRef();
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    (function () {
-      setTimeout(() => {
-        setIsVisible(true);
+  //       setTimeout(() => {
+  //         setIsVisible(false);
+  //       }, 10000);
+  //     }, 5000);
 
-        setTimeout(() => {
-          setIsVisible(false);
-        }, 10000);
-      }, 5000);
-
-      if (isVisible) {
-        imageLoading.current.classList.remove("setOpa");
-        imageLoading.current.classList.add("setDisp");
-      } else {
-        imageLoading.current.classList.remove("setDisp");
-        imageLoading.current.classList.add("setOpa");
-      }
-      console.log(isVisible);
-    })();
-  }, [isVisible]);
+  //     if (isVisible) {
+  //       imageLoading.current.classList.remove("setOpa");
+  //       imageLoading.current.classList.add("setDisp");
+  //     } else {
+  //       imageLoading.current.classList.remove("setDisp");
+  //       imageLoading.current.classList.add("setOpa");
+  //     }
+  //     console.log(isVisible);
+  //   })();
+  // }, [isVisible]);
 
   return (
-    <div className="h" id="hero">
-      <div className="image-res slide-in-left">
-        <img
-          className="right-img"
-          src={process.env.PUBLIC_URL + "./AssetsFolder/imageOne.jpg"}
-          alt="Right"
-        />
-
-        <img
-          className="image-webDev"
-          ref={imageLoading}
-          src={process.env.PUBLIC_URL + "./AssetsFolder/webdev.webp"}
-          alt="Website development"
-        />
-      </div>
-
+    <div className="h">
       <div className="h__wrapper">
-        <div className="h-text">
-          <h1 className="h-text-f puff-in-center">
-            EXPERT <span className="moveRight"> DIGITAL</span>
-          </h1>
-          <h1 className="h-text-s fade-in-bottom"> SOLUTIONS</h1>
+        <div className="h-value">
+          <h1 className="h-value__main">Our Value</h1>
+          <p className="h-value__desc">
+            e are a full-service digital agency offering a wide range of
+            services, including custom app development, web design and
+            development,
+          </p>
         </div>
-        <div className="h-desc">
-          <div className="h-desc-wrap ">
-            <div className="desc-line">
-              <div className="line-show"></div>
-              <h1>DESCRIPTION</h1>
-            </div>
-            <h1 className="h-desc-l-one">
-              We Are A Full-Service Digital Agency Offering As Wide Range Of
-              Services, Including Custom App Development, Web Design And
-              Development, E-Commerce Solution, And Comprehensive Digital
-              Marketing Campaigns
-            </h1>
+        <div className="h-text slide-in-blurred-bottom">
+          EXPERT DIGITAL <span className="m-b">SOLUTIONS</span>.
+        </div>
+        <div className="h-bottom">
+          <div className="h-desc">
+            <h1 className="h-desc-main">We Help Achieve digital Aspirations</h1>
+            <p className="h-desc-d">
+              We are a full-service digital agency offering a wide range of
+              services,
+            </p>
           </div>
-          <div className="h-strt-btn">
-            <h2 className="strt-prj">Start a project</h2>
+          <a href="#sales" className="scroll animate">
+            <ArrowDownwardSharpIcon />
+          </a>
+          <div className="start">
+            <NavLink className="start-project" to="/email">
+              Send us a message
+            </NavLink>
           </div>
+        </div>
+
+        <div className="id">
+          <div className="line"></div>
+          <h1 className="title">HOMEPAGE</h1>
         </div>
       </div>
-      <h1 className="t-overlay">MACGROUP</h1>
+
+      <div className="h-overlay"></div>
     </div>
   );
 }

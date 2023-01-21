@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Team.scss";
 import AOS from "aos";
-
+import { NavLink } from "react-router-dom";
 function Team() {
   useEffect(() => {
     AOS.init();
@@ -66,9 +66,9 @@ function Team() {
             className="linetwo"
           ></div>
           <div data-aos="fade-up" data-aos-duration="2000" className="email">
-            <a className="email-btn" href="/">
+            <NavLink className="email-btn" to="/email">
               Email
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

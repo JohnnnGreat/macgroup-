@@ -3,6 +3,8 @@
   padding: 20px 10px;
   padding-top: 60px;
   overflow: hidden;
+  position: relative;
+  bottom: 0;
   &__wrapper {
     max-width: 75rem;
     margin: auto;

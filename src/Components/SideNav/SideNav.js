@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./SideNav.scss";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function SideNav() {
   const navSideBar = useRef(null);
   const removeSideNav = () => {
@@ -10,10 +10,10 @@ function SideNav() {
     <div ref={navSideBar} onClick={removeSideNav} className="side-nav">
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <Link to="/services">Services</Link>
+          <NavLink to="/services">Services</NavLink>
         </li>
         <li>
           <NavLink to="/blog">Blog</NavLink>

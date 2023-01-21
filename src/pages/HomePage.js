@@ -6,7 +6,7 @@ import Brief from "../Components/Brief/Brief.js";
 import Team from "../Components/Team/Team.js";
 import SalesPitch from "../Components/SalesPitch/SalesPitch.js";
 import Copy from "../Components/Copy/Copy.js";
-
+import Footer from "../Components/Footer/Footer.js";
 //This contains the homepage components
 function HomePage() {
   return (
@@ -18,6 +18,7 @@ function HomePage() {
       <Brand />
       <Brief />
       <Team />
+      <Footer />
     </>
   );
 }

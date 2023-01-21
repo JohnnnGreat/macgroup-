@@ -173,7 +173,6 @@ const Brand = () => {
             className="more-sevices"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            activeClass="active"
             to="/services"
             spy={true}
             smooth={true}
