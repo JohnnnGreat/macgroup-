@@ -1,11 +1,11 @@
 $bg-text-clr: #393939;
 
 .b {
-  background-color: rgba(255, 255, 255, 0.767);
+  background: linear-gradient(rgb(238 238 238), rgba(255, 255, 255, 0.767));
   width: 100%;
   backdrop-filter: blur(10px);
   height: 121vh;
-  padding-top: calc(100px / 16px) + rem;
+  padding-top: calc(140px / 16px) + rem;
   user-select: none;
   user-zoom: none;
   overflow: hidden;
@@ -24,24 +24,37 @@ $bg-text-clr: #393939;
 
         h1 {
           font-size: 7.063rem;
-          text-transform: uppercase;
+          text-transform: capitalize;
           font-weight: 200;
-          color: #000000;
+          color: #3d3d3d;
         }
       }
 
       .second-section {
         position: relative;
         h1 {
-          font-weight: 700;
+          font-weight: 900;
           position: absolute;
           left: 40%;
         }
       }
     }
 
+    .brand-str {
+      position: absolute;
+      opacity: 0.3;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      font-size: 15rem !important;
+      -webkit-text-stroke-color: rgb(63, 63, 63);
+      mix-blend-mode: overlay;
+      color: transparent !important;
+      -webkit-text-stroke-width: 0.002px;
+    }
+
     &__desc {
-      margin-top: calc(140px / 16px) + rem;
+      margin-top: calc(200px / 16px) + rem;
       display: grid;
       grid-template-columns: 40% 60%;
 
@@ -55,13 +68,13 @@ $bg-text-clr: #393939;
         flex-direction: center;
         align-items: center;
         p {
-          font-size: calc(15px / 16px) + rem;
+          font-size: 1rem;
           color: #111111;
           font-weight: 600;
-          line-height: 2.5 !important;
-          letter-spacing: 2px !important;
-          text-transform: uppercase;
-          text-justify: newspaper !important;
+          line-height: 2 !important;
+          letter-spacing: 1px !important;
+          text-transform: capitalize;
+          text-align: justify;
         }
       }
     }
@@ -140,7 +153,7 @@ $bg-text-clr: #393939;
         .first-section,
         .second-section {
           h1 {
-            font-size: 60px;
+            font-size: 45px;
           }
         }
 
@@ -170,8 +183,9 @@ $bg-text-clr: #393939;
         .text-desc {
           width: 100%;
           p {
-            font-size: 1rem;
-            text-justify: inter-word;
+            font-size: 0.8rem;
+            text-align: justify;
+            color: red;
             letter-spacing: 0 !important;
             line-height: 1.7 !important;
             text-transform: capitalize;

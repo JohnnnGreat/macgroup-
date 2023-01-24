@@ -24,6 +24,7 @@ function Brief() {
             >
               Brief
             </h1>
+            <h1 className="brand-str">Brands</h1>
           </div>
         </div>
         <div className="brief__wrapper__main">

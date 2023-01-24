@@ -7,6 +7,8 @@ import Header from "./Components/Header/Header.js";
 import TeamPage from "./pages/TeamPage/Team.js";
 import ServicePage from "./pages/ServicePage/Service.js";
 import EmailPage from "./pages/Email.js";
+import WebDev from "./pages/ServicePage/WebDev/Webdev.js";
+import Branding from "./pages/ServicePage/Branding/Branding.js";
 function App() {
   return (
     <BrowserRouter>
@@ -15,8 +17,10 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />}></Route>
           <Route exact path="/team" element={<TeamPage />}></Route>
-          <Route path="/services" element={<ServicePage />}></Route>
-          <Route path="/email" element={<EmailPage />}></Route>
+          <Route exact path="/services" element={<ServicePage />}></Route>
+          <Route exact path="/email" element={<EmailPage />}></Route>
+          <Route exact path="/webdevelopment" element={<WebDev />}></Route>
+          <Route exact path="/branding" element={<Branding />}></Route>
         </Routes>
       </div>
     </BrowserRouter>

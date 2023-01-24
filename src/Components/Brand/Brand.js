@@ -39,12 +39,14 @@ const Brand = () => {
           <div className="second-section">
             <h1
               data-aos="fade-up"
-              data-aos-duration="1000"
+              data-aos-duration="2000"
               data-aos-delay="200"
             >
               Brands
             </h1>
+            <h1 className="brand-str">Brands</h1>
           </div>
+          <div className="str"></div>
         </div>
         <div className="b__wrapper__desc">
           <div

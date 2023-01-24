@@ -1,65 +1,48 @@
 .side-nav {
-  height: 100vh;
   width: 100%;
-  background-color: #e7e7e7;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.932);
   position: absolute;
-  top: 4.68rem;
-  z-index: 10;
+  top: 80px;
+  bottom: 0;
   left: 0;
-  ul {
-    li {
-      padding: 20px;
-      border-bottom: 2px solid grey;
-      transition: 300ms ease;
-      &:hover {
-        background-color: #2a2a2a;
+  backdrop-filter: blur(10px);
+  z-index: 90;
+  margin-left: auto;
+  &__wrapper {
+    max-width: 90%;
+    margin: auto;
+  }
 
-        a {
-          color: #e7e7e7;
-          padding-right: 50px;
+  .nav-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .item {
+      margin-top: 4rem;
+      .items-tag {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        margin: 1rem 0;
+      }
+      ul {
+        li {
+          list-style: none;
+          padding: 10px 0;
+          .nav {
+            text-decoration: none;
+            color: rgb(228, 228, 228);
+            font-size: 14px;
+            transition: 300ms ease;
+            pointer-events: click;
+            &:hover {
+              padding-left: 10px;
+              color: #ffffff;
+            }
+          }
         }
       }
-      a {
-        font-size: 40px;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: right;
-        color: #2a2a2a;
-        display: block;
-        animation: anchor 300ms linear;
-        font-weight: 800;
-        transition: 300ms ease;
-      }
-
-      a:nth-child(2) {
-        animation-delay: 300ms;
-        color: red;
-      }
     }
-  }
-
-  .side-nav {
-    display: none;
-  }
-  .contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-
-    .contact-us {
-      background-color: #e9e9e9;
-      padding: 10px 20px;
-      text-decoration: none;
-      color: #2a2a2a;
-      border-radius: 50px;
-      border: 1px solid grey;
-    }
-  }
-}
-
-@keyframes anchor {
-  0% {
-    transform: translateY(100%);
   }
 }

@@ -2,8 +2,9 @@ $bg-clr: #2c2a2a;
 
 .brief {
   height: 140vh;
-  background-color: $bg-clr;
+  background: linear-gradient($bg-clr, #1f1c0f);
   overflow: hidden;
+  padding: 10rem 0;
   &__wrapper {
     max-width: 75rem;
     padding: 30px 20px;
@@ -15,11 +16,11 @@ $bg-clr: #2c2a2a;
       .first-section,
       .second-section {
         width: 100%;
-        color: #ffffff;
+        color: #f8df52;
 
         h1 {
           font-size: 7.063rem;
-          text-transform: uppercase;
+          text-transform: capitalize;
           font-weight: 200;
         }
       }
@@ -35,7 +36,7 @@ $bg-clr: #2c2a2a;
     }
 
     &__main {
-      margin-top: 10rem;
+      margin-top: 15rem;
       display: grid;
       grid-template-columns: 40% 60%;
       align-items: flex-start;
@@ -50,7 +51,7 @@ $bg-clr: #2c2a2a;
         .circle-text {
           height: 200px;
           width: 200px;
-          background-color: rgb(255, 255, 255);
+          background-color: #9c8500;
           display: flex;
           align-items: center;
           justify-content: flex-end;
@@ -69,13 +70,14 @@ $bg-clr: #2c2a2a;
       }
 
       .second-sec {
-        color: #c6bfbf;
-        line-height: 2.1;
+        color: #b9af76;
+        line-height: 1.7;
         letter-spacing: 0.5px;
         text-transform: capitalize;
+        text-align: justify;
 
         .text-one {
-          font-weight: 100;
+          font-weight: 500;
         }
 
         .text-two {
@@ -85,11 +87,12 @@ $bg-clr: #2c2a2a;
         .btn {
           margin-top: 3rem;
           a {
-            background-color: #ffffff;
-            color: rgb(41, 41, 41) !important;
+            background-color: transparent;
+            color: #9c8500 !important;
             padding: 20px 30px;
             font-size: 1rem;
             text-decoration: none;
+            border: 2px solid #9c8500;
           }
         }
       }
@@ -97,7 +100,7 @@ $bg-clr: #2c2a2a;
   }
 
   .core-values {
-    background-color: #c9c9c9;
+    background-color: #9c8500;
     margin-top: 2.5rem;
     padding: 1rem 1.4rem;
 
@@ -109,7 +112,7 @@ $bg-clr: #2c2a2a;
       animation: move 10s linear infinite;
       transform: translateX(120%);
       h1 {
-        text-transform: uppercase;
+        text-transform: capitalize;
         letter-spacing: 1px;
         font-weight: 500 !important;
         font-size: 2.5rem;
@@ -118,6 +121,19 @@ $bg-clr: #2c2a2a;
   }
 }
 
+.brand-str {
+  position: absolute;
+  opacity: 0.1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 15rem !important;
+  -webkit-text-stroke-color: #f8df52;
+  mix-blend-mode: lighten;
+  color: transparent !important;
+  -webkit-text-stroke-width: 0.002px;
+  font-weight: 800;
+}
 @keyframes move {
   0% {
     transform: translateX(120%);
@@ -130,7 +146,8 @@ $bg-clr: #2c2a2a;
 @media (max-width: 567px) {
   .brief {
     padding-top: calc(60px / 16px) + rem;
-    padding-bottom: 20px;
+    padding-bottom: 3rem;
+    padding-top: 7rem;
     height: fit-content;
     &__wrapper {
       padding: 0 20px;
@@ -139,7 +156,7 @@ $bg-clr: #2c2a2a;
         .first-section,
         .second-section {
           h1 {
-            font-size: 60px;
+            font-size: 45px;
           }
         }
         .second-section {
@@ -162,13 +179,16 @@ $bg-clr: #2c2a2a;
             height: 120px;
 
             h1 {
-              font-size: 1.3rem;
+              font-size: 1rem;
             }
           }
         }
 
         .second-sec {
           margin-top: 30px;
+          font-size: 0.8rem;
+          text-align: justify;
+          line-height: 2;
         }
       }
     }

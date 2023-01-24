@@ -7,32 +7,59 @@ function SideNav() {
     navSideBar.current.classList.add("remove");
   };
   return (
-    <div ref={navSideBar} onClick={removeSideNav} className="side-nav">
-      <ul>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/services">Services</NavLink>
-        </li>
-        <li>
-          <NavLink to="/blog">Blog</NavLink>
-        </li>
-        <li>
-          <NavLink to="/team">Team</NavLink>
-        </li>
-        <li>
-          <NavLink to="/pricing">Pricing</NavLink>
-        </li>
-        <li>
-          <NavLink to="/about">About</NavLink>
-        </li>
-      </ul>
-
-      <div className="contact">
-        <a href="/" className="contact-us">
-          Contact Us
-        </a>
+    <div className="side-nav">
+      <div className="side-nav__wrapper nav-grid">
+        <div className="item">
+          <h1 className="items-tag">Quick Links</h1>
+          <ul>
+            <li>
+              {" "}
+              <NavLink className="nav" to="/">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink className="nav" to="/blog">
+                Blog
+              </NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink className="nav" to="/team">
+                Team
+              </NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink className="nav" to="/pricing">
+                Pricing
+              </NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink className="nav" to="/services">
+                Services
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+        <div className="item">
+          <div className="items-tag">About Us</div>
+          <ul>
+            <li>
+              <NavLink className="nav" to="/about">
+                About Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="nav" to="/email">
+                Contact Us
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+        <div className="item"></div>
       </div>
     </div>
   );

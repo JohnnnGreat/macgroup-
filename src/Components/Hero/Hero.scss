@@ -5,25 +5,34 @@ $hero-dsc-clr: #000000;
 //Font text-color for both hero and description text respectively
 $hero-bg-ft: 6rem;
 $hero-dsc-ft: 0.75rem;
-
+$txt: #4d3800;
 $md-dsk: 1200px;
 
 .h {
   height: 100vh;
   overflow: hidden;
   position: relative;
+
+  display: flex;
+  align-items: center;
   &__wrapper {
-    max-width: 75rem;
+    width: 100%;
     margin: auto;
-    position: relative;
+
+    backdrop-filter: blur(2px);
+    height: 100%;
 
     .h-value {
       margin-top: 6rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
       padding: 10px;
+      color: $txt;
+      max-width: 75rem;
+      margin-left: auto;
+      margin-right: auto;
       &__main {
         font-size: 20px;
       }
@@ -32,14 +41,20 @@ $md-dsk: 1200px;
         font-size: 0.9rem;
         max-width: 400px;
         line-height: 1.5;
+        color: rgb(39, 39, 39);
       }
     }
 
     .h-text {
-      font-size: 5.5rem;
-      text-align: center;
+      font-size: 5.6rem;
+      text-align: left;
       margin-top: 3rem;
       font-weight: 500;
+      text-transform: capitalize;
+      color: $txt;
+      max-width: 75rem;
+      margin-left: auto;
+      margin-right: auto;
       .m-b {
         font-weight: 800;
       }
@@ -50,6 +65,10 @@ $md-dsk: 1200px;
       align-items: center;
       justify-content: center;
       margin-top: 3rem;
+      color: $txt;
+      max-width: 75rem;
+      margin-left: auto;
+      margin-right: auto;
       .h-desc {
         flex: 1;
         display: flex;
@@ -58,16 +77,16 @@ $md-dsk: 1200px;
 
         text-align: left;
         .h-desc-main {
-          font-size: 20px;
+          font-size: 16px;
           text-align: left;
           width: 100%;
         }
 
         .h-desc-d {
-          font-size: 0.9rem;
+          font-size: 0.7rem;
           max-width: 400px;
           line-height: 1.5;
-          text-align: justify;
+          text-align: left;
         }
       }
 
@@ -89,9 +108,9 @@ $md-dsk: 1200px;
 
         .start-project {
           border-radius: 50px;
-          background-color: #070707;
+          background-color: #252525;
           text-decoration: none;
-          color: rgb(231, 231, 231);
+          color: rgb(226, 226, 226);
           padding: 1rem 2rem;
           transition: 300ms ease;
           &:hover {
@@ -126,21 +145,20 @@ $md-dsk: 1200px;
   }
 }
 
-.h-overlay {
-  // background: rgba(80, 80, 80, 0.363);
-  // backdrop-filter: blur(2px);
-  height: 200%;
-  position: absolute;
-  // transform: skew(20deg, 20deg);
-  top: -20%;
-  left: 50%;
-  z-index: 2;
+video {
   width: 100%;
-  animation: overlay 1s infinite;
-  transition: 300ms ease;
-  border-radius: 100%;
-  border: 40px solid rgba(199, 199, 199, 0.274);
-  pointer-events: none;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -2;
+  filter: saturate(70%) opacity(0.5) invert(100%);
+  mix-blend-mode: overlay;
+}
+@media (max-width: 567px) {
+  id {
+    display: none;
+    background: red;
+  }
 }
 
 .animate {
@@ -160,95 +178,82 @@ $md-dsk: 1200px;
 @media (max-width: 567px) {
   .h {
     height: 100vh;
+
     overflow: hidden;
 
     &__wrapper {
-      max-width: 75rem;
-      margin: auto;
       position: relative;
       padding: 5px;
       .h-value {
-        margin-top: 8rem;
+        margin-top: 10rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         padding: 10px;
+
         &__main {
           font-size: 16px;
+          text-align: left;
+          width: 100%;
         }
 
         &__desc {
           font-size: calc(12.6px / 16px) + rem;
-          max-width: 250px;
+          max-width: 350px;
+          margin-right: auto;
           line-height: 1.5;
-          text-align: center;
+          text-align: left;
           margin-top: 10px;
+
+          width: 100%;
         }
       }
-
+      // .swiper {
+      //   background-color: red;
+      // }
       .h-text {
-        font-size: calc(60px / 16px) + rem;
-        text-align: center;
-        margin-top: 2rem;
+        font-size: calc(40px / 16px) + rem;
+        text-align: left;
+        margin-top: 0;
         font-weight: 500;
+        padding: 0 5px;
+        max-width: 100%;
+        color: $txt;
         .m-b {
           font-weight: 800;
         }
       }
 
       .h-bottom {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 3rem;
-        flex-direction: column;
-        row-gap: 2rem;
         .h-desc {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
           display: none;
-          text-align: left;
-          .h-desc-main {
-            font-size: 20px;
-            text-align: left;
-            width: 100%;
-            color: red;
-          }
-
-          .h-desc-d {
-            font-size: 0.9rem;
-            max-width: 400px;
-            line-height: 1.5;
-            text-align: justify;
-          }
+          background-color: green;
         }
-
         .scroll {
-          flex: 1;
+          flex: 0;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           cursor: pointer;
           text-decoration: none;
+          display: none;
         }
 
         .start {
-          flex: 1;
           display: flex;
           align-items: center;
           justify-content: center;
-
+          width: 100%;
+          height: 100%;
+          background-color: green;
+          flex: -1;
+          position: relative;
+          margin-top: 10px;
           .start-project {
-            border-radius: 50px;
-            background-color: #070707;
-            text-decoration: none;
-            color: rgb(231, 231, 231);
-            padding: 1rem 2rem;
-            transition: 300ms ease;
+            font-size: 0.8rem;
+            position: absolute;
+            left: 10px;
             &:hover {
               margin-bottom: 20px;
             }
@@ -259,41 +264,7 @@ $md-dsk: 1200px;
   }
 
   .id {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 40% !important;
-    left: -140px;
-    column-gap: 0.8rem;
-    .line {
-      width: calc(200px / 16px) + rem;
-      background-color: rgb(27, 27, 27);
-      height: 0.5px;
-    }
-
-    .title {
-      font-size: 12px;
-      color: rgb(0, 0, 0);
-      letter-spacing: 5px;
-      font-weight: 500;
-    }
-  }
-
-  .h-overlay {
-    // background: rgba(80, 80, 80, 0.363);
-    // backdrop-filter: blur(2px);
-    height: 100%;
-    position: absolute;
-    // transform: skew(20deg, 20deg);
-    top: -20%;
-    left: 50%;
-    z-index: 2;
-    width: 100%;
-    animation: overlay 1s infinite;
-    transition: 300ms ease;
-    border-radius: 100%;
-    border: 40px solid rgba(199, 199, 199, 0.274);
-    pointer-events: none;
+    display: none;
   }
 
   .animate {

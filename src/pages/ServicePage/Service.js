@@ -4,11 +4,12 @@ import { animateScroll as scroll } from "react-scroll";
 import emailjs from "@emailjs/browser";
 import Footer from "../../Components/Footer/Footer.js";
 import AOS from "aos";
+import { NavLink } from "react-router-dom";
 
 function Scroll() {
   useEffect(() => {
     AOS.init();
-    scroll.scrollToTop();
+    // scroll.scrollToTop();
   }, []);
 }
 function Service() {
@@ -149,36 +150,44 @@ const ServicesOne = () => {
         <div className="service-one__wrapper">
           <div className="digital-mkt">
             <div data-aos="fade-up" data-aos-duration="2000" className="first">
-              <h1 className="heading">DIGITAL MARKETING</h1>
+              <h1 className="heading">Digital Marketing</h1>
+              <div className="line-div"></div>
               <p data-aos="fade-up" data-aos-duration="2000" className="desc">
                 Maximize your online presence and reach new customers with our
                 comprehensive digital marketing services. From social media
                 management to email campaigns and paid advertising, we'll help
-                you connect with your target audience and drive conversions. Our
-                team of experts will work with you to create a customized
-                strategy that fits your business goals and budget.
+                you connect with your target audience and drive conversions.
               </p>
-            </div>
-            <div className="second-sp">
-              <div className="line"></div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                className="dmkt-btn"
+              >
+                <a class="link" href="#cus-desc">
+                  Read More
+                </a>
+              </div>
             </div>
           </div>
           <div className="app-dev">
-            <div className="second-sp">
-              <div className="line"></div>
-            </div>
-
             <div data-aos="fade-up" data-aos-duration="2000" className="first">
-              <h1 className="heading">APP DEVELOPMENT</h1>
+              <h1 className="heading">App Development</h1>
+              <div className="line-div"></div>
               <p data-aos="fade-up" data-aos-duration="2000" className="desc">
                 In today's digital world, having a mobile app is essential to
                 stay ahead of the competition. Our app development services will
                 help you create a custom mobile app that is tailored to your
-                business needs and goals. From concept to launch, our team of
-                experts will work with you every step of the way to create an
-                app that is user-friendly, visually appealing, and highly
-                functional
+                business needs and goals.
               </p>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                className="dmkt-btn"
+              >
+                <a class="link" href="#cus-desc">
+                  Read More
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -199,7 +208,8 @@ const ServicesTwo = () => {
               data-aos-duration="2000"
               className="first"
             >
-              <h1 className="heading">ECCOMMERCE</h1>
+              <h1 className="heading">E-Commerce</h1>
+              <div className="line-div"></div>
               <p
                 data-aos="fade-right"
                 data-aos-duration="2000"
@@ -209,34 +219,31 @@ const ServicesTwo = () => {
                 are designed to help you create a seamless and efficient online
                 shopping experience for your customers. With our eCommerce
                 services, you'll be able to easily manage your inventory,
-                process payments, and fulfill orders. Our team of experts will
-                work with you to create a customized eCommerce platform that
-                fits your specific business needs, whether you're selling
-                physical or digital products. From design and development to
-                marketing and analytics, we'll help you every step of the way to
-                ensure the success of your online store.
+                process payments, and fulfill orders.
               </p>
-            </div>
-            <div className="second-sp">
-              <div className="line"></div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                className="dmkt-btn"
+              >
+                <a class="link" href="#cus-desc">
+                  Read More
+                </a>
+              </div>
             </div>
           </div>
           <div className="app-dev">
-            <div className="second-sp">
-              <div className="line"></div>
-            </div>
-
             <div data-aos="fade-up" data-aos-duration="2000" className="first">
               <h1 className="heading">BRANDING</h1>
+              <div className="line-div"></div>
               <p data-aos="fade-up" data-aos-duration="2000" className="desc">
                 Your brand is your business's most valuable asset, and it's
                 crucial that it reflects the values and personality of your
                 company. Our branding services will help you create a unique and
                 consistent brand identity that sets you apart from your
-                competitors. Our team of experts will work with you to create a
-                brand that is visually appealing, memorable, and relevant to
-                your target audience.
+                competitors.
               </p>
+              <NavLink to="/branding">Read More</NavLink>
             </div>
           </div>
         </div>
@@ -266,10 +273,9 @@ const ServicesThree = () => {
                 will have of your business, so it's crucial that it makes a good
                 one. We offer professional web development services that will
                 help you create a website that is not only visually stunning but
-                also highly functional and easy to navigate. Our team of
-                developers will work with you to create a customized website
-                that meets your specific business needs.
+                also highly functional and easy to navigate.
               </p>
+              <NavLink to="/webdevelopment">Read More</NavLink>
             </div>
             <div className="second-sp">
               <div className="line"></div>
@@ -287,10 +293,6 @@ const ServicesThree = () => {
                 establish a strong online presence. Our content writing services
                 will help you create compelling, informative, and engaging
                 content that will help you connect with your target audience.
-                Our team of writers will work with you to create content that is
-                tailored to your business, your audience, and your goals.
-                Whether you need blog posts, articles, product descriptions, or
-                website copy, we've got you covered.
               </p>
             </div>
           </div>

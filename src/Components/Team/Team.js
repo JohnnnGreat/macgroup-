@@ -2,6 +2,12 @@ import React, { useEffect, useRef } from "react";
 import "./Team.scss";
 import AOS from "aos";
 import { NavLink } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
+import "swiper/css/autoplay";
+import { Autoplay, Pagination } from "swiper";
 function Team() {
   useEffect(() => {
     AOS.init();

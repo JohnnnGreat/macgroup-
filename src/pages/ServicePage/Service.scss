@@ -2,14 +2,15 @@
   user-select: none;
 }
 
+$txt-clr: #f8df52;
 $pri-clr: #ececec;
+$desc-clr: #c2c2c2;
 .service {
-  background-size: contain;
   width: 100%;
   height: 100vh;
   background-position-x: 100%;
   background-position-y: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   .service__wrapper {
     max-width: 75rem;
     margin: auto;
@@ -76,14 +77,15 @@ $pri-clr: #ececec;
 
 @media (max-width: 567px) {
   .service {
-    height: fit-content;
+    height: 70vh;
     padding: 0 10px;
+
     .service__wrapper {
       max-width: 40rem !important;
       margin: auto;
       overflow: hidden;
       position: relative;
-
+      height: 90%;
       .service__hero {
         display: flex;
         align-items: center;
@@ -92,6 +94,7 @@ $pri-clr: #ececec;
         background-color: rgb(31, 31, 31);
         padding: 4rem 2rem;
         overflow: hidden;
+        height: 75%;
 
         &__first {
           .line {
@@ -141,6 +144,7 @@ $pri-clr: #ececec;
   animation: blink 900ms ease infinite;
   opacity: 1;
   transform-origin: 50% 50%;
+  pointer-events: none;
 }
 .intrs-pink {
   width: 70px;
@@ -154,6 +158,7 @@ $pri-clr: #ececec;
   transform-origin: 50% 50%;
   right: 0;
   bottom: 0;
+  pointer-events: none;
 }
 
 .id-s {
@@ -181,8 +186,12 @@ $pri-clr: #ececec;
 
 @media (max-width: 800px) {
   .id-s {
+    left: -70px;
+    .line {
+      width: 100px;
+    }
     .title {
-      font-size: 12px;
+      font-size: 10px;
     }
   }
 }
@@ -202,7 +211,7 @@ $pri-clr: #ececec;
 .service__main {
   height: 55vh;
   display: flex;
-
+  overflow: hidden;
   justify-content: center;
   position: relative;
   .svg-b {
@@ -246,7 +255,7 @@ $pri-clr: #ececec;
       margin: auto;
 
       .main-text {
-        font-size: calc(40px / 16px) + rem;
+        font-size: calc(35px / 16px) + rem;
         font-weight: 200;
         text-align: center;
       }
@@ -264,16 +273,20 @@ $pri-clr: #ececec;
 .service-one {
   height: 120vh;
   position: relative;
-  background: rgb(31, 31, 31);
+  background: rgb(14, 14, 14);
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &__wrapper {
     max-width: 70rem;
     margin: auto;
     padding: 4rem 0;
+    padding-bottom: 2rem;
 
     .digital-mkt {
       display: grid;
-      grid-template-columns: 60% 40%;
+      grid-template-columns: 1fr 1fr;
       justify-content: space-between;
       align-items: center;
       color: $pri-clr;
@@ -282,6 +295,7 @@ $pri-clr: #ececec;
       .heading {
         font-size: 50px;
         letter-spacing: 1px;
+        color: $txt-clr;
       }
 
       .desc {
@@ -290,14 +304,32 @@ $pri-clr: #ececec;
         font-size: 0.8rem;
         margin: 0.8rem 0;
         line-height: 2;
+        color: $desc-clr;
+        width: 500px;
+      }
+      .dmkt-btn {
+        margin-top: 40px;
+        a {
+          padding: 15px 20px;
+          border: 2px solid #f8df52;
+          font-size: 0.8rem;
+          text-decoration: none;
+          color: #f8df52;
+          transition: 300ms ease;
+          &:hover {
+            transform: rotate(50deg);
+
+            border-radius: 100px;
+          }
+        }
       }
     }
 
-    .line {
-      width: calc(200px / 16px) + rem;
-      background-color: $pri-clr;
-      height: 0.5px;
-      rotate: 90deg;
+    .line-div {
+      width: 100px;
+      height: 3px;
+      background: red;
+      margin-top: 20px;
     }
     .second-sp {
       width: 100%;
@@ -308,13 +340,13 @@ $pri-clr: #ececec;
     }
 
     .app-dev {
-      display: grid;
-      grid-template-columns: 40% 60%;
-      justify-content: center;
+      display: flex;
+      justify-content: flex-end;
       align-items: center;
       color: $pri-clr;
       column-gap: 6rem;
-      margin-top: 10rem;
+
+      // margin-top: 10rem;
 
       .second-sp {
         width: 100%;
@@ -326,14 +358,33 @@ $pri-clr: #ececec;
       .heading {
         font-size: 50px;
         letter-spacing: 1px;
+        color: $txt-clr;
       }
 
       .desc {
         text-align: justify;
+        max-width: 500px;
         font-weight: lighter;
         font-size: 0.8rem;
         margin: 0.8rem 0;
         line-height: 2;
+        color: $desc-clr;
+      }
+      .dmkt-btn {
+        margin-top: 40px;
+        a {
+          padding: 15px 20px;
+          border: 2px solid #f8df52;
+          font-size: 0.8rem;
+          text-decoration: none;
+          color: #f8df52;
+          transition: 300ms ease;
+          &:hover {
+            transform: rotate(50deg);
+
+            border-radius: 100px;
+          }
+        }
       }
     }
   }
@@ -341,14 +392,11 @@ $pri-clr: #ececec;
 
 @media (max-width: 567px) {
   .service-one {
-    height: fit-content;
     padding: 10px;
     &__wrapper {
       .digital-mkt {
-        grid-template-columns: 1fr;
-
         .heading {
-          font-size: calc(40px / 16px) + rem;
+          font-size: calc(35px / 16px) + rem;
           letter-spacing: 1px;
         }
 
@@ -358,12 +406,10 @@ $pri-clr: #ececec;
           font-size: 0.8rem;
           margin: 0.8rem 0;
           line-height: 2;
+          width: 100% !important;
         }
       }
 
-      .line {
-        display: none;
-      }
       .second-sp {
         width: 100%;
         height: 100%;
@@ -374,7 +420,7 @@ $pri-clr: #ececec;
 
       .app-dev {
         grid-template-columns: 1fr;
-        margin-top: 2rem;
+        margin-top: 4rem;
         .second-sp {
           width: 100%;
           height: 100%;
@@ -383,7 +429,7 @@ $pri-clr: #ececec;
           align-items: center;
         }
         .heading {
-          font-size: calc(40px / 16px) + rem;
+          font-size: calc(35px / 16px) + rem;
           letter-spacing: 1px;
         }
 
@@ -404,6 +450,9 @@ $pri-clr: #ececec;
   color: rgb(0, 0, 0);
   padding-top: 4rem;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &__wrapper {
     max-width: 70rem;
     margin: auto;
@@ -411,7 +460,7 @@ $pri-clr: #ececec;
 
     .digital-mkt {
       display: grid;
-      grid-template-columns: 60% 40%;
+      grid-template-columns: 1fr 1fr;
       justify-content: space-between;
       align-items: center;
       color: rgb(0, 0, 0);
@@ -431,12 +480,6 @@ $pri-clr: #ececec;
       }
     }
 
-    .line {
-      width: calc(200px / 16px) + rem;
-      background-color: rgb(0, 0, 0);
-      height: 0.5px;
-      rotate: 90deg;
-    }
     .second-sp {
       width: 100%;
       height: 100%;
@@ -445,15 +488,20 @@ $pri-clr: #ececec;
       justify-content: center;
       align-items: center;
     }
-
+    .line-div {
+      width: 100px;
+      height: 3px;
+      background: red;
+      margin-top: 20px;
+    }
     .app-dev {
-      display: grid;
-      grid-template-columns: 40% 60%;
-      justify-content: center;
+      display: flex;
+      justify-content: flex-end;
       align-items: center;
-      color: rgb(0, 0, 0);
+      color: $pri-clr;
       column-gap: 6rem;
-      margin-top: 7rem;
+
+      // margin-top: 10rem;
 
       .second-sp {
         width: 100%;
@@ -465,14 +513,33 @@ $pri-clr: #ececec;
       .heading {
         font-size: 50px;
         letter-spacing: 1px;
+        color: $txt-clr;
       }
 
       .desc {
         text-align: justify;
+        max-width: 500px;
         font-weight: lighter;
         font-size: 0.8rem;
         margin: 0.8rem 0;
         line-height: 2;
+        color: $desc-clr;
+      }
+      .dmkt-btn {
+        margin-top: 40px;
+        a {
+          padding: 15px 20px;
+          border: 2px solid #f8df52;
+          font-size: 0.8rem;
+          text-decoration: none;
+          color: #f8df52;
+          transition: 300ms ease;
+          &:hover {
+            transform: rotate(50deg);
+
+            border-radius: 100px;
+          }
+        }
       }
     }
   }
@@ -495,7 +562,7 @@ $pri-clr: #ececec;
         grid-template-columns: 1fr;
 
         .heading {
-          font-size: calc(40px / 16px) + rem;
+          font-size: calc(35px / 16px) + rem;
           letter-spacing: 1px;
         }
       }
@@ -509,7 +576,7 @@ $pri-clr: #ececec;
         margin-top: 2rem;
 
         .heading {
-          font-size: calc(40px / 16px) + rem;
+          font-size: calc(35px / 16px) + rem;
           letter-spacing: 1px;
         }
 
@@ -533,7 +600,7 @@ $pri-clr: #ececec;
     max-width: 70rem;
     margin: auto;
     padding: 4rem 0;
-
+    overflow: hidden;
     .digital-mkt {
       display: grid;
       grid-template-columns: 60% 40%;
@@ -615,12 +682,12 @@ $pri-clr: #ececec;
       max-width: 70rem;
       margin: auto;
       padding: 4rem 0;
-
+      overflow: hidden;
       .digital-mkt {
         grid-template-columns: 1fr;
 
         .heading {
-          font-size: calc(40px / 16px) + rem;
+          font-size: calc(35px / 16px) + rem;
           letter-spacing: 1px;
         }
       }
@@ -634,7 +701,7 @@ $pri-clr: #ececec;
         margin-top: 2rem;
 
         .heading {
-          font-size: calc(40px / 16px) + rem;
+          font-size: calc(35px / 16px) + rem;
           letter-spacing: 1px;
         }
 
@@ -764,6 +831,8 @@ $pri-clr: #ececec;
           position: absolute;
           left: 20%;
           top: 20%;
+          width: 100%;
+          text-align: left;
         }
 
         .desc-text {
