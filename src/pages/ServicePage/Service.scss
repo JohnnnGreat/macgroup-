@@ -11,6 +11,10 @@ $desc-clr: #c2c2c2;
   background-position-x: 100%;
   background-position-y: 100%;
   overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .service__wrapper {
     max-width: 75rem;
     margin: auto;
@@ -29,11 +33,7 @@ $desc-clr: #c2c2c2;
       .gradient__line-s {
         height: 10px;
         width: 100%;
-        background: linear-gradient(
-          90deg,
-          rgb(233, 10, 114),
-          rgb(233, 218, 10)
-        );
+        background: #f8df52;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -61,7 +61,7 @@ $desc-clr: #c2c2c2;
       }
 
       &__second {
-        margin-left: 5rem;
+        margin-left: 0.6rem;
         .tag {
           font-size: 6rem;
           color: $pri-clr;
@@ -69,6 +69,7 @@ $desc-clr: #c2c2c2;
         }
         .bold-s {
           font-weight: 800;
+          color: #f8df52;
         }
       }
     }
@@ -112,7 +113,7 @@ $desc-clr: #c2c2c2;
         }
 
         &__second {
-          margin-left: 2rem;
+          margin-left: 0.8rem;
           .tag {
             font-size: calc(40px / 16px) + rem;
           }
@@ -135,16 +136,17 @@ $desc-clr: #c2c2c2;
 }
 
 .intrs-yellow {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  background-color: rgb(233, 10, 114);
+  background-color: #f8df52;
   position: absolute;
   border-radius: 50%;
-  animation: blink 900ms ease infinite;
+  // animation: blink 900ms ease infinite;
   opacity: 1;
   transform-origin: 50% 50%;
   pointer-events: none;
+  opacity: 0.6;
 }
 .intrs-pink {
   width: 70px;
@@ -226,12 +228,10 @@ $desc-clr: #c2c2c2;
     .main-text {
       font-size: calc(80px / 16px) + rem;
       font-weight: 200;
-
-      text-align: justify;
     }
 
     .main-desc {
-      letter-spacing: 3px;
+      letter-spacing: 1px;
       margin-top: 1rem;
     }
   }
@@ -271,7 +271,7 @@ $desc-clr: #c2c2c2;
 
 //First services section
 .service-one {
-  height: 120vh;
+  height: 150vh;
   position: relative;
   background: rgb(14, 14, 14);
   overflow: hidden;
@@ -394,9 +394,12 @@ $desc-clr: #c2c2c2;
   .service-one {
     padding: 10px;
     &__wrapper {
+      padding: 10px;
       .digital-mkt {
+        grid-template-columns: 1fr;
+        margin-bottom: 5rem;
         .heading {
-          font-size: calc(35px / 16px) + rem;
+          font-size: calc(50px / 16px) + rem;
           letter-spacing: 1px;
         }
 
@@ -420,7 +423,8 @@ $desc-clr: #c2c2c2;
 
       .app-dev {
         grid-template-columns: 1fr;
-        margin-top: 4rem;
+        margin-top: 10rem;
+
         .second-sp {
           width: 100%;
           height: 100%;
@@ -429,7 +433,7 @@ $desc-clr: #c2c2c2;
           align-items: center;
         }
         .heading {
-          font-size: calc(35px / 16px) + rem;
+          font-size: calc(45px / 16px) + rem;
           letter-spacing: 1px;
         }
 
@@ -445,7 +449,7 @@ $desc-clr: #c2c2c2;
   }
 }
 .service-two {
-  height: 120vh;
+  height: 150vh;
   position: relative;
   color: rgb(0, 0, 0);
   padding-top: 4rem;
@@ -478,6 +482,23 @@ $desc-clr: #c2c2c2;
         margin: 0.8rem 0;
         line-height: 2;
       }
+
+      .dmkt-btn {
+        margin-top: 40px;
+        a {
+          padding: 15px 20px;
+          border: 2px solid #202020;
+          font-size: 0.8rem;
+          text-decoration: none;
+          color: rgb(0, 0, 0);
+          transition: 300ms ease;
+          &:hover {
+            transform: rotate(50deg);
+
+            border-radius: 100px;
+          }
+        }
+      }
     }
 
     .second-sp {
@@ -500,8 +521,8 @@ $desc-clr: #c2c2c2;
       align-items: center;
       color: $pri-clr;
       column-gap: 6rem;
-
-      // margin-top: 10rem;
+      color: rgb(0, 0, 0);
+      margin-top: 4rem !important;
 
       .second-sp {
         width: 100%;
@@ -513,7 +534,7 @@ $desc-clr: #c2c2c2;
       .heading {
         font-size: 50px;
         letter-spacing: 1px;
-        color: $txt-clr;
+        color: rgb(24, 24, 24);
       }
 
       .desc {
@@ -523,16 +544,15 @@ $desc-clr: #c2c2c2;
         font-size: 0.8rem;
         margin: 0.8rem 0;
         line-height: 2;
-        color: $desc-clr;
       }
       .dmkt-btn {
         margin-top: 40px;
         a {
           padding: 15px 20px;
-          border: 2px solid #f8df52;
+          border: 2px solid #202020;
           font-size: 0.8rem;
           text-decoration: none;
-          color: #f8df52;
+          color: rgb(0, 0, 0);
           transition: 300ms ease;
           &:hover {
             transform: rotate(50deg);
@@ -547,8 +567,6 @@ $desc-clr: #c2c2c2;
 
 @media (max-width: 567px) {
   .service-two {
-    height: fit-content;
-
     padding-top: 4rem;
     padding-left: 10px;
     padding-right: 10px;
@@ -557,12 +575,13 @@ $desc-clr: #c2c2c2;
       max-width: 70rem;
       margin: auto;
       padding: 4rem 0;
-
+      padding-left: 10px;
+      padding-right: 10px;
       .digital-mkt {
         grid-template-columns: 1fr;
-
+        margin-bottom: 5rem;
         .heading {
-          font-size: calc(35px / 16px) + rem;
+          font-size: calc(45px / 16px) + rem;
           letter-spacing: 1px;
         }
       }
@@ -573,7 +592,7 @@ $desc-clr: #c2c2c2;
 
       .app-dev {
         grid-template-columns: 1fr;
-        margin-top: 2rem;
+        margin-top: 10rem;
 
         .heading {
           font-size: calc(35px / 16px) + rem;
@@ -596,6 +615,22 @@ $desc-clr: #c2c2c2;
   position: relative;
   background: rgb(31, 31, 31);
   overflow: hidden;
+  .dmkt-btn {
+    margin-top: 40px;
+    a {
+      padding: 15px 20px;
+      border: 2px solid #f8df52;
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: #f8df52;
+      transition: 300ms ease;
+      &:hover {
+        transform: rotate(50deg);
+
+        border-radius: 100px;
+      }
+    }
+  }
   &__wrapper {
     max-width: 70rem;
     margin: auto;
@@ -612,6 +647,7 @@ $desc-clr: #c2c2c2;
       .heading {
         font-size: 50px;
         letter-spacing: 1px;
+        color: #f8df52;
       }
 
       .desc {
@@ -628,6 +664,14 @@ $desc-clr: #c2c2c2;
       background-color: $pri-clr;
       height: 0.5px;
       rotate: 90deg;
+      display: none;
+    }
+
+    .line-div {
+      width: 100px;
+      height: 3px;
+      background: red;
+      margin-top: 20px;
     }
     .second-sp {
       width: 100%;
@@ -645,7 +689,7 @@ $desc-clr: #c2c2c2;
       align-items: center;
       color: $pri-clr;
       column-gap: 6rem;
-      margin-top: 10rem;
+      margin-top: 15rem;
 
       .second-sp {
         width: 100%;
@@ -657,6 +701,7 @@ $desc-clr: #c2c2c2;
       .heading {
         font-size: 50px;
         letter-spacing: 1px;
+        color: #f8df52;
       }
 
       .desc {
@@ -698,7 +743,7 @@ $desc-clr: #c2c2c2;
 
       .app-dev {
         grid-template-columns: 1fr;
-        margin-top: 2rem;
+        margin-top: 4rem;
 
         .heading {
           font-size: calc(35px / 16px) + rem;
@@ -746,8 +791,9 @@ $desc-clr: #c2c2c2;
       }
 
       .desc-text {
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin: 4rem 0;
+        font-weight: 500;
       }
     }
 

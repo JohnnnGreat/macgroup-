@@ -3,7 +3,7 @@ import "../WebDev/Webdev.scss";
 import AOS from "aos";
 import { animateScroll as scroll } from "react-scroll";
 import { NavLink } from "react-router-dom";
-import Branding from "./branding.jpg";
+import Commerce from "./Commerce.webp";
 import Neon from "../WebDev/neon.webp";
 function BrandingP() {
   useEffect(() => {
@@ -23,7 +23,7 @@ const Main = () => {
   return (
     <div className="webdev-main">
       <img
-        src={Branding}
+        src={Commerce}
         alt="Web development"
         className="webdev-img kenburns-top"
       />
@@ -35,7 +35,7 @@ const Main = () => {
               data-aos-duration="2000"
               className="webDev-txt"
             >
-              Branding
+              E-Commerce
             </h1>
           </div>
           <div className="webdev-desc">
@@ -44,11 +44,11 @@ const Main = () => {
               data-aos-duration="5000"
               className="webdevDesc-p"
             >
-              Your brand is your business's most valuable asset, and it's
-              crucial that it reflects the values and personality of your
-              company. Our branding services will help you create a unique and
-              consistent brand identity that sets you apart from your
-              competitors.
+              Looking to take your business online? Our eCommerce solutions are
+              designed to help you create a seamless and efficient online
+              shopping experience for your customers. With our eCommerce
+              services, you'll be able to easily manage your inventory, process
+              payments, and fulfill orders.
             </p>
           </div>
           <div
@@ -77,8 +77,8 @@ const AltDesc = () => {
               data-aos-duration="2000"
               className="webDev-txt"
             >
-              Creating a Unique Brand Identity: How to Stand Out in a Crowded
-              Market
+              The Ultimate Guide to Boosting Online Sales: Ecommerce Best
+              Practices
             </h1>
           </div>
           <div className="webdev-desc">
@@ -87,13 +87,13 @@ const AltDesc = () => {
               data-aos-duration="2000"
               className="webdevDesc-p"
             >
-              We specialize in helping businesses create unique brand identities
-              that stand out in today's crowded market. We understand that in
-              today's competitive landscape, it can be difficult to make your
-              brand stand out from the crowd. But with our expert guidance and
-              proven strategies, we can help you develop a strong, distinct
-              brand identity that will capture the attention of potential
-              customers.
+              Our guide will cover a wide range of topics, from website
+              optimization and product presentation, to marketing and
+              advertising strategies. We will help you create a visually
+              appealing and user-friendly website that will attract and retain
+              customers. We will also provide you with tips on how to optimize
+              your product listings, and strategies to increase your visibility
+              in search engines and social media platforms.
             </p>
           </div>
           <div
@@ -119,8 +119,8 @@ const CusDesc = () => {
               data-aos-duration="2000"
               className="webDev-txt"
             >
-              Maximizing Your Online Presence: Tips for Building a Strong
-              Digital Brand
+              Elevating the Customer Journey: Proven Strategies for Ecommerce
+              Success
             </h1>
           </div>
           <div
@@ -129,15 +129,12 @@ const CusDesc = () => {
             className="webdev-desc"
           >
             <p className="webdevDesc-p">
-              In today's digital age, having a strong online presence is crucial
-              for any business. Your online presence is often the first
-              impression that potential customers will have of your brand, so
-              it's important to make sure it's a good one. That's where we come
-              in. Our team of digital marketing experts will provide you with
-              the tips and strategies you need to maximize your online presence
-              and build a strong digital brand. We will help you create a
-              cohesive and visually appealing website, and optimize it for
-              search engines to increase visibility.
+              We understand that in today's digital marketplace, the customer
+              experience is more important than ever. That's why our team of
+              experts is dedicated to providing you with the tools and
+              strategies you need to create a seamless customer journey that
+              will encourage repeat purchases, build brand loyalty, and drive
+              revenue growth.
             </p>
           </div>
           <div

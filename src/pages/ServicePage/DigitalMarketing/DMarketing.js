@@ -3,9 +3,9 @@ import "../WebDev/Webdev.scss";
 import AOS from "aos";
 import { animateScroll as scroll } from "react-scroll";
 import { NavLink } from "react-router-dom";
-import Branding from "./branding.jpg";
+import Digital from "./digital.webp";
 import Neon from "../WebDev/neon.webp";
-function BrandingP() {
+function DigitalMarketing() {
   useEffect(() => {
     AOS.init();
     scroll.scrollToTop();
@@ -23,7 +23,7 @@ const Main = () => {
   return (
     <div className="webdev-main">
       <img
-        src={Branding}
+        src={Digital}
         alt="Web development"
         className="webdev-img kenburns-top"
       />
@@ -35,7 +35,7 @@ const Main = () => {
               data-aos-duration="2000"
               className="webDev-txt"
             >
-              Branding
+              Digital Marketing
             </h1>
           </div>
           <div className="webdev-desc">
@@ -44,11 +44,10 @@ const Main = () => {
               data-aos-duration="5000"
               className="webdevDesc-p"
             >
-              Your brand is your business's most valuable asset, and it's
-              crucial that it reflects the values and personality of your
-              company. Our branding services will help you create a unique and
-              consistent brand identity that sets you apart from your
-              competitors.
+              Maximize your online presence and reach new customers with our
+              comprehensive digital marketing services. From social media
+              management to email campaigns and paid advertising, we'll help you
+              connect with your target audience and drive conversions.
             </p>
           </div>
           <div
@@ -77,8 +76,7 @@ const AltDesc = () => {
               data-aos-duration="2000"
               className="webDev-txt"
             >
-              Creating a Unique Brand Identity: How to Stand Out in a Crowded
-              Market
+              Maximize Your Online Presence with Digital Marketing Strategies.
             </h1>
           </div>
           <div className="webdev-desc">
@@ -87,13 +85,12 @@ const AltDesc = () => {
               data-aos-duration="2000"
               className="webdevDesc-p"
             >
-              We specialize in helping businesses create unique brand identities
-              that stand out in today's crowded market. We understand that in
-              today's competitive landscape, it can be difficult to make your
-              brand stand out from the crowd. But with our expert guidance and
-              proven strategies, we can help you develop a strong, distinct
-              brand identity that will capture the attention of potential
-              customers.
+              In today's digital age, having a strong online presence is crucial
+              for any business. Our team of experts can help you develop and
+              implement a comprehensive digital marketing strategy that will
+              elevate your brand and increase your visibility online. From
+              search engine optimization to social media advertising, we'll work
+              with you to create a plan that drives results.
             </p>
           </div>
           <div
@@ -119,8 +116,7 @@ const CusDesc = () => {
               data-aos-duration="2000"
               className="webDev-txt"
             >
-              Maximizing Your Online Presence: Tips for Building a Strong
-              Digital Brand
+              Revolutionize Your Business with the Power of Digital Marketing
             </h1>
           </div>
           <div
@@ -129,15 +125,13 @@ const CusDesc = () => {
             className="webdev-desc"
           >
             <p className="webdevDesc-p">
-              In today's digital age, having a strong online presence is crucial
-              for any business. Your online presence is often the first
-              impression that potential customers will have of your brand, so
-              it's important to make sure it's a good one. That's where we come
-              in. Our team of digital marketing experts will provide you with
-              the tips and strategies you need to maximize your online presence
-              and build a strong digital brand. We will help you create a
-              cohesive and visually appealing website, and optimize it for
-              search engines to increase visibility.
+              Are you ready to take your business to the next level? Our digital
+              marketing services can help you do just that. From website design
+              and development to email marketing and analytics, we'll work with
+              you to create a customized digital marketing plan that takes your
+              business to new heights. Don't get left behind in the digital age,
+              let us help you revolutionize your business and stand out from the
+              competition.
             </p>
           </div>
           <div
@@ -153,4 +147,4 @@ const CusDesc = () => {
   );
 };
 
-export default BrandingP;
+export default DigitalMarketing;

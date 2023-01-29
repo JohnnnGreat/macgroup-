@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Suspense, lazy } from "react";
 import "./Service.scss";
 import { animateScroll as scroll } from "react-scroll";
 import emailjs from "@emailjs/browser";
@@ -6,17 +6,116 @@ import Footer from "../../Components/Footer/Footer.js";
 import AOS from "aos";
 import { NavLink } from "react-router-dom";
 
-function Scroll() {
+function Scroll() {}
+function Service() {
   useEffect(() => {
     AOS.init();
-    // scroll.scrollToTop();
+    scroll.scrollToTop();
   }, []);
-}
-function Service() {
   return (
     <>
-      <Hero />
-      <Main />
+      <div className="service">
+        <div className="service__wrapper">
+          <div className="service__hero">
+            <div className="intrs-pink"></div>
+
+            <div className="service__hero__second">
+              <h1 className="tag">
+                Have a shot of our <span className="bold-s">Services</span>
+              </h1>
+            </div>
+            <div className="gradient__line-s"></div>
+          </div>
+          <h1 className="bg-overlay">MACGROUP</h1>
+        </div>
+      </div>
+      <div className="service__main">
+        <div className="service__main__wrapper">
+          <h1
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            className="main-text"
+          >
+            Discover the services that interest you.
+          </h1>
+          <p
+            data-aos="fade-left"
+            data-aos-duration="2000"
+            className="main-desc"
+          >
+            We are a leading digital company that helps bring your digital
+            solutions to reality.
+          </p>
+        </div>
+        <svg
+          className="svg-b"
+          width="159"
+          height="500"
+          viewBox="0 0 205 665"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="102.978"
+            y="9"
+            width="17"
+            height="531"
+            rx="8.5"
+            transform="rotate(30.3092 102.978 9)"
+            fill="#D9D9D9"
+            // fill-opacity="0.5"
+          />
+          <rect
+            x="77.9775"
+            y="116"
+            width="17"
+            height="531"
+            rx="8.5"
+            transform="rotate(30.3092 77.9775 116)"
+            fill="#D9D9D9"
+            // fill-opacity="0.5"
+          />
+          <rect
+            x="147.405"
+            width="17"
+            height="111.767"
+            rx="8.5"
+            transform="rotate(30.3092 147.405 0)"
+            fill="#D9D9D9"
+            // fill-opacity="0.5"
+          />
+          <rect
+            x="189.405"
+            y="77"
+            width="17"
+            height="111.767"
+            rx="8.5"
+            transform="rotate(30.3092 189.405 77)"
+            fill="#D9D9D9"
+            // fill-opacity="0.5"
+          />
+          <rect
+            x="131.978"
+            y="99"
+            width="17"
+            height="531"
+            rx="8.5"
+            transform="rotate(30.3092 131.978 99)"
+            fill="#D9D9D9"
+            // fill-opacity="0.5"
+          />
+          <rect
+            x="117.978"
+            y="198"
+            width="17"
+            height="531"
+            rx="8.5"
+            transform="rotate(30.3092 117.978 198)"
+            fill="#D9D9D9"
+            // fill-opacity="0.5"
+          />
+        </svg>
+      </div>
       <ServicesOne />
       <ServicesTwo />
       <ServicesThree />
@@ -26,124 +125,9 @@ function Service() {
   );
 }
 
-const Hero = () => {
-  return (
-    <div className="service">
-      <div className="service__wrapper">
-        <div className="service__hero">
-          <div className="intrs-yellow"></div>
-          <div className="intrs-pink"></div>
-          <div className="id-s">
-            <div className="line"></div>
-            <h1 className="title">SERVICE</h1>
-          </div>
-          <div className="service__hero__second">
-            <h1 className="tag">
-              HAVE A SHOT OR OUR <span className="bold-s">SERVICES</span>
-            </h1>
-          </div>
-          <div className="gradient__line-s"></div>
-        </div>
-        <h1 className="bg-overlay">MACGROUP</h1>
-      </div>
-    </div>
-  );
-};
-
-//Main Services Component
-const Main = () => {
-  Scroll();
-  return (
-    <div className="service__main">
-      <div className="service__main__wrapper">
-        <h1
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          className="main-text"
-        >
-          Discover the services that interest you.
-        </h1>
-        <p data-aos="fade-left" data-aos-duration="2000" className="main-desc">
-          We are a leading digital company that helps bring your digital
-          solutions to reality.
-        </p>
-      </div>
-      <svg
-        className="svg-b"
-        width="159"
-        height="500"
-        viewBox="0 0 205 665"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          x="102.978"
-          y="9"
-          width="17"
-          height="531"
-          rx="8.5"
-          transform="rotate(30.3092 102.978 9)"
-          fill="#D9D9D9"
-          fill-opacity="0.5"
-        />
-        <rect
-          x="77.9775"
-          y="116"
-          width="17"
-          height="531"
-          rx="8.5"
-          transform="rotate(30.3092 77.9775 116)"
-          fill="#D9D9D9"
-          fill-opacity="0.5"
-        />
-        <rect
-          x="147.405"
-          width="17"
-          height="111.767"
-          rx="8.5"
-          transform="rotate(30.3092 147.405 0)"
-          fill="#D9D9D9"
-          fill-opacity="0.5"
-        />
-        <rect
-          x="189.405"
-          y="77"
-          width="17"
-          height="111.767"
-          rx="8.5"
-          transform="rotate(30.3092 189.405 77)"
-          fill="#D9D9D9"
-          fill-opacity="0.5"
-        />
-        <rect
-          x="131.978"
-          y="99"
-          width="17"
-          height="531"
-          rx="8.5"
-          transform="rotate(30.3092 131.978 99)"
-          fill="#D9D9D9"
-          fill-opacity="0.5"
-        />
-        <rect
-          x="117.978"
-          y="198"
-          width="17"
-          height="531"
-          rx="8.5"
-          transform="rotate(30.3092 117.978 198)"
-          fill="#D9D9D9"
-          fill-opacity="0.5"
-        />
-      </svg>
-    </div>
-  );
-};
-
 //Services Section in details
 
 const ServicesOne = () => {
-  Scroll();
   return (
     <div className="service-one">
       <div className="bg-s">
@@ -163,7 +147,7 @@ const ServicesOne = () => {
                 data-aos-duration="2000"
                 className="dmkt-btn"
               >
-                <a class="link" href="#cus-desc">
+                <a className="link" href="#cus-desc">
                   Read More
                 </a>
               </div>
@@ -184,7 +168,7 @@ const ServicesOne = () => {
                 data-aos-duration="2000"
                 className="dmkt-btn"
               >
-                <a class="link" href="#cus-desc">
+                <a className="link" href="#cus-desc">
                   Read More
                 </a>
               </div>
@@ -197,7 +181,6 @@ const ServicesOne = () => {
 };
 
 const ServicesTwo = () => {
-  Scroll();
   return (
     <div className="service-two">
       <div className="bg-s">
@@ -226,15 +209,15 @@ const ServicesTwo = () => {
                 data-aos-duration="2000"
                 className="dmkt-btn"
               >
-                <a class="link" href="#cus-desc">
+                <NavLink className="link" to="/commerce">
                   Read More
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
           <div className="app-dev">
             <div data-aos="fade-up" data-aos-duration="2000" className="first">
-              <h1 className="heading">BRANDING</h1>
+              <h1 className="heading">Branding</h1>
               <div className="line-div"></div>
               <p data-aos="fade-up" data-aos-duration="2000" className="desc">
                 Your brand is your business's most valuable asset, and it's
@@ -243,7 +226,15 @@ const ServicesTwo = () => {
                 consistent brand identity that sets you apart from your
                 competitors.
               </p>
-              <NavLink to="/branding">Read More</NavLink>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                className="dmkt-btn"
+              >
+                <NavLink className="link" to="/branding">
+                  Read More
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>
@@ -252,7 +243,6 @@ const ServicesTwo = () => {
   );
 };
 const ServicesThree = () => {
-  Scroll();
   return (
     <div className="service-three">
       <div className="bg-s">
@@ -263,7 +253,8 @@ const ServicesThree = () => {
               data-aos-duration="2000"
               className="first"
             >
-              <h1 className="heading">WEB DEVELOPMENT</h1>
+              <h1 className="heading">Web Development</h1>
+              <div className="line-div"></div>
               <p
                 data-aos="fade-right"
                 data-aos-duration="2000"
@@ -275,7 +266,15 @@ const ServicesThree = () => {
                 help you create a website that is not only visually stunning but
                 also highly functional and easy to navigate.
               </p>
-              <NavLink to="/webdevelopment">Read More</NavLink>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                className="dmkt-btn"
+              >
+                <NavLink className="link" to="/webdevelopment">
+                  Read More
+                </NavLink>
+              </div>
             </div>
             <div className="second-sp">
               <div className="line"></div>
@@ -288,12 +287,22 @@ const ServicesThree = () => {
 
             <div data-aos="fade-up" data-aos-duration="2000" className="first">
               <h1 className="heading">CONTENT WRITING </h1>
+              <div className="line-div"></div>
               <p data-aos="fade-up" data-aos-duration="2000" className="desc">
                 High-quality content is essential for any business looking to
                 establish a strong online presence. Our content writing services
                 will help you create compelling, informative, and engaging
                 content that will help you connect with your target audience.
               </p>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                className="dmkt-btn"
+              >
+                <NavLink className="link" to="/writing">
+                  Read More
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>
@@ -302,7 +311,7 @@ const ServicesThree = () => {
   );
 };
 
-export const ContactUs = () => {
+export const ContactUs = ({ title, shadow, desc }) => {
   // const [email, setEmail] = useState("");
   // const [subject, setSeubject] = useState("");
   // const [message, setMessage] = useState("");
@@ -338,16 +347,16 @@ export const ContactUs = () => {
             data-aos="fade-left"
             className="main-text"
           >
-            CONTACT US
+            {title}
           </h1>
           <h1
             data-aos-duration="2000"
             data-aos="fade-right"
             className="stroke-text"
           >
-            CONTACT US
+            {shadow}
           </h1>
-          <h1 className="desc-text">WE WANT TO HEAR FROM YOU!!!</h1>
+          <h1 className="desc-text">{desc}</h1>
         </div>
 
         <div className="input-fields">
@@ -361,7 +370,7 @@ export const ContactUs = () => {
             />
             <input
               data-aos="fade-up"
-              data-aos-duration="5000"
+              data-aos-duration="2000"
               name="email_subject"
               type="text"
               placeholder="Subject"

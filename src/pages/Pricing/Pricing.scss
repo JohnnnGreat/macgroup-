@@ -1,0 +1,175 @@
+.pricing {
+  height: 80vh;
+  width: 100vw;
+  overflow: hidden !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &__wrapper {
+    .pricing-header {
+      max-width: 60vw;
+      margin: 0 auto;
+      h1 {
+        font-size: 60px;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.coporate {
+  height: 150vh;
+  display: grid;
+  place-content: center;
+  .c-h {
+    font-size: 60px;
+    text-align: left;
+    padding-top: 30px;
+    font-weight: 500;
+    max-width: 70%;
+    margin: auto;
+  }
+
+  .c-d {
+    text-align: left;
+    font-size: 1rem;
+    max-width: 70%;
+    margin: auto;
+  }
+  .plans {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .plans-wrapper {
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+
+    .grid-plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      place-content: center;
+      column-gap: 20px;
+
+      .plan {
+        .p-h {
+          h1 {
+            font-size: 1.6rem;
+            font-weight: 500;
+
+            text-align: center;
+          }
+        }
+        .price {
+          font-size: 2rem;
+          text-align: center;
+          padding: 1rem 0;
+          border-bottom: 1px solid rgb(187, 187, 187);
+          border-top: 1px solid rgb(187, 187, 187);
+          margin-top: 0.9rem;
+          span {
+            font-weight: 500;
+            font-size: 1.7rem;
+          }
+        }
+        .packages {
+          margin-top: 1.4rem;
+          ul {
+            li {
+              margin-top: 10px;
+              text-align: center;
+              list-style-position: inside;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    .card {
+      border: 2px solid rgb(211, 211, 211);
+      width: 350px;
+      padding: 3rem;
+      border-radius: 2px;
+      background: linear-gradient(
+        125deg,
+        rgb(238, 238, 238),
+        rgba(255, 255, 255, 0)
+      );
+      transition: 300ms ease-in;
+
+      &:hover {
+        border: 2px solid rgb(107, 107, 107);
+      }
+    }
+
+    .quote {
+      display: block;
+      margin-top: 3rem;
+
+      height: 50px;
+      display: flex;
+      align-items: center;
+      a {
+        background-color: #000000;
+        color: white;
+        border: none;
+        padding: 1.3rem;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #303030;
+          transition: 300ms ease;
+        }
+      }
+    }
+  }
+}
+
+.patterns {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: overlay;
+  filter: grayscale(30%);
+  opacity: 0.6;
+}
+
+@media (max-width: 567px) {
+  .pricing-header {
+    max-width: 100vw !important;
+
+    padding: 3px;
+
+    h1 {
+      font-size: 40px !important;
+    }
+
+    p {
+      font-size: 1rem !important;
+    }
+  }
+
+  .grid-plans {
+    grid-template-columns: 1fr !important;
+    row-gap: 15px;
+  }
+
+  .plans {
+    height: fit-content;
+    padding: 1.5rem 0;
+  }
+}

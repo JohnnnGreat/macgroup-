@@ -2,7 +2,7 @@ $bg-clr: #2c2a2a;
 
 .brief {
   height: 140vh;
-  background: linear-gradient($bg-clr, #1f1c0f);
+  background: linear-gradient(#1a1a1a, #1f1c0f);
   overflow: hidden;
   padding: 10rem 0;
   &__wrapper {
@@ -21,7 +21,8 @@ $bg-clr: #2c2a2a;
         h1 {
           font-size: 7.063rem;
           text-transform: capitalize;
-          font-weight: 200;
+          font-weight: 700;
+          text-align: center;
         }
       }
 
@@ -30,7 +31,8 @@ $bg-clr: #2c2a2a;
         h1 {
           font-weight: 700;
           position: absolute;
-          left: 40%;
+          text-align: center;
+          width: 100%;
         }
       }
     }
@@ -70,7 +72,7 @@ $bg-clr: #2c2a2a;
       }
 
       .second-sec {
-        color: #b9af76;
+        color: rgb(175, 175, 175);
         line-height: 1.7;
         letter-spacing: 0.5px;
         text-transform: capitalize;
@@ -78,10 +80,12 @@ $bg-clr: #2c2a2a;
 
         .text-one {
           font-weight: 500;
+          font-size: 0.8rem;
         }
 
         .text-two {
           margin-top: 30px;
+          font-size: 0.8rem;
         }
 
         .btn {
@@ -93,6 +97,10 @@ $bg-clr: #2c2a2a;
             font-size: 1rem;
             text-decoration: none;
             border: 2px solid #9c8500;
+            transition: 300ms ease-in-out;
+            &:hover {
+              border-radius: 50px;
+            }
           }
         }
       }
@@ -100,22 +108,27 @@ $bg-clr: #2c2a2a;
   }
 
   .core-values {
-    background-color: #9c8500;
-    margin-top: 2.5rem;
+    margin-top: 4rem;
     padding: 1rem 1.4rem;
 
-    overflow: hidden;
+    display: grid;
+    place-content: center;
+
+    .coreValue {
+      font-size: 60px;
+      color: #9c8500;
+    }
 
     .move {
-      display: flex;
-      column-gap: 2rem;
-      animation: move 10s linear infinite;
-      transform: translateX(120%);
-      h1 {
-        text-transform: capitalize;
-        letter-spacing: 1px;
-        font-weight: 500 !important;
-        font-size: 2.5rem;
+      display: grid;
+      place-content: center;
+      grid-template-columns: repeat(2, 1fr);
+      color: rgb(175, 175, 175);
+      margin-top: 2rem;
+      ul {
+        li {
+          line-height: 2;
+        }
       }
     }
   }
@@ -123,16 +136,17 @@ $bg-clr: #2c2a2a;
 
 .brand-str {
   position: absolute;
-  opacity: 0.1;
+
   top: 0;
   right: 0;
   bottom: 0;
+  font-weight: 500 !important;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(255, 223, 44, 0.979);
+  mix-blend-mode: overlay;
+  color: transparent;
+
   font-size: 15rem !important;
-  -webkit-text-stroke-color: #f8df52;
-  mix-blend-mode: lighten;
-  color: transparent !important;
-  -webkit-text-stroke-width: 0.002px;
-  font-weight: 800;
 }
 @keyframes move {
   0% {

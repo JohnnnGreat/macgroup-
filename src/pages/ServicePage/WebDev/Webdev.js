@@ -33,8 +33,8 @@ const Main = () => {
         <div className="webdev-first">
           <div className="webdev-header">
             <h1
-              data-aos="fade-up"
-              data-aos-duration="2000"
+              data-aos="fade-down"
+              // data-aos-duration="2000"
               className="webDev-txt"
             >
               Web Development

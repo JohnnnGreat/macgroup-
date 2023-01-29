@@ -1,8 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./Hero.scss";
 import AOS from "aos";
-
-import video from "../../Hh.mp4";
+import ImageBg from "./bg.jpg";
 import "../Hero/imageOne.jpg";
 import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,34 +17,10 @@ function Hero() {
     AOS.init();
   }, []);
 
-  //State to change image
-  // const imageLoading = useRef();
-  // const [isVisible, setIsVisible] = useState(false);
-  // useEffect(() => {
-  //   (function () {
-  //     setTimeout(() => {
-  //       setIsVisible(true);
-
-  //       setTimeout(() => {
-  //         setIsVisible(false);
-  //       }, 10000);
-  //     }, 5000);
-
-  //     if (isVisible) {
-  //       imageLoading.current.classList.remove("setOpa");
-  //       imageLoading.current.classList.add("setDisp");
-  //     } else {
-  //       imageLoading.current.classList.remove("setDisp");
-  //       imageLoading.current.classList.add("setOpa");
-  //     }
-  //     console.log(isVisible);
-  //   })();
-  // }, [isVisible]);
-
   return (
     <div className="h">
-      <video src={video} muted loop autoPlay />
-
+      {/* <video src={video} muted loop autoPlay /> */}
+      <img src={ImageBg} alt="Web development" className="hero-img xx" />
       <div className="h__wrapper">
         <div data-aos="fade-right" data-aos-duration="1000" className="h-value">
           <h1 className="h-value__main">Our Value</h1>
@@ -93,12 +68,15 @@ function Hero() {
               services,
             </p>
           </div>
-          <a href="#sales" className="scroll animate">
-            <ArrowDownwardSharpIcon />
+          <a href="#sales" className="scroll ">
+            {/* <ArrowDownwardSharpIcon fontSize="large" className="scro-b" /> */}
+            <div className="container-wr">
+              <div className="move-ic animate"></div>
+            </div>
           </a>
           <div className="start">
             <NavLink className="start-project" to="/email">
-              Send us a message
+              Message Us
             </NavLink>
           </div>
         </div>

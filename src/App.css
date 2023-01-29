@@ -5,6 +5,10 @@
   src: url("../public/fonts/HelveticaNowText-Light.ttf") format("truetype");
 }
 
+* {
+  user-select: none;
+}
+
 body {
   font-family: HelveticaNow;
   background-color: #e7e7e7;

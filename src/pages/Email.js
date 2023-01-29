@@ -10,7 +10,11 @@ const Email = () => {
   }, []);
   return (
     <>
-      <ContactUs />
+      <ContactUs
+        title={"Contact Us"}
+        shadow="Contact Us"
+        desc="We Want To Hear From You!!!"
+      />
       <Footer />
     </>
   );

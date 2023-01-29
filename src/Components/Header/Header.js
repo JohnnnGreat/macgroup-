@@ -1,19 +1,15 @@
 import React, { useState, useRef } from "react";
-import SideNav from "../SideNav/SideNav";
 import "./Header.scss";
 
-function Header({ title, sub }) {
-  const [navToggle, setNavToggle] = useState(true);
+function Header({ title, sub, Toggle, NavOpen }) {
+  const [navToggle, setNavToggle] = useState(false);
   const logoAnimation = useRef(null);
   const navBtn = useRef(null);
 
   const handleNavToggle = () => {
-    console.log(navToggle);
     setNavToggle(!navToggle);
-
-    navToggle
-      ? navBtn.current.classList.add("x-btn")
-      : navBtn.current.classList.remove("x-btn");
+    console.log(navToggle);
+    Toggle();
   };
 
   /*
@@ -63,11 +59,37 @@ function Header({ title, sub }) {
           onClick={handleNavToggle}
           ref={navBtn}
           className="header__wrapper__navBtn"
+          style={NavOpen ? { display: "flex", position: "relative" } : null}
         >
-          <div className="nav-line"></div>
-          <div className="nav-line"></div>
+          <div
+            className="nav-line"
+            style={
+              NavOpen
+                ? {
+                    position: "absolute",
+                    top: "50%",
+                    rotate: "45deg",
+                  }
+                : null
+            }
+          ></div>
+          <div
+            className="nav-line"
+            style={
+              NavOpen
+                ? {
+                    position: "absolute",
+                    rotate: "-45deg",
+                    top: "50%",
+                    transform: "translate(-50% -50%)",
+                    backgroundColor: "#ffffff",
+                    transformOrigin: "50%",
+                    marginTop: "0",
+                  }
+                : null
+            }
+          ></div>
         </div>
-        {navToggle ? null : <SideNav />}
       </div>
     </div>
   );
