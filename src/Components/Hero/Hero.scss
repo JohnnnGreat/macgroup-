@@ -1,141 +1,154 @@
 //Font color for both hero and description text respectively
-$hero-bg-clr: #070707;
-$hero-dsc-clr: #000000;
+$hero-bg-clr: #ffffff;
+$hero-dsc-clr: #ffffff;
 
 //Font text-color for both hero and description text respectively
 $hero-bg-ft: 6rem;
 $hero-dsc-ft: 0.75rem;
-$txt: #161616;
+$txt: #eca500;
 $md-dsk: 1200px;
 
 .h {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  background-image: linear-gradient(rgba(204, 204, 204, 0), rgb(209, 209, 209));
-  display: flex;
-  align-items: center;
+
+  // background-image: linear-gradient(
+  //   rgba(204, 204, 204, 0),
+  //   rgba(209, 209, 209, 0.295)
+  // );
+
   &__wrapper {
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.854);
+    backdrop-filter: blur(3px);
+    height: 100vh;
 
-    .h-value {
-      margin-top: 6rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      padding: 10px;
-      color: $txt;
-      max-width: 75rem;
-      margin-left: auto;
-      margin-right: auto;
-      &__main {
-        font-size: 20px;
-      }
-
-      &__desc {
-        font-size: 0.9rem;
-        max-width: 400px;
-        line-height: 1.5;
-        color: rgb(39, 39, 39);
-      }
-    }
-
-    .h-text {
-      font-size: 5.6rem;
-      text-align: left;
-      margin-top: 3rem;
-      font-weight: 500;
-      text-transform: capitalize;
-      color: $txt;
-      max-width: 75rem;
-      margin-left: auto;
-      margin-right: auto;
-      .m-b {
-        font-weight: 800;
-        color: rgb(0, 0, 0);
-      }
-    }
-
-    .h-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 3rem;
-      color: $txt;
-      max-width: 75rem;
-      margin-left: auto;
-      margin-right: auto;
-      .h-desc {
-        flex: 1;
+    .wide {
+      .h-value {
         display: flex;
         flex-direction: column;
-        align-items: center;
-
-        text-align: left;
-        .h-desc-main {
-          font-size: 16px;
-          text-align: left;
-          width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px;
+        color: $txt;
+        max-width: 75rem;
+        margin-left: auto;
+        margin-right: auto;
+        &__main {
+          font-size: 20px;
+          font-weight: 600;
         }
 
-        .h-desc-d {
-          font-size: 0.7rem;
+        &__desc {
+          font-size: 0.9rem;
           max-width: 400px;
           line-height: 1.5;
-          text-align: left;
-
-          margin-right: auto;
+          color: rgb(255, 255, 255);
         }
       }
 
-      .scroll {
-        flex: 1;
+      .first-text {
+        h1 {
+          max-width: 50%;
+        }
+      }
+      .h-text {
+        font-size: 5.6rem;
+        text-align: left;
+        margin-top: 3rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: $txt;
+        max-width: 75rem;
+        margin-left: auto;
+        margin-right: auto;
+        .m-b {
+          font-weight: 800;
+          color: rgb(255, 255, 255);
+        }
+      }
+
+      .h-bottom {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
-        text-decoration: none;
-        height: 50px;
-
-        .container-wr {
-          width: 30px;
-          height: 100%;
-          border: 2px solid rgb(66, 66, 66);
-          border-radius: 20px;
+        margin-top: 3rem;
+        color: $txt;
+        max-width: 75rem;
+        margin-left: auto;
+        margin-right: auto;
+        .h-desc {
+          flex: 1;
           display: flex;
-          justify-content: center;
-          padding-top: 10px;
+          flex-direction: column;
+          align-items: center;
 
-          .move-ic {
-            width: 30%;
-            height: 60%;
-            background-color: rgb(66, 66, 66);
-            border-radius: 5px;
+          text-align: left;
+          .h-desc-main {
+            font-size: 16px;
+            text-align: left;
+            width: 100%;
+          }
+
+          .h-desc-d {
+            font-size: 0.7rem;
+            max-width: 400px;
+            line-height: 1.5;
+            text-align: left;
+
+            margin-right: auto;
           }
         }
-      }
 
-      .start {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .start-project {
-          border-radius: 50px;
-          background-color: #ffffff00;
+        .scroll {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
           text-decoration: none;
-          color: rgb(226, 226, 226);
-          padding: 1rem 2rem;
-          transition: 300ms ease;
-          backdrop-filter: blur(3px);
-          border: none;
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.157);
-          &:hover {
-            margin-bottom: 20px;
+          height: 50px;
+
+          .container-wr {
+            width: 20px;
+            height: 100%;
+            border: 2px solid rgb(66, 66, 66);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+
+            .move-ic {
+              width: 30%;
+              height: 60%;
+              background-color: rgb(66, 66, 66);
+              border-radius: 5px;
+            }
+          }
+        }
+
+        .start {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .start-project {
+            border-radius: 50px;
+            background-color: #ffffff00;
+            text-decoration: none;
+            color: rgb(226, 226, 226);
+            padding: 1rem 2rem;
+            transition: 300ms ease;
+            backdrop-filter: blur(3px);
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.157);
+            &:hover {
+              margin-bottom: 20px;
+            }
           }
         }
       }
@@ -151,7 +164,7 @@ $md-dsk: 1200px;
   z-index: -90;
   bottom: 0;
   opacity: 1;
-  filter: grayscale(100%);
+  filter: grayscale(40%);
   //   filter: saturate(100%);
   //   mix-blend-mode: overlay;
 }
@@ -225,17 +238,21 @@ video {
 }
 
 @media (max-width: 567px) {
+  .first-text {
+    width: 100%;
+    max-width: 1005;
+  }
   .h {
     height: 100vh;
 
     overflow: hidden;
-    display: flex;
-    align-items: center !important;
-    justify-content: center !important;
+
     &__wrapper {
-      position: relative;
       padding: 5px;
 
+      .wide {
+        background-color: red;
+      }
       .h-value {
         margin-top: 0;
         display: flex;
@@ -282,13 +299,6 @@ video {
           background-color: green;
         }
         .scroll {
-          flex: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          text-decoration: none;
           display: none;
         }
 
@@ -306,15 +316,21 @@ video {
             font-size: 0.8rem;
             position: absolute;
             border-radius: 0;
-            background-color: transparent;
+            background-color: rgb(27, 27, 27);
             border: 2px solid rgb(27, 27, 27);
-            color: #000000;
+            color: #d1d1d1;
             left: 10px;
             &:hover {
               margin-bottom: 0;
               border-radius: 50px;
+              color: white;
             }
           }
+        }
+      }
+      .first-text {
+        h1 {
+          max-width: 75%;
         }
       }
     }
@@ -329,6 +345,10 @@ video {
   }
 }
 @media (min-width: 567px) and (max-width: 667px) {
+  .first-text {
+    width: 100% !important;
+    max-width: 1005;
+  }
 }
 @media (min-width: 667px) and (max-width: 920px) {
 }

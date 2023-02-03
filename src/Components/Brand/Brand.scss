@@ -133,11 +133,14 @@ $bg-text-clr: #393939;
   }
 }
 
-.black-overlay {
+.more-service {
+  position: relative;
+}
+.black-overlay-t {
   width: 0;
   height: 100%;
   background: rgb(21, 21, 21);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;

@@ -58,7 +58,8 @@ $bg-clr: #2c2a2a;
           align-items: center;
           justify-content: flex-end;
           border-radius: 50%;
-
+          position: relative;
+          z-index: 4;
           h1 {
             font-weight: 200;
             margin-right: 10px;
@@ -158,6 +159,9 @@ $bg-clr: #2c2a2a;
   }
 }
 @media (max-width: 567px) {
+  .brand-str {
+    font-size: 10rem !important;
+  }
   .brief {
     padding-top: calc(60px / 16px) + rem;
     padding-bottom: 3rem;
@@ -177,7 +181,8 @@ $bg-clr: #2c2a2a;
           background-color: rgb(69, 102, 74) !important;
 
           h1 {
-            left: 40%;
+            font-weight: 700;
+            text-align: center;
           }
         }
       }
@@ -206,6 +211,12 @@ $bg-clr: #2c2a2a;
         }
       }
     }
+
+    .core-values {
+      .coreValue {
+        font-size: 40px;
+      }
+    }
   }
 }
 
@@ -226,10 +237,6 @@ $bg-clr: #2c2a2a;
         }
         .second-section {
           background-color: rgb(69, 102, 74) !important;
-
-          h1 {
-            left: 50%;
-          }
         }
       }
 
@@ -274,10 +281,6 @@ $bg-clr: #2c2a2a;
         }
         .second-section {
           background-color: rgb(69, 102, 74) !important;
-
-          h1 {
-            left: 40%;
-          }
         }
       }
 
@@ -322,10 +325,6 @@ $bg-clr: #2c2a2a;
         }
         .second-section {
           background-color: rgb(69, 102, 74) !important;
-
-          h1 {
-            left: 40%;
-          }
         }
       }
 

@@ -5,6 +5,7 @@ import { animateScroll as scroll } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import Digital from "./digital.webp";
 import Neon from "../WebDev/neon.webp";
+import Footer from "../../../Components/Footer/Footer";
 function DigitalMarketing() {
   useEffect(() => {
     AOS.init();
@@ -15,6 +16,7 @@ function DigitalMarketing() {
       <Main />
       <AltDesc />
       <CusDesc />
+      <Footer />
     </div>
   );
 }

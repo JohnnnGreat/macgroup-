@@ -5,6 +5,7 @@ import { animateScroll as scroll } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import Commerce from "./Commerce.webp";
 import Neon from "../WebDev/neon.webp";
+import Footer from "../../../Components/Footer/Footer";
 function BrandingP() {
   useEffect(() => {
     AOS.init();
@@ -15,6 +16,7 @@ function BrandingP() {
       <Main />
       <AltDesc />
       <CusDesc />
+      <Footer />
     </div>
   );
 }
@@ -142,7 +144,7 @@ const CusDesc = () => {
             data-aos-duration="2000"
             className="explore-btn"
           >
-            <NavLink to="/email">Send Us a Message</NavLink>
+            <NavLink to="/pricing">Send Us a Message</NavLink>
           </div>
         </div>
       </div>

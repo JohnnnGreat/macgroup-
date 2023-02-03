@@ -213,6 +213,49 @@
       width: 100%;
       margin-top: 10px;
       text-align: left !important;
+      margin-left: 0;
+    }
+  }
+
+  .legal-wrapper {
+    grid-template-columns: 1fr !important;
+
+    ul {
+      flex-direction: column;
+      align-items: flex-start !important;
+
+      li {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 567px) and (max-width: 667px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+
+    .blog-f,
+    .services-f {
+      margin-top: 2rem !important;
+      margin-bottom: 10px !important;
+    }
+  }
+
+  .logo-grid {
+    grid-template-columns: 1fr !important;
+
+    .logo-t {
+      font-size: 40px !important;
+    }
+
+    .logo-s {
+      font-size: 15px !important;
+      width: 100%;
+      margin-top: 10px;
+      text-align: left !important;
+
+      max-width: 100% !important;
     }
   }
 

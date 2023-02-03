@@ -331,3 +331,36 @@
     }
   }
 }
+
+@media (min-width: 567px) and (max-width: 667px) {
+  .webdev-header {
+    .webDev-txt {
+      font-size: 50px !important;
+    }
+  }
+  .webdev-desc {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 667px) and (max-width: 920px) {
+  .webdev-header {
+    .webDev-txt {
+      font-size: 50px !important;
+    }
+  }
+  .webdev-desc {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 920px) and (max-width: 1180px) {
+  .webdev-header {
+    .webDev-txt {
+      font-size: 50px !important;
+    }
+  }
+  .webdev-desc {
+    max-width: 70% !important;
+  }
+}

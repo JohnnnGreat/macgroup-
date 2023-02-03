@@ -103,7 +103,7 @@ function SideNav({ Toggle }) {
               </NavLink>
             </li>
             <li>
-              <NavLink className="nav" onClick={setClick} to="/commerce">
+              <NavLink className="nav" onClick={setClick} to="/contentwriting">
                 Content Writing
               </NavLink>
             </li>
@@ -117,10 +117,10 @@ function SideNav({ Toggle }) {
               </NavLink>
             </li>
           </ul>
-          <NavLink to="/" className="home-icon">
-            <HomeIcon fontSize="large" className="icon" />
-          </NavLink>
         </div>
+        <NavLink to="/" className="home-icon">
+          <HomeIcon fontSize="large" className="icon" />
+        </NavLink>
       </div>
     </div>
   );

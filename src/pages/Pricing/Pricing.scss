@@ -1,12 +1,14 @@
 .pricing {
   height: 80vh;
-  width: 100vw;
-  overflow: hidden !important;
+
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
   position: relative;
   &__wrapper {
+    overflow: hidden;
     .pricing-header {
       max-width: 60vw;
       margin: 0 auto;
@@ -14,6 +16,11 @@
         font-size: 60px;
         text-align: center;
         font-weight: 500;
+
+        span {
+          background-color: #fb9b00;
+          text-decoration: wavy;
+        }
       }
 
       p {
@@ -23,12 +30,40 @@
       }
     }
   }
+
+  .circle,
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+    position: absolute;
+  }
+
+  .box {
+    left: -50px;
+    rotate: 45deg;
+  }
+
+  .line {
+    width: 100%;
+    height: 0.3px;
+    background-color: rgb(87, 87, 87);
+    margin-top: 3rem;
+  }
+  .circle {
+    border-radius: 100%;
+    right: -30px;
+    top: 70%;
+    background-color: #fb9b00;
+  }
 }
 
 .coporate {
-  height: 150vh;
+  // height: 200vh;
   display: grid;
   place-content: center;
+  padding: 3rem 0;
+  overflow: hidden !important;
   .c-h {
     font-size: 60px;
     text-align: left;
@@ -45,10 +80,13 @@
     margin: auto;
   }
   .plans {
-    height: 100vh;
+    // height: 200vh;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+
     .plans-wrapper {
       max-width: 80rem;
       margin: 0 auto;
@@ -57,14 +95,17 @@
     .grid-plans {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      height: 100%;
+      overflow: hidden;
       place-content: center;
       column-gap: 20px;
+      row-gap: 20px;
 
       .plan {
         .p-h {
           h1 {
             font-size: 1.6rem;
-            font-weight: 500;
+            font-weight: 600;
 
             text-align: center;
           }
@@ -78,23 +119,37 @@
           margin-top: 0.9rem;
           span {
             font-weight: 500;
-            font-size: 1.7rem;
+            font-size: 1.4rem;
           }
         }
+
         .packages {
           margin-top: 1.4rem;
           ul {
             li {
               margin-top: 10px;
-              text-align: center;
+              text-align: left;
               list-style-position: inside;
               font-size: 0.8rem;
+              display: flex;
+              appearance: none;
+              justify-content: space-between;
+              span {
+                font-weight: bold;
+                text-align: right;
+                display: inline-block;
+
+                flex: -1;
+              }
             }
           }
         }
       }
     }
-
+    .two {
+      background-color: red !important;
+      grid-template-areas: 3/5;
+    }
     .card {
       border: 2px solid rgb(211, 211, 211);
       width: 350px;
@@ -109,6 +164,7 @@
 
       &:hover {
         border: 2px solid rgb(107, 107, 107);
+        box-shadow: 0 0 5px rgba(45, 45, 45, 0.184);
       }
     }
 
@@ -116,15 +172,18 @@
       display: block;
       margin-top: 3rem;
 
-      height: 50px;
+      height: fit-content;
       display: flex;
       align-items: center;
+
+      width: 100%;
       a {
         background-color: #000000;
         color: white;
         border: none;
         padding: 1.3rem;
         width: 100%;
+        margin: 0 auto;
         text-align: center;
         text-decoration: none;
 
@@ -149,6 +208,20 @@
 }
 
 @media (max-width: 567px) {
+  .circle {
+    right: -50px !important;
+
+    width: 100px;
+    height: 100px;
+  }
+
+  .box {
+    left: -50px !important;
+
+    width: 50px;
+    height: 50px;
+    top: 10px;
+  }
   .pricing-header {
     max-width: 100vw !important;
 
@@ -169,7 +242,21 @@
   }
 
   .plans {
-    height: fit-content;
     padding: 1.5rem 0;
+  }
+}
+
+.plans {
+  .p-h {
+    h1 {
+      font-size: 1.2rem !important;
+    }
+  }
+  .price {
+    font-size: 1.4rem !important;
+
+    span {
+      font-size: 1rem !important;
+    }
   }
 }

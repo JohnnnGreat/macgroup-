@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./Footer.scss";
 import AOS from "aos";
+import { NavLink, Link } from "react-router-dom";
 
 function Footer() {
   useEffect(() => {
@@ -32,19 +33,22 @@ function Footer() {
 
             <ul>
               <li>
-                <a href="/">E-Commerce</a>
+                <NavLink to="/commerce">E-Commerce</NavLink>
               </li>
               <li>
-                <a href="/">Web Development</a>
+                <NavLink href="/webdevelopment">Web Development</NavLink>
               </li>
               <li>
-                <a href="/">Branding</a>
+                <NavLink to="/branding">Branding</NavLink>
               </li>
               <li>
-                <a href="/">Digital Marketing</a>
+                <NavLink to="/digitalmarketing">Digital Marketing</NavLink>
               </li>
               <li>
-                <a href="/  ">Mobile App Development</a>
+                <NavLink to="/appdevelopment">App Development</NavLink>
+              </li>
+              <li>
+                <NavLink to="/appdevelopment">Content Writing</NavLink>
               </li>
             </ul>
           </div>

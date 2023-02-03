@@ -286,7 +286,7 @@ const ServicesThree = () => {
             </div>
 
             <div data-aos="fade-up" data-aos-duration="2000" className="first">
-              <h1 className="heading">CONTENT WRITING </h1>
+              <h1 className="heading">Content Writing</h1>
               <div className="line-div"></div>
               <p data-aos="fade-up" data-aos-duration="2000" className="desc">
                 High-quality content is essential for any business looking to

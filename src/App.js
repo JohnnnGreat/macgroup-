@@ -8,11 +8,13 @@ import Footer from "./Components/Footer/Footer.js";
 import Header from "./Components/Header/Header.js";
 import Branding from "./pages/ServicePage/Branding/Branding.js";
 import DigitalMarketing from "./pages/ServicePage/DigitalMarketing/DMarketing.js";
-import AppDevelopment from "./pages/ServicePage/DigitalMarketing/DMarketing.js";
+import AppDevelopment from "./pages/ServicePage/App/AppDev";
+import ContentWriting from "./pages/ServicePage/ContentWriting/Content";
 import SideNav from "./Components/SideNav/SideNav.js";
+import ServicePage from "./pages/ServicePage/Service.js";
 const Side = lazy(() => import("./Components/SideNav/SideNav.js"));
 const Home = lazy(() => import("./pages/HomePage.js"));
-const ServicePage = lazy(() => import("./pages/ServicePage/Service.js"));
+const Service = lazy(() => import("./pages/ServicePage/Service.js"));
 
 const Commerce = lazy(() => import("./pages/ServicePage/Commerce/Commerce"));
 const WebDev = lazy(() => import("./pages/ServicePage/WebDev/Webdev.js"));
@@ -38,20 +40,25 @@ function App() {
           NavOpen={navOpen}
           NavState={navOpen}
           title={"MACGROUP"}
-          sub={"INTERNATIONAL TECH SERVICE"}
+          sub={"International Tech Services"}
         />
         <Suspense fallback={"<h1> Loading </h1>"}>
           {navOpen ? <Side Toggle={NavToggle} /> : null}
         </Suspense>
         <Suspense>
           <Routes>
-            <Route exact path="/" element={<HomePage />}></Route>
+            <Route exact path="/" element={<Home />}></Route>
             <Route exact path="/services" element={<ServicePage />}></Route>
             <Route exact path="/email" element={<EmailPage />}></Route>
             <Route exact path="/branding" element={<Branding />}></Route>
             <Route exact path="/pricing" element={<Pricing />}></Route>
             <Route exact path="/webdevelopment" element={<WebDev />}></Route>
             <Route exact path="/commerce" element={<Commerce />}></Route>
+            <Route
+              exact
+              path="/contentwriting"
+              element={<ContentWriting />}
+            ></Route>
             <Route
               exact
               path="/digitalmarketing"
