@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef, Suspense, lazy } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Service.scss";
 import { animateScroll as scroll } from "react-scroll";
 import emailjs from "@emailjs/browser";
 import Footer from "../../Components/Footer/Footer.js";
 import AOS from "aos";
-import { NavLink } from "react-router-dom";
+import Location from "../LocationMap/Location.jsx";
+import { Link } from "react-router-dom";
 
-function Scroll() {}
 function Service() {
   useEffect(() => {
     AOS.init();
@@ -14,21 +14,14 @@ function Service() {
   }, []);
   return (
     <>
-      <div className="service">
-        <div className="service__wrapper">
-          <div className="service__hero">
-            <div className="intrs-pink"></div>
-
-            <div className="service__hero__second">
-              <h1 className="tag">
-                Have a shot of our <span className="bold-s">Services</span>
-              </h1>
-            </div>
-            <div className="gradient__line-s"></div>
-          </div>
-          <h1 className="bg-overlay">MACGROUP</h1>
-        </div>
-      </div>
+      <Hero
+        headerText={
+          <>
+            Have a shot of our
+            <span className="bold-s"> Services.</span>{" "}
+          </>
+        }
+      />
       <div className="service__main">
         <div className="service__main__wrapper">
           <h1
@@ -119,12 +112,38 @@ function Service() {
       <ServicesOne />
       <ServicesTwo />
       <ServicesThree />
-      <ContactUs />
+      <ContactUs
+        title="Contact Us"
+        shadow="Contact Us"
+        desc="Send us a message!!!"
+      />
       <Footer />
     </>
   );
 }
 
+//Pages Header
+export function Hero({ headerText }) {
+  return (
+    <>
+      <div className="service">
+        <div className="service__wrapper">
+          <div className="service__hero">
+            <div className="intrs-pink"></div>
+
+            <div className="service__hero__second">
+              <h1 className="tag" data-aos="fade-down" data-aos-duration="2000">
+                {headerText}
+              </h1>
+            </div>
+            <div className="gradient__line-s"></div>
+          </div>
+          <h1 className="bg-overlay">MACGROUP</h1>
+        </div>
+      </div>
+    </>
+  );
+}
 //Services Section in details
 
 const ServicesOne = () => {
@@ -209,9 +228,9 @@ const ServicesTwo = () => {
                 data-aos-duration="2000"
                 className="dmkt-btn"
               >
-                <NavLink className="link" to="/commerce">
+                <Link className="link" to="/commerce">
                   Read More
-                </NavLink>
+                </Link>
               </div>
             </div>
           </div>
@@ -231,9 +250,9 @@ const ServicesTwo = () => {
                 data-aos-duration="2000"
                 className="dmkt-btn"
               >
-                <NavLink className="link" to="/branding">
+                <Link className="link" to="/branding">
                   Read More
-                </NavLink>
+                </Link>
               </div>
             </div>
           </div>
@@ -271,9 +290,9 @@ const ServicesThree = () => {
                 data-aos-duration="2000"
                 className="dmkt-btn"
               >
-                <NavLink className="link" to="/webdevelopment">
+                <Link className="link" to="/webdevelopment">
                   Read More
-                </NavLink>
+                </Link>
               </div>
             </div>
             <div className="second-sp">
@@ -299,9 +318,9 @@ const ServicesThree = () => {
                 data-aos-duration="2000"
                 className="dmkt-btn"
               >
-                <NavLink className="link" to="/writing">
+                <Link className="link" to="/writing">
                   Read More
-                </NavLink>
+                </Link>
               </div>
             </div>
           </div>
@@ -315,8 +334,12 @@ export const ContactUs = ({ title, shadow, desc }) => {
   // const [email, setEmail] = useState("");
   // const [subject, setSeubject] = useState("");
   // const [message, setMessage] = useState("");
-  const form = useRef(null);
 
+  const [Error, setError] = useState(false);
+  const [Close, setCloseError] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const form = useRef(null);
+  const ErrorRemove = useRef(null);
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -332,68 +355,149 @@ export const ContactUs = ({ title, shadow, desc }) => {
           console.log(result.text);
         },
         (error) => {
-          console.log(error.text);
+          setError(true);
+          setShowAlert(true);
+          console.log(Error);
+          setTimeout(() => {
+            setShowAlert(false);
+          }, 4000);
         }
       );
   };
 
-  Scroll();
+  const location = {
+    address: "1600 Amphitheatre Parkway, Mountain View, california.",
+    lat: 37.42216,
+    lng: -122.08427,
+  };
   return (
-    <div className="contact-us-s">
-      <div className="contact-us-s__wrapper">
-        <div className="text-header">
-          <h1
-            data-aos-duration="2000"
-            data-aos="fade-left"
-            className="main-text"
-          >
-            {title}
-          </h1>
-          <h1
-            data-aos-duration="2000"
-            data-aos="fade-right"
-            className="stroke-text"
-          >
-            {shadow}
-          </h1>
-          <h1 className="desc-text">{desc}</h1>
-        </div>
+    <>
+      {/* <Location /> */}
+      <div className="contact-us-s">
+        <div className="contact-us-s__wrapper">
+          <div className="text-header">
+            <h1
+              data-aos-duration="2000"
+              data-aos="fade-left"
+              className="main-text"
+            >
+              {title}
+            </h1>
+            <h1
+              data-aos-duration="2000"
+              data-aos="fade-right"
+              className="stroke-text"
+            >
+              {shadow}
+            </h1>
+            <h1 className="desc-text">{desc}</h1>
+          </div>
 
-        <div className="input-fields">
-          <form ref={form} onSubmit={sendEmail} action="">
-            <input
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              name="user_email"
-              type="text"
-              placeholder="Email"
-            />
-            <input
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              name="email_subject"
-              type="text"
-              placeholder="Subject"
-            />
-            <textarea
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              name="email_message"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="Message"
-            ></textarea>
-            <input
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              type="submit"
-              value="Submit"
-            />
-          </form>
+          {showAlert ? (
+            Error ? (
+              <div
+                style={{
+                  transition: " all 300ms ease",
+
+                  backgroundColor: "#000",
+                  position: "fixed",
+                  height: "100vh",
+                  width: "0",
+                  width: Error ? "100vw" : "0",
+
+                  top: "0",
+                  zIndex: "4",
+                  transition: " all 300ms ease",
+                }}
+                // Error
+                //   ? {
+                //       transition: " all 300ms ease",
+                //       backgroundColor: "red",
+                //       position: "fixed",
+                //       height: "100vh",
+                //       width: "100vw",
+                //       top: "0",
+                //       zIndex: "4",
+                //     }
+                //   : {
+                //       backgroundColor: "green",
+                //       position: "fixed",
+                //       height: "100vh",
+
+                //       transition: "all 300ms ease",
+
+                //       top: "0",
+                //       zIndex: "4",
+
+                className="error"
+              >
+                <div className="container-er">
+                  <h1
+                    style={{
+                      fontSize: "30px",
+                      color: "red",
+                    }}
+                  >
+                    Error
+                  </h1>
+                </div>
+              </div>
+            ) : (
+              (<div
+                style={{
+                  backgroundColor: "red",
+                  position: "fixed",
+                  height: "100vh",
+                  width: "0",
+                  width: Error ? "100vw" : "0",
+                  top: "0",
+                  zIndex: "4",
+                  transition: "300ms ease",
+                }}
+                className="error"
+              >
+                <h1>This is a success</h1>
+              </div>)()
+            )
+          ) : null}
+
+          <div className="input-fields">
+            <form ref={form} onSubmit={sendEmail} action="">
+              <input
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                name="user_email"
+                type="text"
+                placeholder="Email"
+              />
+              <input
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                name="email_subject"
+                type="text"
+                placeholder="Subject"
+              />
+              <textarea
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                name="email_message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Message"
+              ></textarea>
+              <input
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                type="submit"
+                value="Submit"
+                // onClick={handleError}
+              />
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
-export default Service;
+export default React.memo(Service);

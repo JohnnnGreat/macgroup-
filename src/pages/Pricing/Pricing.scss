@@ -153,6 +153,7 @@
     .card {
       border: 2px solid rgb(211, 211, 211);
       width: 350px;
+      height: 500px;
       padding: 3rem;
       border-radius: 2px;
       background: linear-gradient(
@@ -161,7 +162,7 @@
         rgba(255, 255, 255, 0)
       );
       transition: 300ms ease-in;
-
+      position: relative;
       &:hover {
         border: 2px solid rgb(107, 107, 107);
         box-shadow: 0 0 5px rgba(45, 45, 45, 0.184);
@@ -169,20 +170,23 @@
     }
 
     .quote {
-      display: block;
       margin-top: 3rem;
-
+      position: absolute;
+      bottom: 18px;
+      left: 0;
       height: fit-content;
       display: flex;
       align-items: center;
-
+      justify-content: center;
       width: 100%;
+      margin-left: auto;
+
       a {
         background-color: #000000;
         color: white;
         border: none;
         padding: 1.3rem;
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         text-align: center;
         text-decoration: none;

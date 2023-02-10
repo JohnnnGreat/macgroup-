@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./Header.scss";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Header({ title, sub, Toggle, NavOpen }) {
   const [navToggle, setNavToggle] = useState(false);
   const logoAnimation = useRef(null);
@@ -12,6 +12,9 @@ function Header({ title, sub, Toggle, NavOpen }) {
     Toggle();
   };
 
+  // function setClick() {
+  //   Toggle();
+  // }
   /*
   Handles Logo animation Effects on Home Page
   */
@@ -26,7 +29,7 @@ function Header({ title, sub, Toggle, NavOpen }) {
   return (
     <div className="header">
       <div className="header__wrapper">
-        <NavLink to="/" className="click">
+        <Link to="/" className="click">
           <div className="header__wrapper__logo">
             <svg
               width="44"
@@ -56,7 +59,7 @@ function Header({ title, sub, Toggle, NavOpen }) {
               </div>
             </div>
           </div>
-        </NavLink>
+        </Link>
         <div
           onClick={handleNavToggle}
           ref={navBtn}

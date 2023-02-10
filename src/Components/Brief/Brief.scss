@@ -1,10 +1,11 @@
 $bg-clr: #2c2a2a;
 
 .brief {
-  height: 140vh;
+  height: 170vh;
   background: linear-gradient(#1a1a1a, #1f1c0f);
   overflow: hidden;
   padding: 10rem 0;
+
   &__wrapper {
     max-width: 75rem;
     padding: 30px 20px;
@@ -37,6 +38,20 @@ $bg-clr: #2c2a2a;
       }
     }
 
+    .brief-str {
+      position: absolute;
+
+      top: 0;
+      right: 0;
+      bottom: 0;
+      font-weight: 500 !important;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgba(255, 223, 44, 0.979);
+      mix-blend-mode: overlay;
+      color: transparent;
+
+      font-size: 15rem !important;
+    }
     &__main {
       margin-top: 15rem;
       display: grid;
@@ -63,6 +78,7 @@ $bg-clr: #2c2a2a;
           h1 {
             font-weight: 200;
             margin-right: 10px;
+            font-size: 1.1rem;
           }
         }
 
@@ -75,18 +91,15 @@ $bg-clr: #2c2a2a;
       .second-sec {
         color: rgb(175, 175, 175);
         line-height: 1.7;
-        letter-spacing: 0.5px;
-        text-transform: capitalize;
-        text-align: justify;
 
         .text-one {
           font-weight: 500;
-          font-size: 0.8rem;
+          font-size: 1.05rem;
         }
 
         .text-two {
           margin-top: 30px;
-          font-size: 0.8rem;
+          font-size: 1.05rem;
         }
 
         .btn {
@@ -107,48 +120,8 @@ $bg-clr: #2c2a2a;
       }
     }
   }
-
-  .core-values {
-    margin-top: 4rem;
-    padding: 1rem 1.4rem;
-
-    display: grid;
-    place-content: center;
-
-    .coreValue {
-      font-size: 60px;
-      color: #9c8500;
-    }
-
-    .move {
-      display: grid;
-      place-content: center;
-      grid-template-columns: repeat(2, 1fr);
-      color: rgb(175, 175, 175);
-      margin-top: 2rem;
-      ul {
-        li {
-          line-height: 2;
-        }
-      }
-    }
-  }
 }
 
-.brand-str {
-  position: absolute;
-
-  top: 0;
-  right: 0;
-  bottom: 0;
-  font-weight: 500 !important;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgba(255, 223, 44, 0.979);
-  mix-blend-mode: overlay;
-  color: transparent;
-
-  font-size: 15rem !important;
-}
 @keyframes move {
   0% {
     transform: translateX(120%);
@@ -159,12 +132,12 @@ $bg-clr: #2c2a2a;
   }
 }
 @media (max-width: 567px) {
-  .brand-str {
-    font-size: 10rem !important;
-  }
+  // .brand-str {
+  //   font-size: 15rem !important;
+  // }
   .brief {
-    padding-top: calc(60px / 16px) + rem;
-    padding-bottom: 3rem;
+    padding-top: calc(65px / 16px) + rem;
+    padding-bottom: 6rem;
     padding-top: 7rem;
     height: fit-content;
     &__wrapper {
@@ -174,7 +147,7 @@ $bg-clr: #2c2a2a;
         .first-section,
         .second-section {
           h1 {
-            font-size: 45px;
+            font-size: 55px;
           }
         }
         .second-section {
@@ -198,16 +171,22 @@ $bg-clr: #2c2a2a;
             height: 120px;
 
             h1 {
-              font-size: 1rem;
+              font-size: 1.2rem;
             }
           }
         }
 
         .second-sec {
           margin-top: 30px;
-          font-size: 0.8rem;
+          font-weight: 500 !important;
           text-align: justify;
-          line-height: 2;
+
+          .text-one {
+            font-size: 1rem !important;
+          }
+          .text-two {
+            font-size: 1rem !important;
+          }
         }
       }
     }
@@ -223,7 +202,7 @@ $bg-clr: #2c2a2a;
 @media (min-width: 567px) and (max-width: 667px) {
   .brief {
     padding-top: calc(60px / 16px) + rem;
-    padding-bottom: 20px;
+    padding-bottom: 6rem;
     height: fit-content;
     &__wrapper {
       padding: 0 20px;
@@ -258,6 +237,7 @@ $bg-clr: #2c2a2a;
 
         .second-sec {
           margin-top: 30px;
+          font-size: 0.6rem !important;
         }
       }
     }
@@ -267,7 +247,7 @@ $bg-clr: #2c2a2a;
 @media (min-width: 667px) and (max-width: 920px) {
   .brief {
     padding-top: calc(60px / 16px) + rem;
-    padding-bottom: 20px;
+    padding-bottom: 6rem;
     height: fit-content;
     &__wrapper {
       padding: 0 20px;
@@ -311,7 +291,7 @@ $bg-clr: #2c2a2a;
 @media (min-width: 920px) and (max-width: 1180px) {
   .brief {
     padding-top: calc(60px / 16px) + rem;
-    padding-bottom: 20px;
+    padding-bottom: 6rem;
     height: fit-content;
     &__wrapper {
       padding: 0 20px;

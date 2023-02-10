@@ -17,14 +17,10 @@ function Brief() {
             </h1>
           </div>
           <div className="second-section">
-            <h1
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-delay="200"
-            >
+            <h1 data-aos="fade-left" data-aos-duration="2000">
               Brief
             </h1>
-            <h1 className="brand-str">Brands</h1>
+            <h1 className="brief-str">Brief</h1>
           </div>
         </div>
         <div className="brief__wrapper__main">
@@ -58,7 +54,7 @@ function Brief() {
         </div>
       </div>
 
-      <div className="core-values">
+      {/* <div className="core-values">
         <h1 className="coreValue">Our Core Values</h1>
         <div className="move">
           <ul>
@@ -70,7 +66,7 @@ function Brief() {
             <li>Fast Delivery</li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

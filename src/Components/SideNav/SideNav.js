@@ -1,7 +1,7 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./SideNav.scss";
-import { NavLink, Link } from "react-router-dom";
-import HomeIcon from "@mui/icons-material/Home";
+import { Link } from "react-router-dom";
+
 import AOS from "aos";
 import { animateScroll as scroll } from "react-scroll";
 
@@ -30,27 +30,27 @@ function SideNav({ Toggle }) {
             </li>
             <li>
               {" "}
-              <NavLink className="nav" onClick={setClick} to="/blog">
+              <Link className="nav" onClick={setClick} to="/blog">
                 Blog
-              </NavLink>
+              </Link>
             </li>
             <li>
               {" "}
-              <NavLink className="nav" onClick={setClick} to="/team">
+              <Link className="nav" onClick={setClick} to="/team">
                 Team
-              </NavLink>
+              </Link>
             </li>
             <li>
               {" "}
-              <NavLink className="nav" onClick={setClick} to="/pricing">
+              <Link className="nav" onClick={setClick} to="/pricing">
                 Pricing
-              </NavLink>
+              </Link>
             </li>
             <li>
               {" "}
-              <NavLink className="nav" onClick={setClick} to="/services">
+              <Link className="nav" onClick={setClick} to="/services">
                 Services
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </div>
@@ -63,14 +63,14 @@ function SideNav({ Toggle }) {
           <div className="items-tag">About Us</div>
           <ul>
             <li>
-              <NavLink className="nav" onClick={setClick} to="/about">
+              <Link className="nav" onClick={setClick} to="/about-us">
                 About Us
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink className="nav" onClick={setClick} to="/email">
+              <Link className="nav" onClick={setClick} to="/email">
                 Contact Us
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </div>
@@ -83,47 +83,43 @@ function SideNav({ Toggle }) {
           <div className="items-tag">Service</div>
           <ul>
             <li>
-              <NavLink className="nav" onClick={setClick} to="/branding">
+              <Link className="nav" onClick={setClick} to="/branding">
                 Branding
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink className="nav" onClick={setClick} to="/commerce">
+              <Link className="nav" onClick={setClick} to="/commerce">
                 E-commerce
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink className="nav" onClick={setClick} to="/webdevelopment">
+              <Link className="nav" onClick={setClick} to="/webdevelopment">
                 Web Development
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink className="nav" onClick={setClick} to="/appdevelopment">
+              <Link className="nav" onClick={setClick} to="/appdevelopment">
                 App Development
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink className="nav" onClick={setClick} to="/contentwriting">
+              <Link className="nav" onClick={setClick} to="/contentwriting">
                 Content Writing
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
-                className="nav"
-                onClick={setClick}
-                to="/digitalmarketing"
-              >
+              <Link className="nav" onClick={setClick} to="/digitalmarketing">
                 Digital Marketing
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </div>
-        <NavLink to="/" className="home-icon">
+        {/* <Link to="/" className="home-icon">
           <HomeIcon fontSize="large" className="icon" />
-        </NavLink>
+        </Link> */}
       </div>
     </div>
   );
 }
 
-export default SideNav;
+export default React.memo(SideNav);

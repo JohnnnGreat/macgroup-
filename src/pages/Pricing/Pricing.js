@@ -22,7 +22,7 @@ function Pricing() {
             <div className="line"></div>
             <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
               We have a couple of plans to chooose from. Lets know the one that
-              best suite you.
+              best suits you.
             </p>
           </div>
         </div>
@@ -42,16 +42,16 @@ function Pricing() {
                 <div className="packages">
                   <ul>
                     <li>
-                      Logo Design <span>-$500</span>
+                      Logo Design <span>$500</span>
                     </li>
                     <li>
-                      Business Card Design <span>-$600</span>
+                      Business Card Design <span>$600</span>
                     </li>
                     <li>
-                      Security Card Design <span>-$100</span>
+                      Security Card Design <span>$100</span>
                     </li>
                     <li>
-                      Letterhead Paper Design <span>-$100</span>
+                      Letterhead Paper Design <span>$100</span>
                     </li>
                     <li>
                       Invoice and Receipt Design <span>$200</span>
@@ -70,7 +70,7 @@ function Pricing() {
               </div>
               <div className="card plan one">
                 <div className="p-h">
-                  <h1>Search Engine Optimization</h1>
+                  <h1>SEO</h1>
                 </div>
                 <h1 className="price">
                   $2,700 <span>/3months</span>
@@ -78,16 +78,16 @@ function Pricing() {
                 <div className="packages">
                   <ul>
                     <li>
-                      Keyword research and analysis <span>-$500</span>
+                      Keyword research and analysis <span>$500</span>
                     </li>
                     <li>
-                      On-page optimization <span>-$500</span>
+                      On-page optimization <span>$500</span>
                     </li>
                     <li>
-                      Content optimization <span>-$700</span>
+                      Content optimization <span>$700</span>
                     </li>
                     <li>
-                      Link building <span>-$500</span>
+                      Link building <span>$500</span>
                     </li>
                     <li>
                       Local SEO <span>$500</span>
@@ -110,7 +110,7 @@ function Pricing() {
                   <ul>
                     <li>
                       SHopify / Joomla / WooCommerce Store(WIth 70 product
-                      posted before launch) <span>-$500</span>
+                      posted before launch) <span>$500</span>
                     </li>
                     <li>
                       Online Payment Systems Integration( Stripe, PayPal,
@@ -119,7 +119,7 @@ function Pricing() {
                   </ul>
                 </div>
                 <div className="quote">
-                  <NavLink to="/coporate-message">Contact Us</NavLink>
+                  <NavLink to="/coporate-message">Order Now</NavLink>
                 </div>
               </div>
               <div className="card plan one">

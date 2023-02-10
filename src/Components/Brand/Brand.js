@@ -39,27 +39,14 @@ const Brand = () => {
             </h1>
           </div>
           <div className="second-section">
-            <h1
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              data-aos-delay="200"
-            >
-              Brands
+            <h1 data-aos="fade-up" data-aos-duration="2000">
+              Brands.
             </h1>
             <h1 className="brand-str">Brands</h1>
           </div>
           <div className="str"></div>
         </div>
         <div className="b__wrapper__desc">
-          <div
-            className="dots-design"
-            data-aos-duration="2000"
-            data-aos-delay="300"
-            data-aos="fade-right"
-          >
-            <img src={BrandImage} alt="brand" className="xx" />
-          </div>
-
           <div
             data-aos="fade-left"
             data-aos-duration="2000"
@@ -104,8 +91,18 @@ const Brand = () => {
           </Link>
         </div>
       </div>
+      <div
+        className="circle right"
+        data-aos="fade-left"
+        data-aos-duration="2000"
+      ></div>
+      <div
+        className="circle left"
+        data-aos="fade-right"
+        data-aos-duration="2000"
+      ></div>
     </div>
   );
 };
 
-export default Brand;
+export default React.memo(Brand);

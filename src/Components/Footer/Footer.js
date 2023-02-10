@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Footer.scss";
 import AOS from "aos";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Footer() {
   useEffect(() => {
@@ -12,19 +12,17 @@ function Footer() {
       <div className="footer__wrapper ">
         <div className="logo-grid">
           <h1 data-aos="fade-right" data-aos-duration="2000" className="logo-t">
-            MACGROUP
+            Macgroup
           </h1>
           <h1 data-aos="fade-left" data-aos-duration="2000" className="logo-s">
-            INTERNATIONAL TECH SERVICE
+            International Tech Service.
           </h1>
         </div>
 
         <div className="footer-grid">
           <div className="info">
             <h1 className="contact-f">CONTACT</h1>
-            <h1 className="physical-address">
-              6278 Springpark ave. Ladera Heights, Los Angeles, California 90056
-            </h1>
+            <h1 className="physical-address">5716 Alba Street La 90058</h1>
             <h1>+1(310) 490-3772</h1>
             <h1>info@macgrouptech.com</h1>
           </div>
@@ -33,22 +31,22 @@ function Footer() {
 
             <ul>
               <li>
-                <NavLink to="/commerce">E-Commerce</NavLink>
+                <Link to="/commerce">E-Commerce</Link>
               </li>
               <li>
-                <NavLink href="/webdevelopment">Web Development</NavLink>
+                <Link to="/webdevelopment">Web Development</Link>
               </li>
               <li>
-                <NavLink to="/branding">Branding</NavLink>
+                <Link to="/branding">Branding</Link>
               </li>
               <li>
-                <NavLink to="/digitalmarketing">Digital Marketing</NavLink>
+                <Link to="/digitalmarketing">Digital Marketing</Link>
               </li>
               <li>
-                <NavLink to="/appdevelopment">App Development</NavLink>
+                <Link to="/appdevelopment">App Development</Link>
               </li>
               <li>
-                <NavLink to="/appdevelopment">Content Writing</NavLink>
+                <Link to="/contentwriting">Content Writing</Link>
               </li>
             </ul>
           </div>
