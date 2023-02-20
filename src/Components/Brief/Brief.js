@@ -3,6 +3,7 @@ import "./Brief.scss";
 import AOS from "aos";
 import { Link } from "react-router-dom";
 
+
 function Brief() {
   useEffect(() => {
     AOS.init();

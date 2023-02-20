@@ -14,11 +14,13 @@ import HeroImage from "./HeroImage.gif";
 // import ArrowDownwardSharpIcon from "@mui/icons-material/ArrowDownwardSharp";
 function Hero() {
   // const slider = useRef(null);
+  // const slider = useRef(null);
   useEffect(() => {
     AOS.init();
   }, []);
-
+  
   return (
+    
     <div className="h">
       <div className="h__wrapper">
         <img class="hero-image" src={HeroImage} alt="" />
@@ -106,3 +108,4 @@ function Hero() {
 }
 
 export default React.memo(Hero);
+

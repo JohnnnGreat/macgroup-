@@ -17,6 +17,7 @@ function Team() {
     AOS.init();
   }, []);
   return (
+
     <div className="team">
       <div className="team__wrapper">
         <div className="team__wrapper__bg-text">

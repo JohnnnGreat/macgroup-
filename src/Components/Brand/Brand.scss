@@ -1,11 +1,14 @@
 $bg-text-clr: #393939;
 $service-btn: #0000;
+$service-btn: #0000;
 
 .b {
+  background: linear-gradient(rgb(238 238 238), rgba(255, 255, 255, 0.767));
   background: linear-gradient(rgb(238 238 238), rgba(255, 255, 255, 0.767));
   width: 100%;
   backdrop-filter: blur(10px);
   height: 121vh;
+  padding-top: calc(140px / 16px) + rem;
   padding-top: calc(140px / 16px) + rem;
   user-select: none;
   user-zoom: none;
@@ -25,7 +28,10 @@ $service-btn: #0000;
         h1 {
           font-size: 7.063rem;
           text-transform: capitalize;
+          text-transform: capitalize;
           font-weight: 200;
+          color: $bg-text-clr;
+          text-align: center;
           color: $bg-text-clr;
           text-align: center;
         }
@@ -35,7 +41,10 @@ $service-btn: #0000;
         position: relative;
         h1 {
           font-weight: 900;
+          font-weight: 900;
           position: absolute;
+          text-align: center;
+          width: 100%;
           text-align: center;
           width: 100%;
         }
@@ -56,7 +65,22 @@ $service-btn: #0000;
       font-size: 15rem !important;
     }
 
+    .brand-str {
+      position: absolute;
+      opacity: 0.5;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      font-weight: 500 !important;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgba(44, 44, 44, 0.829);
+      mix-blend-mode: overlay;
+      color: transparent !important;
+      font-size: 15rem !important;
+    }
+
     &__desc {
+      margin-top: calc(200px / 16px) + rem;
       margin-top: calc(200px / 16px) + rem;
 
       .text-desc {
@@ -66,9 +90,18 @@ $service-btn: #0000;
         max-width: 700px;
         margin: 60px auto !important;
 
+        max-width: 700px;
+        margin: 60px auto !important;
+
         p {
           font-size: 1rem;
+          font-size: 1rem;
           color: #111111;
+          font-weight: 500;
+          line-height: 2 !important;
+          letter-spacing: 1px !important;
+          text-transform: capitalize;
+          text-align: justify;
           font-weight: 500;
           line-height: 2 !important;
           letter-spacing: 1px !important;
@@ -80,9 +113,12 @@ $service-btn: #0000;
 
     .line-divider {
       width: 70%;
+      width: 70%;
       height: 1px;
       background-color: #828282;
       margin-top: calc(30px / 16px) + rem;
+      margin-left: auto;
+      margin-right: auto;
       margin-left: auto;
       margin-right: auto;
     }
@@ -94,14 +130,21 @@ $service-btn: #0000;
       padding: calc(20px / 16px) + rem;
       flex-wrap: wrap;
       height: 100px;
+      height: 100px;
       h1 {
         font-size: 1.3rem;
+        color: $bg-text-clr;
+        letter-spacing: 1px;
+        font-weight: 500;
         color: $bg-text-clr;
         letter-spacing: 1px;
         font-weight: 500;
       }
 
       a {
+        padding: 20px 30px;
+
+        color: $bg-text-clr;
         padding: 20px 30px;
 
         color: $bg-text-clr;
@@ -112,6 +155,8 @@ $service-btn: #0000;
         position: relative;
         z-index: 3;
         overflow: hidden;
+
+        max-height: initial;
 
         max-height: initial;
       }
@@ -151,13 +196,47 @@ $service-btn: #0000;
   position: relative;
 }
 .black-overlay-t {
+.circle {
+  width: 500px;
+  border: 40px solid $bg-text-clr;
+  height: 300px;
+  border-radius: 200px;
+  position: absolute;
+  top: 0;
+}
+
+.right {
+  right: -20%;
+  top: 10%;
+}
+
+.left {
+  left: -20%;
+  top: 60%;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+}
+.more-service {
+  position: relative;
+}
+.black-overlay-t {
   width: 0;
   height: 100%;
+  background: rgb(21, 21, 21);
   background: rgb(21, 21, 21);
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+  transition: 300ms ease;
   transition: 300ms ease;
   user-select: none;
 }
@@ -173,6 +252,7 @@ $service-btn: #0000;
   border: none !important;
 }
 
+//Media queries for small mobile screens
 //Media queries for small mobile screens
 @media (max-width: 567px) {
   .b {
@@ -204,11 +284,14 @@ $service-btn: #0000;
         .dots-design {
           display: none;
         }
+          display: none;
+        }
 
         .text-desc {
           width: 100%;
           p {
             font-size: 1rem;
+            text-align: justify;
             text-align: justify;
             letter-spacing: 0 !important;
             line-height: 1.7 !important;
@@ -221,10 +304,12 @@ $service-btn: #0000;
         row-gap: 20px;
         h1 {
           font-size: calc(15px / 16px) + rem !important;
+          font-size: calc(15px / 16px) + rem !important;
         }
 
         a {
           padding: 20px 40px;
+          font-size: 15px;
           font-size: 15px;
           user-select: none;
         }
@@ -244,9 +329,24 @@ $service-btn: #0000;
     .line-divider {
       width: 100%;
     }
+
+    .left {
+      left: -70%;
+      mix-blend-mode: overlay;
+    }
+
+    .right {
+      right: -70%;
+      mix-blend-mode: overlay;
+      top: -20%;
+    }
+    .line-divider {
+      width: 100%;
+    }
   }
 }
 
+//Media queries for mid-mobile screens
 //Media queries for mid-mobile screens
 @media (min-width: 567px) and (max-width: 667px) {
   .b {
@@ -302,6 +402,7 @@ $service-btn: #0000;
   }
 }
 //Media queries for tablets screens
+//Media queries for tablets screens
 @media (min-width: 667px) and (max-width: 920px) {
   .b {
     padding-top: calc(60px / 16px) + rem;
@@ -347,6 +448,7 @@ $service-btn: #0000;
     }
   }
 }
+//Media queries for mid-laptop screens
 //Media queries for mid-laptop screens
 @media (min-width: 920px) and (max-width: 1180px) {
   .b {

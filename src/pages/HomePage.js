@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useEffect } from "react";
 import Hero from "../Components/Hero/Hero.js";
 import Websites from "../Components/Websites/Website.js";
 import Brand from "../Components/Brand/Brand.js";
@@ -19,6 +20,10 @@ function HomePage() {
     AOS.init();
     scroll.scrollToTop();
   }, []);
+  useEffect(() => {
+    AOS.init();
+    scroll.scrollToTop();
+  }, []);
   return (
     <>
       <Hero />
@@ -29,6 +34,7 @@ function HomePage() {
       <Projects />
       <Values />
       <Team />
+      <Footer />
       <Footer />
     </>
   );

@@ -6,9 +6,9 @@ import axios from "axios";
 function Location({ location, zoomLevel }) {
   const API_KEY = "AIzaSyC18c2xXIqhAj96Aq0cuB_tvFSiKFHCTI8";
   //latitude and Longitude for the location, these numbers were gotten from the google map product.
+
   const LAT = 33.9914619;
   const LON = -118.238958;
-
   const mapStyle = [
     {
       featureType: "all",
@@ -21,12 +21,8 @@ function Location({ location, zoomLevel }) {
     },
   ];
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      console.log(position.coords.latitude);
-      console.log(position.coords.longitude);
-    });
-  }, []);
+  
+ 
   return (
     <div
       style={{
