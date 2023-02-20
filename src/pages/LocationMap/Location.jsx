@@ -1,6 +1,6 @@
 import GoogleMapReact from "google-map-react";
 import { Icon } from "@iconify/react";
-
+import { TerrainLayer } from "@react-google-maps/api";
 import { useEffect } from "react";
 import axios from "axios";
 function Location({ location, zoomLevel }) {
@@ -9,17 +9,17 @@ function Location({ location, zoomLevel }) {
   const LAT = 33.9914619;
   const LON = -118.238958;
 
-  /*const mapStyles = [
+  const mapStyle = [
+    {
+      featureType: "all",
+      stylers: [{ saturation: -80 }, { lightness: 60 }],
+    },
     {
       featureType: "road",
       elementType: "geometry",
-      stylers: [{ color: "#000000" }, { weight: 1 }],
+      stylers: [{ hue: "#00ffee" }, { saturation: -50 }],
     },
-    {
-      featureType: "transit",
-      stylers: [{ visibility: "off" }],
-    },
-  ];*/
+  ];
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -41,8 +41,9 @@ function Location({ location, zoomLevel }) {
         bootstrapURLKeys={{ key: API_KEY }}
         defaultCenter={{ lat: LAT, lng: LON }}
         defaultZoom={17}
-        // options={{ mapTypeId: "terrain" }}
+        options={{ style: mapStyle }}
       >
+        <TerrainLayer />
         <LocationPin lat={LAT} lng={LON} text={"5716 Alba Street La 90058"} />
       </GoogleMapReact>
     </div>
