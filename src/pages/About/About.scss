@@ -1,13 +1,7 @@
 .about {
-<<<<<<< HEAD
   display: flex;
   align-items: center;
   padding: 3rem 2rem;
-=======
-  height: 100vh;
-  display: flex;
-  align-items: center;
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
   &__wrapper {
     max-width: 75rem;
     margin: auto;
@@ -15,10 +9,7 @@
     .text {
       font-size: 1rem;
       margin: 1rem 0;
-<<<<<<< HEAD
       text-align: justify;
-=======
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
     }
   }
 }

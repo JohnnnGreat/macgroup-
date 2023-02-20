@@ -11,10 +11,7 @@
     "css-select": "^5.1.0",
     "emailjs-com": "^3.2.0",
     "firebase": "^9.17.1",
-<<<<<<< HEAD
     "formik": "^2.2.9",
-=======
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
     "google-map-react": "^2.2.0",
     "gsap": "^3.11.4",
     "netlify-cli": "^12.9.1",
@@ -30,12 +27,8 @@
     "sass": "^1.57.1",
     "swiper": "^8.4.6",
     "typewriter-effect": "^2.19.0",
-<<<<<<< HEAD
     "web-vitals": "^2.1.4",
     "yup": "^1.0.0"
-=======
-    "web-vitals": "^2.1.4"
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
   },
   "scripts": {
     "start": "react-scripts start",
