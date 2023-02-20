@@ -1,12 +1,18 @@
-import React, { useState, useEffect, useRef, Suspense, lazy } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Service.scss";
 import { animateScroll as scroll } from "react-scroll";
 import emailjs from "@emailjs/browser";
 import Footer from "../../Components/Footer/Footer.js";
 import AOS from "aos";
-import { NavLink } from "react-router-dom";
-
-function Scroll() {}
+import Location from "../LocationMap/Location.jsx";
+import { Link } from "react-router-dom";
+import ContactMain from "../../Components/Contact/ContactMain";
+import App from "./app.svg";
+import Marketing from "./marketing.svg";
+import Commerce from "./Commerce.svg";
+import Design from "./Design.svg";
+import Web from "./web.svg";
+import Writing from "./writing.svg";
 function Service() {
   useEffect(() => {
     AOS.init();
@@ -14,21 +20,14 @@ function Service() {
   }, []);
   return (
     <>
-      <div className="service">
-        <div className="service__wrapper">
-          <div className="service__hero">
-            <div className="intrs-pink"></div>
-
-            <div className="service__hero__second">
-              <h1 className="tag">
-                Have a shot of our <span className="bold-s">Services</span>
-              </h1>
-            </div>
-            <div className="gradient__line-s"></div>
-          </div>
-          <h1 className="bg-overlay">MACGROUP</h1>
-        </div>
-      </div>
+      <Hero
+        headerText={
+          <>
+            Have a shot of our
+            <span className="bold-s"> Services.</span>{" "}
+          </>
+        }
+      />
       <div className="service__main">
         <div className="service__main__wrapper">
           <h1
@@ -116,195 +115,257 @@ function Service() {
           />
         </svg>
       </div>
-      <ServicesOne />
-      <ServicesTwo />
-      <ServicesThree />
-      <ContactUs />
+      {/* <ServicesOne /> */}
+      <ServiceSection
+        titleOne={"Digital Marketing"}
+        descOne={`Maximize your online presence and reach new customers with our
+              comprehensive digital marketing services. From social media
+              management to email campaigns and paid advertising, we'll help you
+              connect with your target audience and drive conversions.`}
+        imageOne={Marketing}
+        routeOne="/digitalMarketing"
+        titleTwo={"App Development"}
+        descTwo={`In today's digital world, having a mobile app is essential to
+        stay ahead of the competition. Our app development services will
+        help you create a custom mobile app that is tailored to your
+        business needs and goals.`}
+        imageTwo={App}
+        routeTwo="/appdevelopment"
+      />
+
+      <ServiceSpecial
+        titleOne={"Web Development"}
+        descOne={`Looking to take your business online? Our eCommerce solutions
+        are designed to help you create a seamless and efficient online
+        shopping experience for your customers. With our eCommerce
+        services, you'll be able to easily manage your inventory,
+        process payments, and fulfill orders.`}
+        imageOne={Web}
+        routeOne="/webdevelopment"
+        titleTwo={"Content Writing"}
+        descTwo={`High-quality content is essential for any business looking to
+        establish a strong online presence. Our content writing services
+        will help you create compelling, informative, and engaging
+        content that will help you connect with your target audience.`}
+        imageTwo={Writing}
+        routeTwo="/writing"
+      />
+      <ServiceSection
+        titleOne={"E-Commerce"}
+        descOne={`Looking to take your business online? Our eCommerce solutions
+        are designed to help you create a seamless and efficient online
+        shopping experience for your customers. With our eCommerce
+        services, you'll be able to easily manage your inventory,
+        process payments, and fulfill orders.`}
+        imageOne={Commerce}
+        routeOne="/commerce"
+        titleTwo={"Branding"}
+        descTwo={`Your brand is your business's most valuable asset, and it's
+        crucial that it reflects the values and personality of your
+        company. Our branding services will help you create a unique and
+        consistent brand identity that sets you apart from your
+        competitors.`}
+        imageTwo={Design}
+        routeTwo="/branding"
+      />
+      {/* <ContactUs
+        title="Contact Us"
+        shadow="Contact Us"
+        desc="Send us a message!!!"
+      /> */}
+
+      <ContactMain />
       <Footer />
     </>
   );
 }
 
+//Pages Header
+
+const ServiceSection = ({
+  titleOne,
+  descOne,
+  imageOne,
+  routeOne,
+  titleTwo,
+  descTwo,
+  imageTwo,
+  routeTwo,
+}) => {
+  return (
+    <div className="service-p">
+      <div className="service-p__wrapper">
+        <div className="service-main">
+          <img className="heartbeat" src={imageOne} alt="" />
+          <div className="text-section">
+            <h1
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="header-se"
+            >
+              {titleOne}
+            </h1>
+            <div
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="line-div"
+            ></div>
+            <p
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="description-se"
+            >
+              {descOne}
+            </p>
+            <div
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="dmkt-btn"
+            >
+              <Link className="link" to={routeOne}>
+                Read More
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="service-main">
+          <div className="text-section">
+            <h1
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="header-se"
+            >
+              {titleTwo}
+            </h1>
+            <div
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="line-div"
+            ></div>
+            <p
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="description-se"
+            >
+              {descTwo}
+            </p>
+            <div
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="dmkt-btn"
+            >
+              <Link className="link" to={routeTwo}>
+                Read More
+              </Link>
+            </div>
+          </div>
+          <img className="heartbeat" src={imageTwo} alt="" />
+        </div>
+      </div>
+    </div>
+  );
+};
+export function Hero({ headerText }) {
+  return (
+    <>
+      <div className="service">
+        <div className="service__wrapper">
+          <div className="service__hero">
+            <div className="intrs-pink"></div>
+
+            <div className="service__hero__second">
+              <h1 className="tag" data-aos="fade-down" data-aos-duration="2000">
+                {headerText}
+              </h1>
+            </div>
+            <div className="gradient__line-s"></div>
+          </div>
+          <h1 className="bg-overlay">MACGROUP</h1>
+        </div>
+      </div>
+    </>
+  );
+}
 //Services Section in details
 
-const ServicesOne = () => {
+const ServiceSpecial = ({
+  titleOne,
+  descOne,
+  imageOne,
+  routeOne,
+  titleTwo,
+  descTwo,
+  imageTwo,
+  routeTwo,
+}) => {
   return (
-    <div className="service-one">
-      <div className="bg-s">
-        <div className="service-one__wrapper">
-          <div className="digital-mkt">
-            <div data-aos="fade-up" data-aos-duration="2000" className="first">
-              <h1 className="heading">Digital Marketing</h1>
-              <div className="line-div"></div>
-              <p data-aos="fade-up" data-aos-duration="2000" className="desc">
-                Maximize your online presence and reach new customers with our
-                comprehensive digital marketing services. From social media
-                management to email campaigns and paid advertising, we'll help
-                you connect with your target audience and drive conversions.
-              </p>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="dmkt-btn"
-              >
-                <a className="link" href="#cus-desc">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="app-dev">
-            <div data-aos="fade-up" data-aos-duration="2000" className="first">
-              <h1 className="heading">App Development</h1>
-              <div className="line-div"></div>
-              <p data-aos="fade-up" data-aos-duration="2000" className="desc">
-                In today's digital world, having a mobile app is essential to
-                stay ahead of the competition. Our app development services will
-                help you create a custom mobile app that is tailored to your
-                business needs and goals.
-              </p>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="dmkt-btn"
-              >
-                <a className="link" href="#cus-desc">
-                  Read More
-                </a>
-              </div>
+    <div className="serviceSpe-p">
+      <div className="serviceSpe-p__wrapper">
+        <div className="service-main">
+          <img className="heartbeat" src={imageOne} alt="" />
+          <div className="text-section">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="header-se"
+            >
+              {titleOne}
+            </h1>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="line-div"
+            ></div>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="description-se"
+            >
+              {descOne}
+            </p>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="dmkt-btn"
+            >
+              <Link className="link" to={routeOne}>
+                Read More
+              </Link>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
-
-const ServicesTwo = () => {
-  return (
-    <div className="service-two">
-      <div className="bg-s">
-        <div className="service-two__wrapper">
-          <div className="digital-mkt">
-            <div
-              data-aos="fade-left"
-              data-aos-duration="2000"
-              className="first"
+        <div className="service-main">
+          <div className="text-section">
+            <h1
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="header-se"
             >
-              <h1 className="heading">E-Commerce</h1>
-              <div className="line-div"></div>
-              <p
-                data-aos="fade-right"
-                data-aos-duration="2000"
-                className="desc"
-              >
-                Looking to take your business online? Our eCommerce solutions
-                are designed to help you create a seamless and efficient online
-                shopping experience for your customers. With our eCommerce
-                services, you'll be able to easily manage your inventory,
-                process payments, and fulfill orders.
-              </p>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="dmkt-btn"
-              >
-                <NavLink className="link" to="/commerce">
-                  Read More
-                </NavLink>
-              </div>
-            </div>
-          </div>
-          <div className="app-dev">
-            <div data-aos="fade-up" data-aos-duration="2000" className="first">
-              <h1 className="heading">Branding</h1>
-              <div className="line-div"></div>
-              <p data-aos="fade-up" data-aos-duration="2000" className="desc">
-                Your brand is your business's most valuable asset, and it's
-                crucial that it reflects the values and personality of your
-                company. Our branding services will help you create a unique and
-                consistent brand identity that sets you apart from your
-                competitors.
-              </p>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="dmkt-btn"
-              >
-                <NavLink className="link" to="/branding">
-                  Read More
-                </NavLink>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-const ServicesThree = () => {
-  return (
-    <div className="service-three">
-      <div className="bg-s">
-        <div className="service-three__wrapper">
-          <div className="digital-mkt">
+              {titleTwo}
+            </h1>
             <div
-              data-aos="fade-left"
-              data-aos-duration="2000"
-              className="first"
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="line-div"
+            ></div>
+            <p
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="description-se"
             >
-              <h1 className="heading">Web Development</h1>
-              <div className="line-div"></div>
-              <p
-                data-aos="fade-right"
-                data-aos-duration="2000"
-                className="desc"
-              >
-                Your website is the first impression that potential customers
-                will have of your business, so it's crucial that it makes a good
-                one. We offer professional web development services that will
-                help you create a website that is not only visually stunning but
-                also highly functional and easy to navigate.
-              </p>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="dmkt-btn"
-              >
-                <NavLink className="link" to="/webdevelopment">
-                  Read More
-                </NavLink>
-              </div>
-            </div>
-            <div className="second-sp">
-              <div className="line"></div>
+              {descTwo}
+            </p>
+            <div
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              className="dmkt-btn"
+            >
+              <Link className="link" to={routeTwo}>
+                Read More
+              </Link>
             </div>
           </div>
-          <div className="app-dev">
-            <div className="second-sp">
-              <div className="line"></div>
-            </div>
-
-            <div data-aos="fade-up" data-aos-duration="2000" className="first">
-              <h1 className="heading">Content Writing</h1>
-              <div className="line-div"></div>
-              <p data-aos="fade-up" data-aos-duration="2000" className="desc">
-                High-quality content is essential for any business looking to
-                establish a strong online presence. Our content writing services
-                will help you create compelling, informative, and engaging
-                content that will help you connect with your target audience.
-              </p>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="dmkt-btn"
-              >
-                <NavLink className="link" to="/writing">
-                  Read More
-                </NavLink>
-              </div>
-            </div>
-          </div>
+          <img className="heartbeat" src={imageTwo} alt="" />
         </div>
       </div>
     </div>
@@ -312,14 +373,36 @@ const ServicesThree = () => {
 };
 
 export const ContactUs = ({ title, shadow, desc }) => {
-  // const [email, setEmail] = useState("");
-  // const [subject, setSeubject] = useState("");
-  // const [message, setMessage] = useState("");
-  const form = useRef(null);
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
+  const [Error, setError] = useState(false);
+
+  const [Response, setResponse] = useState(false);
+  const [ErrorResponse, setErrorResponse] = useState(false);
+  // const [ValidationError, setValidationError] = useState(false);
+  const form = useRef(null);
+  const ErrorRemove = useRef(null);
   const sendEmail = (e) => {
     e.preventDefault();
+  };
 
+  // let email = "";
+  // let subject = "";
+  // let message = "";
+  function handleEmail(e) {
+    setEmail(e.target.value);
+  }
+  const handleMessage = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const handleSubject = (e) => {
+    setSubject(e.target.value);
+  };
+
+  function handleSubmit() {
     emailjs
       .sendForm(
         "service_btqqoig",
@@ -329,71 +412,108 @@ export const ContactUs = ({ title, shadow, desc }) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setResponse(true);
+
+          setTimeout(() => {
+            setResponse(false);
+          }, 4000);
         },
         (error) => {
-          console.log(error.text);
+          setErrorResponse(true);
+
+          setTimeout(() => {
+            setErrorResponse(false);
+          }, 4000);
         }
       );
-  };
 
-  Scroll();
+    (function() {
+      setEmail("");
+      setMessage("");
+      setSubject("");
+    })();
+  }
+
   return (
-    <div className="contact-us-s">
-      <div className="contact-us-s__wrapper">
-        <div className="text-header">
-          <h1
-            data-aos-duration="2000"
-            data-aos="fade-left"
-            className="main-text"
-          >
-            {title}
-          </h1>
-          <h1
-            data-aos-duration="2000"
-            data-aos="fade-right"
-            className="stroke-text"
-          >
-            {shadow}
-          </h1>
-          <h1 className="desc-text">{desc}</h1>
-        </div>
+    <>
+      {/* <Location /> */}
+      <div className="contact-us-s">
+        <div className="contact-us-s__wrapper">
+          <div className="text-header">
+            <h1
+              data-aos-duration="2000"
+              data-aos="fade-left"
+              className="main-text"
+            >
+              {title}
+            </h1>
+            <h1
+              data-aos-duration="2000"
+              data-aos="fade-right"
+              className="stroke-text"
+            >
+              {shadow}
+            </h1>
+            <h1 className="desc-text">{desc}</h1>
+          </div>
 
-        <div className="input-fields">
-          <form ref={form} onSubmit={sendEmail} action="">
-            <input
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              name="user_email"
-              type="text"
-              placeholder="Email"
-            />
-            <input
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              name="email_subject"
-              type="text"
-              placeholder="Subject"
-            />
-            <textarea
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              name="email_message"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="Message"
-            ></textarea>
-            <input
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              type="submit"
-              value="Submit"
-            />
-          </form>
+          <div className="input-fields">
+            {Response ? (
+              <div className="showSuccessRes">
+                <h1>
+                  We have received your message. We will respond to you shortly.
+                </h1>
+              </div>
+            ) : null}
+
+            {ErrorResponse ? (
+              <div className="showErrorRes">
+                <h1>An unexpected error occured.</h1>
+              </div>
+            ) : null}
+            <form ref={form} onSubmit={sendEmail} action="">
+              <input
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                name="user_email"
+                type="text"
+                placeholder="Email"
+                onChange={handleEmail}
+                value={email}
+              />
+              <input
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                name="email_subject"
+                type="text"
+                placeholder="Subject"
+                onChange={handleSubject}
+                value={subject}
+              />
+              <textarea
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                name="email_message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Message"
+                value={message}
+                onChange={handleMessage}
+              ></textarea>
+
+              <input
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                type="submit"
+                value="Submit"
+                onClick={handleSubmit}
+              />
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
-export default Service;
+export default React.memo(Service);

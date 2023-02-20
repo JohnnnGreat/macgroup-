@@ -1,0 +1,168 @@
+.contactForm {
+  padding: 4rem 0;
+  overflow: hidden;
+
+  &__wrapper {
+    max-width: 75rem;
+    margin: auto;
+    @media (max-width: 700px) {
+      padding: 10px;
+    }
+    .contactForm-header {
+      text-align: center;
+      margin: 1.2rem 0;
+      h1 {
+        font-size: 4.3rem;
+
+        @media (max-width: 567px) {
+          font-size: 2rem;
+        }
+
+        span {
+          color: #6b4000;
+        }
+      }
+
+      p {
+        font-size: 1.2rem;
+        @media (max-width: 567px) {
+          font-size: 1rem;
+        }
+      }
+    }
+    .contactForm-main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.7rem;
+      place-content: center;
+      margin: 5rem 0;
+      align-items: center;
+
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+        row-gap: 1.7rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+        box-shadow: 0 0 5px rgba(20, 20, 20, 0.308);
+        padding: 1.3rem;
+        border-radius: 10px;
+        .margin {
+          margin-top: 1rem;
+        }
+        label {
+          font-weight: 500;
+          color: grey;
+          margin: 0.6rem 0;
+          span {
+            color: red;
+          }
+        }
+        [type="text"],
+        textarea {
+          padding: 1rem;
+          outline: none;
+
+          border: 1px solid rgb(196, 196, 196);
+          border-radius: 5px;
+
+          &:hover {
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.089);
+          }
+        }
+
+        .dark {
+          font-weight: 600;
+        }
+
+        .radio-input {
+          display: none;
+        }
+        .custom-radio {
+          left: -8px;
+          top: 6px;
+          cursor: pointer;
+          width: 17px;
+          height: 17px;
+          border: 2px solid #9a9a9a;
+          border-radius: 50%;
+          display: inline-block;
+          position: relative;
+        }
+
+        .submit {
+          width: 100%;
+          background: #000000;
+          padding: 1rem;
+          color: #ffffff;
+          margin-top: 10px;
+
+          &:hover {
+            background: #131313;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 140;
+}
+// .modal {
+//   background-color: #fff;
+//   padding: 20px;
+//   border-radius: 10px;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+//   text-align: center;
+//   transition: transform 0.3s ease-in-out;
+// }
+
+.modal {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 300px;
+  border-radius: 20px;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.301);
+  .closeModal {
+    width: 60%;
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 50px;
+    margin-top: 2rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+
+    text-align: center;
+  }
+}
+.show {
+  opacity: 1;
+}
+
+.removeModal {
+  opacity: 0;
+}
+
+.modal button {
+  margin-top: 20px;
+}

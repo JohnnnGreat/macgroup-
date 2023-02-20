@@ -153,6 +153,7 @@
     .card {
       border: 2px solid rgb(211, 211, 211);
       width: 350px;
+      height: 500px;
       padding: 3rem;
       border-radius: 2px;
       background: linear-gradient(
@@ -161,7 +162,7 @@
         rgba(255, 255, 255, 0)
       );
       transition: 300ms ease-in;
-
+      position: relative;
       &:hover {
         border: 2px solid rgb(107, 107, 107);
         box-shadow: 0 0 5px rgba(45, 45, 45, 0.184);
@@ -169,20 +170,24 @@
     }
 
     .quote {
-      display: block;
       margin-top: 3rem;
-
+      position: absolute;
+      bottom: 18px;
+      left: 0;
       height: fit-content;
       display: flex;
       align-items: center;
-
+      justify-content: center;
       width: 100%;
-      a {
+      margin-left: auto;
+
+      a,
+      button {
         background-color: #000000;
         color: white;
         border: none;
         padding: 1.3rem;
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         text-align: center;
         text-decoration: none;
@@ -246,6 +251,105 @@
   }
 }
 
+.other-packages {
+  margin-top: 3rem;
+  margin-left: 3rem;
+
+  // ::-webkit-scrollbar {
+  //   width: 10px;
+  //   background-color: red !important;
+  // }
+
+  // ::-webkit-scrollbar-track {
+  //   background-color: rgb(255, 1, 1) !important;
+  //   height: 10px;
+  // }
+
+  .disc {
+    max-width: 75rem;
+    margin: 2rem 1rem;
+    text-shadow: none;
+
+    span {
+      font-weight: bolder;
+    }
+  }
+
+  .scroll {
+    overflow: auto;
+  }
+
+  .sc {
+    @media (max-width: 567px) {
+      width: 150%;
+    }
+  }
+  .packages-wrapper {
+    max-width: 90rem;
+    margin: auto;
+  }
+  .disc {
+    max-width: 75rem;
+    margin: 2rem 1rem;
+    text-shadow: none;
+
+    span {
+      font-weight: bolder;
+    }
+  }
+  .heading {
+    font-size: calc(40px / 16px) + rem;
+    line-height: 2;
+    margin-bottom: 10px;
+  }
+  table {
+    width: 100%;
+
+    color: rgb(31, 31, 31);
+    border-radius: 10px;
+    outline: none;
+
+    // tr:nth-child(1) {
+    //   border-bottom: 3px solid rgb(36, 36, 36);
+    // }
+
+    // tr:nth-child(2) {
+    //   border-bottom: 1.3px solid rgb(36, 36, 36);
+    //   // display: flex;
+    //   // justify-content: unsafe;
+    //   // align-items: center;
+    // }
+    tr {
+      th {
+        padding: 1.2rem 1rem;
+        text-align: left;
+        font-weight: 600;
+        border: 1px solid rgb(182, 182, 182);
+
+        // font-size: 1.3rem;
+      }
+    }
+
+    tr {
+      td {
+        padding: 1.2rem 1rem;
+        border: 1px solid rgb(182, 182, 182);
+
+        font-weight: 500;
+        font-size: 1rem;
+      }
+
+      // .pck-link {
+      //   background-color: red;
+      //   height: 100%;
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: center;
+
+      // }
+    }
+  }
+}
 .plans {
   .p-h {
     h1 {
@@ -257,6 +361,58 @@
 
     span {
       font-size: 1rem !important;
+    }
+  }
+}
+
+.modal-card {
+  background: #f0f0f0;
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 300px;
+  border-radius: 3px;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.301);
+  padding: 1rem;
+
+  .first-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    padding: 1rem 0;
+    .package-h {
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .desc-card {
+    .desc-p {
+      margin: 0.7rem 0;
+      line-height: 1.7;
+      font-size: 0.9rem;
+    }
+    .other-info {
+      padding: 5px 0;
+      color: rgb(0, 0, 0);
+      border-bottom: 1px solid rgb(204, 204, 204);
+      margin-top: 1rem;
+    }
+
+    .redirected {
+      margin-top: 1.6rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #808080;
+      span {
+        color: #000;
+      }
     }
   }
 }

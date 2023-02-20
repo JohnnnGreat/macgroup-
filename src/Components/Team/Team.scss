@@ -54,7 +54,7 @@ $ft-clr: #2f2f2f;
         line-height: 2;
         letter-spacing: 0;
         text-align: justify;
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
     }
   }
@@ -77,78 +77,130 @@ $ft-clr: #2f2f2f;
 
   .team-icon {
     width: 100%;
-    height: 300px;
+
     display: flex;
     column-gap: 30px;
     align-items: center;
     justify-content: center;
-    .team-one {
-      width: 300px;
-      height: 100%;
-      background-color: rgb(218, 218, 218);
-      border-radius: 25px;
+    .container-mem {
+      display: grid;
+      column-gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+
+      @media (max-width: 567px) {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        column-gap: 5rem;
+        row-gap: 15px;
+      }
+
+      .members-cont {
+        width: fit-content;
+        height: 100%;
+        position: relative;
+
+        &:hover {
+          box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.01);
+        }
+        img {
+          width: 400px;
+          height: 300px;
+          transition: 300ms ease;
+          object-fit: cover;
+          --webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+
+          &:hover {
+            filter: grayscale(10%);
+          }
+        }
+
+        .card {
+          background: #ffffff;
+          width: 100%;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          .tag {
+            text-align: center;
+            font-weight: 600;
+            color: #000000;
+          }
+
+          .m-desc {
+            text-align: center;
+            color: rgb(121, 121, 255);
+          }
+        }
+      }
+    }
+  }
+}
+
+.line,
+.linetwo {
+  height: 1px;
+  width: 100%;
+  background-color: #828282;
+  margin-top: 50px;
+}
+
+.swiper-cont {
+  height: 100%;
+}
+
+.contact {
+  width: 100%;
+  .start-project {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-weight: 300;
+      font-size: 20px;
+      color: #000000;
+      text-transform: capitalize;
+      letter-spacing: 3px;
+      margin-top: 35px;
+      font-weight: 600;
     }
   }
 
-  .line,
-  .linetwo {
-    height: 1px;
-    width: 100%;
-    background-color: #828282;
-    margin-top: 50px;
+  .contact-us {
+    .cont-us {
+      font-size: 5.1rem;
+      text-transform: capitalize;
+      letter-spacing: 2px;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+
+    .sub {
+      font-weight: 300;
+      font-size: 20px;
+      color: #000000;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      margin-top: 10px;
+    }
   }
-
-  .contact {
-    width: 100%;
-    .start-project {
-      width: 100%;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      h1 {
-        font-weight: 300;
-        font-size: 20px;
-        color: #000000;
-        text-transform: capitalize;
-        letter-spacing: 3px;
-        margin-top: 35px;
-        font-weight: 600;
-      }
-    }
-
-    .contact-us {
-      .cont-us {
-        font-size: 5.1rem;
-        text-transform: capitalize;
-        letter-spacing: 2px;
-        font-weight: 500;
-        margin-top: 20px;
-      }
-
-      .sub {
-        font-weight: 300;
-        font-size: 20px;
-        color: #000000;
-        text-transform: capitalize;
-        letter-spacing: 1px;
-        margin-top: 10px;
-      }
-    }
-    .email {
-      margin-top: calc(50px / 16px) + rem;
-      .email-btn {
-        background-color: $ft-clr;
-        color: #ffffff;
-        text-decoration: none;
-        padding: 20px 100px;
-        border-radius: 30px;
-        font-size: 17px;
-        font-weight: 500;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-      }
+  .email {
+    margin-top: calc(50px / 16px) + rem;
+    .email-btn {
+      background-color: $ft-clr;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 20px 100px;
+      border-radius: 30px;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
   }
 }

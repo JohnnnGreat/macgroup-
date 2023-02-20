@@ -1,14 +1,20 @@
 import React from "react";
 import { ContactUs } from "../ServicePage/Service";
+import Location from "../LocationMap/Location.jsx";
 
+import Footer from "../../Components/Footer/Footer";
 function ContactCus() {
   return (
     <>
-      <ContactUs
-        title={"Request A Quote"}
-        shadow="Contact Us"
-        desc="You have requested for a custom application, feel freen to send us a message"
-      />
+      <Location />
+      <div>
+        <ContactUs
+          title="Contact Us"
+          shadow="Contact Us"
+          desc="Fill the form the form below to request a custom package"
+        />
+      </div>
+      <Footer />
     </>
   );
 }

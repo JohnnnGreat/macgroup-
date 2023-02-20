@@ -8,6 +8,10 @@ import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import "swiper/css/autoplay";
 import { Autoplay, Pagination } from "swiper";
+import Timothy from "./imagesteam//MainTimothy.jpg";
+import Akin from "./imagesteam/Timothy.jpg";
+import Babson from "./imagesteam/BABSON.png";
+import CEO from "./imagesteam/CEoEdit.jpg";
 function Team() {
   useEffect(() => {
     AOS.init();
@@ -45,8 +49,36 @@ function Team() {
       <div className="team__wrapper">
         {" "}
         <div className="team-icon">
-          <div className="team-one"></div>
-          <div className="team-one"></div>
+          <div className="container-mem">
+            <div className="members-cont">
+              <img src={CEO} alt="" />
+              <div className="card">
+                <h1 className="tag">Samuel Adiele</h1>
+                <p className="m-desc ">Chief Executive Officer</p>
+              </div>
+            </div>
+            <div className="members-cont">
+              <img src={Timothy} alt="" />
+              <div className="card">
+                <h1 className="tag ">Zinwota Timothy</h1>
+                <p className="m-desc ">Chief Technical Officer</p>
+              </div>
+            </div>
+            <div className="members-cont">
+              <img src={Akin} alt="" />
+              <div className="card">
+                <h1 className="tag ">Akinwumi Ogundipe</h1>
+                <p className="m-desc ">Lead designer</p>
+              </div>
+            </div>
+            <div className="members-cont">
+              <img src={Babson} alt="" />
+              <div className="card">
+                <h1 className="tag">Babatunde Samson</h1>
+                <p className="m-desc ">Head of Content</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="line"></div>
         <div className="contact">

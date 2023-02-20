@@ -39,12 +39,8 @@ const Brand = () => {
             </h1>
           </div>
           <div className="second-section">
-            <h1
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              data-aos-delay="200"
-            >
-              Brands
+            <h1 data-aos="fade-up" data-aos-duration="2000">
+              Brands.
             </h1>
             <h1 className="brand-str">Brands</h1>
           </div>
@@ -52,26 +48,20 @@ const Brand = () => {
         </div>
         <div className="b__wrapper__desc">
           <div
-            className="dots-design"
-            data-aos-duration="2000"
-            data-aos-delay="300"
-            data-aos="fade-right"
-          >
-            <img src={BrandImage} alt="brand" className="xx" />
-          </div>
-
-          <div
             data-aos="fade-left"
             data-aos-duration="2000"
             className="text-desc"
             data-aos-delay="300"
           >
             <p>
-              At our digital agency, we understand the importance of a strong
-              brand and have the expertise to help you build one. From brand
-              strategy and identity development, to website design and social
-              media management, we offer a range of services to help you
+              With over 5 bllion using the internet, the present and future of
+              sales and business is digital. But to stand out, you need a solid
+              brand. And MacGroup International Tech Services have the expertise
+              to help you develop the perfect brand for your business. From
+              brand strategy and identity development, to website design and
+              social media management, we offer a range of services to help you
               effectively communicate your brand and connect with your audience.
+              At our digital agency,
             </p>
           </div>
         </div>
@@ -104,8 +94,18 @@ const Brand = () => {
           </Link>
         </div>
       </div>
+      <div
+        className="circle right"
+        data-aos="fade-left"
+        data-aos-duration="2000"
+      ></div>
+      <div
+        className="circle left"
+        data-aos="fade-right"
+        data-aos-duration="2000"
+      ></div>
     </div>
   );
 };
 
-export default Brand;
+export default React.memo(Brand);

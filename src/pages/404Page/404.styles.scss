@@ -1,0 +1,31 @@
+//This is the error page styling
+
+.error {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  &__wrapper {
+    .error-text {
+      font-size: 23rem;
+      color: #000000;
+      line-height: 0.9;
+    }
+
+    .error-sub {
+      font-size: 3rem;
+      color: #000000;
+      text-align: center;
+    }
+
+    .back-homepage {
+      text-align: center;
+      background-color: #000000;
+      color: #ffffff;
+      padding: 2rem 3rem;
+      width: 100%;
+      display: block;
+    }
+  }
+}

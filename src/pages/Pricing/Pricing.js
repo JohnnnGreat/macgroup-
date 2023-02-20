@@ -1,17 +1,87 @@
 import "./Pricing.scss";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import AOS from "aos";
 import { animateScroll as scroll } from "react-scroll";
 import Pattern from "./pattern.png";
 import Footer from "../../Components/Footer/Footer.js";
 import { NavLink } from "react-router-dom";
 function Pricing() {
+  const [selectedPackage, setSelectedPackage] = useState("");
+  const [selectedPrice, setSelectedPrice] = useState("");
+  const [showDialogue, setShowDialogue] = useState(false);
+  const [date, setDate] = useState("");
+  let navigate = useNavigate();
   useEffect(() => {
     AOS.init();
     scroll.scrollToTop();
   }, []);
+
+  const ShowModal = (packageName, price) => {
+    //Get the current Date for the card
+    let date = new Date();
+
+    let day = date.getDate();
+    let month = date.toLocaleString("default", { month: "short" });
+    let year = date.getFullYear();
+
+    let fullDate = day + " " + month + "," + year;
+
+    setDate(fullDate);
+    if (!packageName) {
+      return new Error("Cannot be empty");
+    }
+
+    if (!price) {
+      return new Error("Cannot be empty");
+    }
+
+    setSelectedPackage(packageName);
+    setSelectedPrice(price);
+    setShowDialogue(true);
+    //Close Modal and Navigate to Email Page after 2 seconds
+
+    setTimeout(() => {
+      navigate("/email");
+    }, 2000);
+  };
+
   return (
     <>
+      {showDialogue && (
+        <div
+          className={`modal-overlay ${showDialogue ? "show" : "removeModal"}`}
+        >
+          <div className="modal-card">
+            <div className="first-card">
+              <h1 className="package-h">Package Information</h1>
+              <h2 className="package-d">{date}</h2>
+            </div>
+            <div className="desc-card">
+              <p className="desc-p">
+                Thank you for your interest in our package. You have selected{" "}
+                {selectedPackage} among our package lists.
+              </p>
+              <h2 className="other-info">Other Information:</h2>
+              <h1>
+                <span>Price: </span>
+                {selectedPrice}
+              </h1>
+              <h1>
+                <span>Duration: </span>
+                {selectedPrice}
+              </h1>
+
+              <p className="redirected">You will be redirected shortly!</p>
+            </div>
+
+            {/* <button className="closeModal" onClick={closeModal}>
+              Close
+            </button> */}
+          </div>
+        </div>
+      )}
       <div className="pricing">
         {/* <img className="patterns" src={Pattern} alt="pricing-pattern" /> */}
         <div className="pricing__wrapper">
@@ -22,7 +92,7 @@ function Pricing() {
             <div className="line"></div>
             <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
               We have a couple of plans to chooose from. Lets know the one that
-              best suite you.
+              best suits you.
             </p>
           </div>
         </div>
@@ -42,16 +112,16 @@ function Pricing() {
                 <div className="packages">
                   <ul>
                     <li>
-                      Logo Design <span>-$500</span>
+                      Logo Design <span>$500</span>
                     </li>
                     <li>
-                      Business Card Design <span>-$600</span>
+                      Business Card Design <span>$600</span>
                     </li>
                     <li>
-                      Security Card Design <span>-$100</span>
+                      Security Card Design <span>$100</span>
                     </li>
                     <li>
-                      Letterhead Paper Design <span>-$100</span>
+                      Letterhead Paper Design <span>$100</span>
                     </li>
                     <li>
                       Invoice and Receipt Design <span>$200</span>
@@ -65,12 +135,18 @@ function Pricing() {
                   </ul>
                 </div>
                 <div className="quote">
-                  <NavLink to="/coporate-message">Order Now</NavLink>
+                  <button
+                    onClick={() => {
+                      ShowModal("BRANDING", "$1,800.00");
+                    }}
+                  >
+                    Choose Plan
+                  </button>
                 </div>
               </div>
               <div className="card plan one">
                 <div className="p-h">
-                  <h1>Search Engine Optimization</h1>
+                  <h1>SEO</h1>
                 </div>
                 <h1 className="price">
                   $2,700 <span>/3months</span>
@@ -78,16 +154,16 @@ function Pricing() {
                 <div className="packages">
                   <ul>
                     <li>
-                      Keyword research and analysis <span>-$500</span>
+                      Keyword research and analysis <span>$500</span>
                     </li>
                     <li>
-                      On-page optimization <span>-$500</span>
+                      On-page optimization <span>$500</span>
                     </li>
                     <li>
-                      Content optimization <span>-$700</span>
+                      Content optimization <span>$700</span>
                     </li>
                     <li>
-                      Link building <span>-$500</span>
+                      Link building <span>$500</span>
                     </li>
                     <li>
                       Local SEO <span>$500</span>
@@ -98,7 +174,13 @@ function Pricing() {
                   </ul>
                 </div>
                 <div className="quote">
-                  <NavLink to="/coporate-message">Order now</NavLink>
+                  <button
+                    onClick={() => {
+                      ShowModal("SEO", "$2,700");
+                    }}
+                  >
+                    Choose Plan
+                  </button>
                 </div>
               </div>
               <div className="card plan one">
@@ -110,7 +192,7 @@ function Pricing() {
                   <ul>
                     <li>
                       SHopify / Joomla / WooCommerce Store(WIth 70 product
-                      posted before launch) <span>-$500</span>
+                      posted before launch) <span>$500</span>
                     </li>
                     <li>
                       Online Payment Systems Integration( Stripe, PayPal,
@@ -119,7 +201,13 @@ function Pricing() {
                   </ul>
                 </div>
                 <div className="quote">
-                  <NavLink to="/coporate-message">Contact Us</NavLink>
+                  <button
+                    onClick={() => {
+                      ShowModal("E-commerce", "$1, 800.00");
+                    }}
+                  >
+                    Choose Plan
+                  </button>
                 </div>
               </div>
               <div className="card plan one">
@@ -130,25 +218,132 @@ function Pricing() {
                 <div className="packages">
                   <ul>
                     <li>
-                      Sales Analysis <span>-$900</span>
+                      Sales Analysis <span>$900</span>
                     </li>
                     <li>
-                      Customer Analysis <span>-$900</span>
+                      Customer Analysis <span>$900</span>
                     </li>
                     <li>
-                      Inventory Analysis <span>-$900</span>
+                      Inventory Analysis <span>$900</span>
                     </li>
                     <li>
-                      Marketing Analysis <span>-$900</span>
+                      Marketing Analysis <span>$900</span>
                     </li>
                   </ul>
                 </div>
                 <div className="quote">
-                  <NavLink to="/coporate-message">Contact Us</NavLink>
+                  <button
+                    onClick={() => {
+                      ShowModal("Data Analysis", "$3,600.00");
+                    }}
+                  >
+                    Choose Plan
+                  </button>
                 </div>
               </div>
-              <div className="card plan two"></div>
+              <div className="card plan one">
+                <div className="p-h">
+                  <h1>Social Media</h1>
+                </div>
+                <h1 className="price">$1, 950</h1>
+                <div className="packages">
+                  <ul>
+                    <li>
+                      Instagram and Facebook <span>$650</span>
+                    </li>
+                    <li>
+                      Tiktok <span>$500</span>
+                    </li>
+                    <li>
+                      Youtube <span>$200</span>
+                    </li>
+                    <li>
+                      Pinterest and Twitter <span>$400</span>
+                    </li>
+                    <li>
+                      Yelp <span>$200</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="quote">
+                  <button
+                    onClick={() => {
+                      ShowModal("Social Media", "$1, 950.00");
+                    }}
+                  >
+                    Choose Plan
+                  </button>
+                </div>
+              </div>
+              <div className="card plan one">
+                <div className="p-h">
+                  <h1>Content Writing.</h1>
+                </div>
+                <h1 className="price">$3, 000</h1>
+                <div className="packages">
+                  <ul>
+                    <li>
+                      Instagram and Facebook <span>$650</span>
+                    </li>
+                    <li>
+                      Tiktok <span>$500</span>
+                    </li>
+                    <li>
+                      Youtube <span>$200</span>
+                    </li>
+                    <li>
+                      Pinterest and Twitter <span>$400</span>
+                    </li>
+                    <li>
+                      Yelp <span>$200</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="quote">
+                  <button
+                    onClick={() => {
+                      ShowModal("Social Media", "$1, 950.00");
+                    }}
+                  >
+                    Choose Plan
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+        <div className="other-packages">
+          <div className="packages-wrapper">
+            <h1 className="heading"> Other Packages</h1>
+            <div className="scroll">
+              <div className="sc">
+                <table>
+                  <tr>
+                    <th>S/N</th>
+                    <th>Package</th>
+                    <th>Duration</th>
+                    <th>Price</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Digital Marketing</td>
+                    <td>3 Months</td>
+                    <td>$2, 500</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Custom(BeSpoke) Apps (Web and Mobile)</td>
+                    <td>N/A</td>
+                    <td>On Demand</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p className="disc">
+              <span>Disclaimer: </span> The aforementioned packages are listed
+              among the special packages available at MacGroup, and therefore,
+              must be duly indicated when sending us a mail. Thank you.
+            </p>
           </div>
         </div>
       </div>
