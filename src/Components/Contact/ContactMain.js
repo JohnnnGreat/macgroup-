@@ -119,14 +119,21 @@ const ContactForm = () => {
     if (Error) {
       console.log("An Error Has Occured");
     } else {
-      console.log(
-        FirstName,
-        LastName,
-        Email,
-        Phone,
-        selectedOption.value,
-        Text
-      );
+      emailjs
+        .sendForm(
+          "service_btqqoig",
+          "template_sprcbxj",
+          form.current,
+          "8dnyCGiR6nE3cE-by"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
     }
   };
 
