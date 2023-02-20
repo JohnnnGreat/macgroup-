@@ -17,7 +17,11 @@ function Brief() {
             </h1>
           </div>
           <div className="second-section">
+<<<<<<< HEAD
             <h1 data-aos="fade-left" data-aos-duration="1000">
+=======
+            <h1 data-aos="fade-left" data-aos-duration="2000">
+>>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
               Brief
             </h1>
             <h1 className="brief-str">Brief</h1>

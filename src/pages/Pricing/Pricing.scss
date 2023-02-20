@@ -163,6 +163,7 @@
       );
       transition: 300ms ease-in;
       position: relative;
+      position: relative;
       &:hover {
         border: 2px solid rgb(107, 107, 107);
         box-shadow: 0 0 5px rgba(45, 45, 45, 0.184);
@@ -178,6 +179,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      justify-content: center;
       width: 100%;
       margin-left: auto;
 
@@ -187,6 +189,7 @@
         color: white;
         border: none;
         padding: 1.3rem;
+        width: 90%;
         width: 90%;
         margin: 0 auto;
         text-align: center;

@@ -5,7 +5,10 @@ import AOS from "aos";
 import "../Hero/imageOne.jpg";
 import Typewriter from "typewriter-effect";
 import { Swiper, SwiperSlide } from "swiper/react";
+<<<<<<< HEAD
 import HeroImage from "./HeroImage.gif";
+=======
+>>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
 // import "swiper/scss";
 // import "swiper/scss/navigation";
 // import "swiper/scss/pagination";
@@ -21,7 +24,10 @@ function Hero() {
   return (
     <div className="h">
       <div className="h__wrapper">
+<<<<<<< HEAD
         <img class="hero-image" src={HeroImage} alt="" />
+=======
+>>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
         <div className="hero-main">
           <div
             className="f-text"
@@ -29,16 +35,26 @@ function Hero() {
             data-aos-duration="2000"
             data-aos-delay="200"
           >
+<<<<<<< HEAD
             <h1>What We Offer</h1>
+=======
+            <h1>Why Us?</h1>
+>>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
           </div>
           <div data-aos="fade-up" className="m-text">
             <h1>
               <Typewriter
                 options={{
                   strings: [
+<<<<<<< HEAD
                     "We take care of your software needs.",
                     "Elevate your digital presence.",
                     "We Put Businesses on the internet.",
+=======
+                    "Expert Digital Agency.",
+                    "Elevate your digital presence.",
+                    "Leading the digital revolution.",
+>>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
                   ],
                   autoStart: true,
                   loop: true,
@@ -49,8 +65,13 @@ function Hero() {
           <div className="sub-text">
             <p>
               We provide comprehensive branding, software and marketing services
+<<<<<<< HEAD
               for individuals and business. These include: Custom software
               development, web design and development, e-commerce solutions, and
+=======
+              for individuals and business. These include: C app development,
+              web design and development, e-commerce solutions, and
+>>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
               comprehensive digital marketing campaigns.
             </p>
           </div>
@@ -80,7 +101,11 @@ function Hero() {
           width="415"
           height="862"
           rx="207.5"
+<<<<<<< HEAD
           stroke="#acacacb2"
+=======
+          stroke="#777777"
+>>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
           stroke-width="70"
         />
       </svg>

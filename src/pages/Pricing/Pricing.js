@@ -201,6 +201,7 @@ function Pricing() {
                   </ul>
                 </div>
                 <div className="quote">
+<<<<<<< HEAD
                   <button
                     onClick={() => {
                       ShowModal("E-commerce", "$1, 800.00");
@@ -208,6 +209,9 @@ function Pricing() {
                   >
                     Choose Plan
                   </button>
+=======
+                  <NavLink to="/coporate-message">Order Now</NavLink>
+>>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
                 </div>
               </div>
               <div className="card plan one">
