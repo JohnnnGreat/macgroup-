@@ -19,21 +19,13 @@ $md-dsk: 1200px;
     width: 80%;
     margin: auto;
     height: 70%;
-<<<<<<< HEAD
-    background-color: #e1e1e1b2;
+
     // box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.065);
     position: relative;
-=======
-    background-color: #e1e1e1;
-    // box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.065);
-    backdrop-filter: blur(10px);
-
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
     .hero-image {
       position: absolute;
       right: -3rem;
@@ -42,9 +34,6 @@ $md-dsk: 1200px;
         display: none;
       }
     }
-=======
-
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
     .hero-main {
       width: 90%;
 
@@ -53,10 +42,6 @@ $md-dsk: 1200px;
 
         h1 {
           font-weight: 600;
-<<<<<<< HEAD
-
-=======
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
           letter-spacing: 2.5px;
         }
       }
@@ -64,13 +49,10 @@ $md-dsk: 1200px;
       .m-text {
         font-weight: 600;
         margin-top: -0.3rem;
-<<<<<<< HEAD
         max-width: 60%;
         @media (max-width: 700px) {
           max-width: 100%;
         }
-=======
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
         h1 {
           font-size: calc(56px / 16px) + rem;
         }
@@ -146,11 +128,7 @@ $md-dsk: 1200px;
     position: absolute;
     top: 0;
     right: -100px;
-<<<<<<< HEAD
     z-index: -1;
-=======
-    z-index: 45;
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
     pointer-events: none;
   }
 

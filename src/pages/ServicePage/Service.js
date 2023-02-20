@@ -6,7 +6,6 @@ import Footer from "../../Components/Footer/Footer.js";
 import AOS from "aos";
 import Location from "../LocationMap/Location.jsx";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
 import ContactMain from "../../Components/Contact/ContactMain";
 import App from "./app.svg";
 import Marketing from "./marketing.svg";
@@ -14,9 +13,6 @@ import Commerce from "./Commerce.svg";
 import Design from "./Design.svg";
 import Web from "./web.svg";
 import Writing from "./writing.svg";
-=======
-
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
 function Service() {
   useEffect(() => {
     AOS.init();
@@ -119,7 +115,6 @@ function Service() {
           />
         </svg>
       </div>
-<<<<<<< HEAD
       {/* <ServicesOne /> */}
       <ServiceSection
         titleOne={"Digital Marketing"}
@@ -180,23 +175,12 @@ function Service() {
       /> */}
 
       <ContactMain />
-=======
-      <ServicesOne />
-      <ServicesTwo />
-      <ServicesThree />
-      <ContactUs
-        title="Contact Us"
-        shadow="Contact Us"
-        desc="Send us a message!!!"
-      />
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
       <Footer />
     </>
   );
 }
 
 //Pages Header
-<<<<<<< HEAD
 
 const ServiceSection = ({
   titleOne,
@@ -281,8 +265,6 @@ const ServiceSection = ({
     </div>
   );
 };
-=======
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
 export function Hero({ headerText }) {
   return (
     <>
@@ -359,68 +341,8 @@ const ServiceSpecial = ({
               data-aos="fade-up"
               className="header-se"
             >
-<<<<<<< HEAD
               {titleTwo}
             </h1>
-=======
-              <h1 className="heading">E-Commerce</h1>
-              <div className="line-div"></div>
-              <p
-                data-aos="fade-right"
-                data-aos-duration="2000"
-                className="desc"
-              >
-                Looking to take your business online? Our eCommerce solutions
-                are designed to help you create a seamless and efficient online
-                shopping experience for your customers. With our eCommerce
-                services, you'll be able to easily manage your inventory,
-                process payments, and fulfill orders.
-              </p>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="dmkt-btn"
-              >
-                <Link className="link" to="/commerce">
-                  Read More
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="app-dev">
-            <div data-aos="fade-up" data-aos-duration="2000" className="first">
-              <h1 className="heading">Branding</h1>
-              <div className="line-div"></div>
-              <p data-aos="fade-up" data-aos-duration="2000" className="desc">
-                Your brand is your business's most valuable asset, and it's
-                crucial that it reflects the values and personality of your
-                company. Our branding services will help you create a unique and
-                consistent brand identity that sets you apart from your
-                competitors.
-              </p>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="dmkt-btn"
-              >
-                <Link className="link" to="/branding">
-                  Read More
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-const ServicesThree = () => {
-  return (
-    <div className="service-three">
-      <div className="bg-s">
-        <div className="service-three__wrapper">
-          <div className="digital-mkt">
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
             <div
               data-aos-duration="1000"
               data-aos="fade-up"
@@ -431,7 +353,6 @@ const ServicesThree = () => {
               data-aos="fade-up"
               className="description-se"
             >
-<<<<<<< HEAD
               {descTwo}
             </p>
             <div
@@ -442,58 +363,6 @@ const ServicesThree = () => {
               <Link className="link" to={routeTwo}>
                 Read More
               </Link>
-=======
-              <h1 className="heading">Web Development</h1>
-              <div className="line-div"></div>
-              <p
-                data-aos="fade-right"
-                data-aos-duration="2000"
-                className="desc"
-              >
-                Your website is the first impression that potential customers
-                will have of your business, so it's crucial that it makes a good
-                one. We offer professional web development services that will
-                help you create a website that is not only visually stunning but
-                also highly functional and easy to navigate.
-              </p>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="dmkt-btn"
-              >
-                <Link className="link" to="/webdevelopment">
-                  Read More
-                </Link>
-              </div>
-            </div>
-            <div className="second-sp">
-              <div className="line"></div>
-            </div>
-          </div>
-          <div className="app-dev">
-            <div className="second-sp">
-              <div className="line"></div>
-            </div>
-
-            <div data-aos="fade-up" data-aos-duration="2000" className="first">
-              <h1 className="heading">Content Writing</h1>
-              <div className="line-div"></div>
-              <p data-aos="fade-up" data-aos-duration="2000" className="desc">
-                High-quality content is essential for any business looking to
-                establish a strong online presence. Our content writing services
-                will help you create compelling, informative, and engaging
-                content that will help you connect with your target audience.
-              </p>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                className="dmkt-btn"
-              >
-                <Link className="link" to="/writing">
-                  Read More
-                </Link>
-              </div>
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
             </div>
           </div>
           <img className="heartbeat" src={imageTwo} alt="" />
@@ -504,7 +373,6 @@ const ServicesThree = () => {
 };
 
 export const ContactUs = ({ title, shadow, desc }) => {
-<<<<<<< HEAD
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
@@ -514,15 +382,6 @@ export const ContactUs = ({ title, shadow, desc }) => {
   const [Response, setResponse] = useState(false);
   const [ErrorResponse, setErrorResponse] = useState(false);
   // const [ValidationError, setValidationError] = useState(false);
-=======
-  // const [email, setEmail] = useState("");
-  // const [subject, setSeubject] = useState("");
-  // const [message, setMessage] = useState("");
-
-  const [Error, setError] = useState(false);
-  const [Close, setCloseError] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
   const form = useRef(null);
   const ErrorRemove = useRef(null);
   const sendEmail = (e) => {
@@ -560,23 +419,14 @@ export const ContactUs = ({ title, shadow, desc }) => {
           }, 4000);
         },
         (error) => {
-<<<<<<< HEAD
           setErrorResponse(true);
 
           setTimeout(() => {
             setErrorResponse(false);
-=======
-          setError(true);
-          setShowAlert(true);
-          console.log(Error);
-          setTimeout(() => {
-            setShowAlert(false);
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
           }, 4000);
         }
       );
 
-<<<<<<< HEAD
     (function() {
       setEmail("");
       setMessage("");
@@ -584,13 +434,6 @@ export const ContactUs = ({ title, shadow, desc }) => {
     })();
   }
 
-=======
-  const location = {
-    address: "1600 Amphitheatre Parkway, Mountain View, california.",
-    lat: 37.42216,
-    lng: -122.08427,
-  };
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
   return (
     <>
       {/* <Location /> */}
@@ -614,7 +457,6 @@ export const ContactUs = ({ title, shadow, desc }) => {
             <h1 className="desc-text">{desc}</h1>
           </div>
 
-<<<<<<< HEAD
           <div className="input-fields">
             {Response ? (
               <div className="showSuccessRes">
@@ -629,77 +471,6 @@ export const ContactUs = ({ title, shadow, desc }) => {
                 <h1>An unexpected error occured.</h1>
               </div>
             ) : null}
-=======
-          {showAlert ? (
-            Error ? (
-              <div
-                style={{
-                  transition: " all 300ms ease",
-
-                  backgroundColor: "#000",
-                  position: "fixed",
-                  height: "100vh",
-                  width: "0",
-                  width: Error ? "100vw" : "0",
-
-                  top: "0",
-                  zIndex: "4",
-                  transition: " all 300ms ease",
-                }}
-                // Error
-                //   ? {
-                //       transition: " all 300ms ease",
-                //       backgroundColor: "red",
-                //       position: "fixed",
-                //       height: "100vh",
-                //       width: "100vw",
-                //       top: "0",
-                //       zIndex: "4",
-                //     }
-                //   : {
-                //       backgroundColor: "green",
-                //       position: "fixed",
-                //       height: "100vh",
-
-                //       transition: "all 300ms ease",
-
-                //       top: "0",
-                //       zIndex: "4",
-
-                className="error"
-              >
-                <div className="container-er">
-                  <h1
-                    style={{
-                      fontSize: "30px",
-                      color: "red",
-                    }}
-                  >
-                    Error
-                  </h1>
-                </div>
-              </div>
-            ) : (
-              (<div
-                style={{
-                  backgroundColor: "red",
-                  position: "fixed",
-                  height: "100vh",
-                  width: "0",
-                  width: Error ? "100vw" : "0",
-                  top: "0",
-                  zIndex: "4",
-                  transition: "300ms ease",
-                }}
-                className="error"
-              >
-                <h1>This is a success</h1>
-              </div>)()
-            )
-          ) : null}
-
-          <div className="input-fields">
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
             <form ref={form} onSubmit={sendEmail} action="">
               <input
                 data-aos="fade-up"
@@ -707,11 +478,8 @@ export const ContactUs = ({ title, shadow, desc }) => {
                 name="user_email"
                 type="text"
                 placeholder="Email"
-<<<<<<< HEAD
                 onChange={handleEmail}
                 value={email}
-=======
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
               />
               <input
                 data-aos="fade-up"
@@ -719,11 +487,8 @@ export const ContactUs = ({ title, shadow, desc }) => {
                 name="email_subject"
                 type="text"
                 placeholder="Subject"
-<<<<<<< HEAD
                 onChange={handleSubject}
                 value={subject}
-=======
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
               />
               <textarea
                 data-aos="fade-up"
@@ -733,24 +498,16 @@ export const ContactUs = ({ title, shadow, desc }) => {
                 cols="30"
                 rows="10"
                 placeholder="Message"
-<<<<<<< HEAD
                 value={message}
                 onChange={handleMessage}
               ></textarea>
 
-=======
-              ></textarea>
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
               <input
                 data-aos="fade-up"
                 data-aos-duration="2000"
                 type="submit"
                 value="Submit"
-<<<<<<< HEAD
                 onClick={handleSubmit}
-=======
-                // onClick={handleError}
->>>>>>> 29c2a7384a93544ff2c189ae13ca882a283bafb7
               />
             </form>
           </div>
