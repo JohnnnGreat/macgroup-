@@ -133,6 +133,7 @@ $ft-clr: #2f2f2f;
           align-items: center;
           flex-direction: column;
           justify-content: center;
+          cursor: pointer;
           .tag {
             text-align: center;
             font-weight: 600;
@@ -141,7 +142,7 @@ $ft-clr: #2f2f2f;
 
           .m-desc {
             text-align: center;
-            color: rgb(121, 121, 255);
+            color: grey;
           }
         }
       }

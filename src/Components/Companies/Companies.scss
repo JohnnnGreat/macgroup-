@@ -5,11 +5,6 @@
   background: white;
   position: relative;
 
-  &::after {
-    width: 30px;
-    height: 100px;
-    background-color: green;
-  }
   @media (max-width: 567px) {
     height: 500px;
   }
@@ -26,10 +21,11 @@
       padding: 10px 0;
 
       position: relative;
+      color: rgb(29, 29, 29);
 
       &::after {
         content: "";
-        background: rgb(197, 197, 197);
+        background: rgb(233, 232, 232);
         width: 200px;
         height: 10px;
         position: absolute;

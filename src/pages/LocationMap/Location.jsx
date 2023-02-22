@@ -1,6 +1,6 @@
 import GoogleMapReact from "google-map-react";
 import { Icon } from "@iconify/react";
-import { TerrainLayer } from "@react-google-maps/api";
+
 import { useEffect } from "react";
 import axios from "axios";
 function Location({ location, zoomLevel }) {
@@ -21,8 +21,6 @@ function Location({ location, zoomLevel }) {
     },
   ];
 
-  
- 
   return (
     <div
       style={{
@@ -39,7 +37,6 @@ function Location({ location, zoomLevel }) {
         defaultZoom={17}
         options={{ style: mapStyle }}
       >
-        <TerrainLayer />
         <LocationPin lat={LAT} lng={LON} text={"5716 Alba Street La 90058"} />
       </GoogleMapReact>
     </div>

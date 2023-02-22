@@ -23,6 +23,7 @@ import CreateBlog from "./pages/Blog/BlogCreate/CreateBlog";
 import NoPageError from "./pages/404Page/404Page.jsx";
 import ContactPage from "./pages/ContactPage/ContactCus";
 import AboutPage from "./pages/About/About.jsx";
+import Message from "./pages/MessageMe/Message.js";
 function App() {
   const [navOpen, setNavOpen] = useState(false);
   const [navClick, setNavClick] = useState(false);
@@ -50,6 +51,7 @@ function App() {
           <Route exact path="/" element={<HomePage />}></Route>
           <Route exact path="/services" element={<ServicePage />}></Route>
           <Route exact path="/email" element={<ContactPage />}></Route>
+          <Route exact path="/contact" element={<Message />}></Route>
           <Route exact path="/branding" element={<Branding />}></Route>
           <Route exact path="/pricing" element={<Pricing />}></Route>
           <Route

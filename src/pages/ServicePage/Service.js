@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import React, { useEffect, useState, useRef } from "react";
+
 import "./Service.scss";
 import { animateScroll as scroll } from "react-scroll";
 import emailjs from "@emailjs/browser";
@@ -24,7 +24,7 @@ function Service() {
       <Hero
         headerText={
           <>
-            Have a shot of our
+            Have a look of our
             <span className="bold-s"> Services.</span>{" "}
           </>
         }
@@ -268,16 +268,13 @@ const ServiceSection = ({
 };
 export function Hero({ headerText }) {
   return (
-    
     <>
       <div className="service">
         <div className="service__wrapper">
           <div className="service__hero">
             <div className="intrs-pink"></div>
 
-
             <div className="service__hero__second">
-              
               <h1 className="tag" data-aos="fade-down" data-aos-duration="2000">
                 {headerText}
               </h1>

@@ -43,7 +43,7 @@ function Pricing() {
     //Close Modal and Navigate to Email Page after 2 seconds
 
     setTimeout(() => {
-      navigate("/email");
+      navigate("/contact");
     }, 2000);
   };
 

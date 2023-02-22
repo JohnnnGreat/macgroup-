@@ -5,9 +5,7 @@
 $txt-clr: #f8df52;
 $pri-clr: #ececec;
 $desc-clr: #c2c2c2;
-$txt-clr: #f8df52;
-$pri-clr: #ececec;
-$desc-clr: #c2c2c2;
+
 .service {
   width: 100%;
   height: 100vh;
@@ -18,23 +16,15 @@ $desc-clr: #c2c2c2;
   display: flex;
   align-items: center;
 
-
-  display: flex;
-  align-items: center;
-
   .service__wrapper {
     margin: auto;
     overflow: hidden;
-    overflow: hidden;
+
     position: relative;
-    background: red;
 
     width: 90%;
     height: 70%;
-    background: red;
 
-    width: 90%;
-    height: 70%;
     .service__hero {
       display: flex;
 
@@ -86,17 +76,16 @@ $desc-clr: #c2c2c2;
 
       &__second {
         margin-left: 0.6rem;
-        margin-left: 0.6rem;
+
         .tag {
           font-size: 6rem;
-          font-size: 6rem;
+
           color: $pri-clr;
           font-weight: 200;
           font-weight: 200;
         }
         .bold-s {
           font-weight: 800;
-          color: #f8df52;
           color: #f8df52;
         }
       }
@@ -149,15 +138,14 @@ $desc-clr: #c2c2c2;
         }
       }
     }
-        &__second {
-          margin-left: 0.8rem;
-          .tag {
-            font-size: calc(40px / 16px) + rem;
-          }
-        }
+    &__second {
+      margin-left: 0.8rem;
+      .tag {
+        font-size: calc(40px / 16px) + rem;
       }
     }
-
+  }
+}
 
 .bg-overlay {
   position: absolute;
@@ -166,7 +154,7 @@ $desc-clr: #c2c2c2;
   top: 60%;
   top: 60%;
   mix-blend-mode: overlay;
- 
+
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.267);
   color: rgba(0, 0, 0, 0);
@@ -181,7 +169,7 @@ $desc-clr: #c2c2c2;
   height: 100px;
   position: absolute;
   background-color: #f8df52;
-  background-color: #f8df52;
+
   position: absolute;
   border-radius: 50%;
   // animation: blink 900ms ease infinite;
@@ -190,15 +178,13 @@ $desc-clr: #c2c2c2;
   transform-origin: 50% 50%;
   pointer-events: none;
   opacity: 0.6;
-  pointer-events: none;
-  opacity: 0.6;
 }
 .intrs-pink {
   width: 70px;
   height: 70px;
   position: absolute;
   background-color: rgb(233, 218, 10);
-  position: absolute;
+
   border-radius: 50%;
   animation: blink 800ms 800ms ease infinite;
   opacity: 1;
@@ -391,7 +377,7 @@ $desc-clr: #c2c2c2;
   .line-div {
     width: 100px;
     height: 3px;
-    background: red;
+
     margin-top: 20px;
   }
 

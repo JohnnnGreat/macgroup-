@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useEffect } from "react";
+
 import Hero from "../Components/Hero/Hero.js";
 import Websites from "../Components/Websites/Website.js";
 import Brand from "../Components/Brand/Brand.js";
@@ -16,10 +16,6 @@ import Footer from "../Components/Footer/Footer.js";
 
 //This contains the homepage components
 function HomePage() {
-  useEffect(() => {
-    AOS.init();
-    scroll.scrollToTop();
-  }, []);
   useEffect(() => {
     AOS.init();
     scroll.scrollToTop();

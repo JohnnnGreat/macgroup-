@@ -12,12 +12,13 @@ import Timothy from "./imagesteam//MainTimothy.jpg";
 import Akin from "./imagesteam/Timothy.jpg";
 import Babson from "./imagesteam/BABSON.png";
 import CEO from "./imagesteam/CEoEdit.jpg";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import MailIcon from "@mui/icons-material/Mail";
 function Team() {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-
     <div className="team">
       <div className="team__wrapper">
         <div className="team__wrapper__bg-text">
@@ -56,6 +57,10 @@ function Team() {
               <div className="card">
                 <h1 className="tag">Samuel Adiele</h1>
                 <p className="m-desc ">Chief Executive Officer</p>
+                <div className="s-icons">
+                  {/* <LinkedInIcon fontSize="medium" />
+                  <MailIcon /> */}
+                </div>
               </div>
             </div>
             <div className="members-cont">

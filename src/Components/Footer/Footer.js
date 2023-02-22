@@ -15,15 +15,18 @@ function Footer() {
             Macgroup
           </h1>
           <h1 data-aos="fade-left" data-aos-duration="2000" className="logo-s">
-            International Tech Service.
+            International Tech Services.
           </h1>
         </div>
 
         <div className="footer-grid">
           <div className="info">
             <h1 className="contact-f">CONTACT</h1>
-            <h1 className="physical-address">5716 Alba Street La 90058</h1>
-            <h1>+1(310) 490-3772</h1>
+            <h1 className="physical-address">
+              5716, Alba Street. <br />
+              Los Angeles 90058
+            </h1>
+            <h1>+1 (310) 490-3772</h1>
             <h1>info@macgrouptech.com</h1>
           </div>
           <div className="services">
@@ -53,8 +56,9 @@ function Footer() {
           <div className="blog">
             <h1 className="blog-f">BLOG</h1>
             <p className="desc">
-              We have a whole library of related blog post, that may suit your
-              interests
+              We have a whole library of tech related blog posts that may suit
+              your interests. Read for more insights to the latest technologies
+              and our services.
             </p>
             <a className="blog-btn" href="/">
               Go To Blog
@@ -68,9 +72,6 @@ function Footer() {
           <div className="legal-wrapper">
             <h1 className="legal-t">Legal</h1>
             <ul>
-              <li>
-                <a href="/">Career</a>
-              </li>
               <li>
                 <a href="/">Privacy Policy</a>
               </li>

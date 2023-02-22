@@ -8,11 +8,11 @@ function ContactCus() {
     <>
       <Location />
       <div>
-        <ContactUs
+        {/* <ContactUs
           title="Contact Us"
           shadow="Contact Us"
           desc="Fill the form the form below to request a custom package"
-        />
+        /> */}
       </div>
       <Footer />
     </>

@@ -1,7 +1,7 @@
 import ContactSvg from "./Contact.svg";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { RadioGroup, Radio } from "react-radio-group";
-
+import emailjs from "@emailjs/browser";
 import "./ContactMain.scss";
 import Select from "react-select";
 const ContactForm = () => {
@@ -15,6 +15,8 @@ const ContactForm = () => {
   const [Email, setEmail] = useState("");
   const [Text, setText] = useState("");
   const [Error, setError] = useState(false);
+
+  const form = useRef(null);
   const options = [
     { value: "Modify Existing Product(s)", label: "Modify Existing Product" },
     { value: "Revamp a Digital Platform", label: "Revamp a Digital Platform" },
@@ -23,11 +25,16 @@ const ContactForm = () => {
       label: "Digital Service Consultancy",
     },
     {
-      value: "Establish Relevancy in the Market Space",
-      label: "Establish Relevancy in the Market Space",
+      value: "Establish Relevancy in the Market Industry",
+      label: "Establish Relevancy in the Market Industry",
+    },
+    {
+      value: "Build your own mobile application",
+      label: "Build your own mobile application",
     },
   ];
   const budget = [
+    { value: "$2k - 5k", label: "$2k - 5k" },
     { value: "$5k - 50k", label: "$5k - 50k" },
     { value: "$50k-100k", label: "$50k-100k" },
     {
@@ -101,8 +108,7 @@ const ContactForm = () => {
       LastName == "" ||
       Phone == "" ||
       Email == "" ||
-      selectedOption == "" ||
-      Text == ""
+      selectedOption == ""
     ) {
       setError(true);
     } else {
@@ -113,12 +119,19 @@ const ContactForm = () => {
   };
   const handleForm = () => {
     //Open Modal on Form submit click
-    setShowDialogue(true);
+
     ErrorHandler();
 
     if (Error) {
       console.log("An Error Has Occured");
+      setShowDialogue(false);
+      alert("An erro");
     } else {
+      setShowDialogue(true);
+
+      setTimeout(() => {
+        setShowDialogue(false);
+      }, 1000);
       emailjs
         .sendForm(
           "service_btqqoig",
@@ -162,7 +175,7 @@ const ContactForm = () => {
         <div className="contactForm-main">
           <img src={ContactSvg} alt="" />
           <div className="form-section">
-            <form onClick={handleFormP}>
+            <form ref={form} onClick={handleFormP}>
               <label htmlFor="firstName">
                 {" "}
                 FIRST NAME <span className="required">*</span>
@@ -171,9 +184,10 @@ const ContactForm = () => {
               <input
                 type="text"
                 id="firstName"
-                placeholder="FIRST NAME"
+                placeholder="JOHN"
                 onChange={handleFName}
                 value={FirstName}
+                name="user_firstname"
               />
               <label className="margin" htmlFor="lastName">
                 {" "}
@@ -183,9 +197,10 @@ const ContactForm = () => {
               <input
                 type="text"
                 id="lastName"
-                placeholder="LAST NAME"
+                placeholder="DOE"
                 onChange={handleLName}
                 value={LastName}
+                name="user_lastname"
               />
               <label className="margin" htmlFor="email">
                 {" "}
@@ -198,6 +213,7 @@ const ContactForm = () => {
                 placeholder="johndoe@email.com"
                 onChange={handleEmail}
                 value={Email}
+                name="user_email"
               />
               <label className="margin" htmlFor="number">
                 {" "}
@@ -209,6 +225,7 @@ const ContactForm = () => {
                 placeholder="+1 (123) 456-7890"
                 onChange={handlePhone}
                 value={Phone}
+                name="user_phone"
               />
               <label className="margin" htmlFor="number">
                 {" "}
@@ -219,6 +236,7 @@ const ContactForm = () => {
                 value={selectedOption}
                 onChange={setSelectedOption}
                 styles={customStyles}
+                name="user_product"
               />
               <label className="margin" htmlFor="number">
                 {" "}
@@ -231,10 +249,7 @@ const ContactForm = () => {
                 styles={customStyles}
               />
 
-              <label htmlFor="text">
-                {" "}
-                ANYTHING ELSE? <span className="required">*</span>
-              </label>
+              <label htmlFor="text"> ANYTHING ELSE?</label>
 
               <textarea
                 onChange={handleText}

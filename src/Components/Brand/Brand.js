@@ -66,23 +66,14 @@ const Brand = () => {
           </div>
         </div>
 
-        <div
-          className="line-divider"
-          data-aos="fade-right"
-          data-aos-delay="200"
-        ></div>
+        <div className="line-divider" data-aos="fade-right"></div>
         <div className="check-services">
-          <h1
-            data-aos="fade-right"
-            data-aos-delay="200"
-            data-aos-duration="2000"
-          >
+          <h1 data-aos="fade-right" data-aos-duration="1000">
             Check our services
           </h1>
           <Link
             data-aos="fade-left"
-            data-aos-duration="2000"
-            data-aos-delay="200"
+            data-aos-duration="1000"
             ref={changeTextColor}
             className="more-sevices"
             onMouseEnter={handleMouseEnter}
