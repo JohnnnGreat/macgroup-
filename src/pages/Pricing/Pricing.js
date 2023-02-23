@@ -1,12 +1,10 @@
 import "./Pricing.scss";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import AOS from "aos";
 import { animateScroll as scroll } from "react-scroll";
-import Pattern from "./pattern.png";
 import Footer from "../../Components/Footer/Footer.js";
-import { NavLink } from "react-router-dom";
+
 function Pricing() {
   const [selectedPackage, setSelectedPackage] = useState("");
   const [selectedPrice, setSelectedPrice] = useState("");
@@ -318,12 +316,12 @@ function Pricing() {
             <div className="scroll">
               <div className="sc">
                 <table>
-                  <tr>
+                  <thead>
                     <th>S/N</th>
                     <th>Package</th>
                     <th>Duration</th>
                     <th>Price</th>
-                  </tr>
+                  </thead>
                   <tr>
                     <td>1</td>
                     <td>Digital Marketing</td>

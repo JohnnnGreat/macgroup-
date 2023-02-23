@@ -1,19 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import "./Team.scss";
 import AOS from "aos";
 import { NavLink } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/scss";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
-import "swiper/css/autoplay";
-import { Autoplay, Pagination } from "swiper";
 import Timothy from "./imagesteam//MainTimothy.jpg";
 import Akin from "./imagesteam/Timothy.jpg";
 import Babson from "./imagesteam/BABSON.png";
 import CEO from "./imagesteam/CEoEdit.jpg";
-// import LinkedInIcon from "@mui/icons-material/LinkedIn";
-// import MailIcon from "@mui/icons-material/Mail";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import MailIcon from "@mui/icons-material/Mail";
 function Team() {
   useEffect(() => {
     AOS.init();
@@ -58,8 +52,8 @@ function Team() {
                 <h1 className="tag">Samuel Adiele</h1>
                 <p className="m-desc ">Chief Executive Officer</p>
                 <div className="s-icons">
-                  {/* <LinkedInIcon fontSize="medium" />
-                  <MailIcon /> */}
+                  <LinkedInIcon fontSize="medium" />
+                  <MailIcon />
                 </div>
               </div>
             </div>

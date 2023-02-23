@@ -6,7 +6,6 @@ function About() {
   return (
     <>
       <Hero headerText={<>About Us</>} />
-
       <div className="about">
         <div className="about__wrapper">
           <p className="text">

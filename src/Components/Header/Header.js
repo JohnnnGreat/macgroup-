@@ -6,18 +6,15 @@ function Header({ title, sub, Toggle, NavOpen }) {
   const logoAnimation = useRef(null);
   const navBtn = useRef(null);
 
+  //handle the nav toggle
   const handleNavToggle = () => {
     setNavToggle(!navToggle);
-    console.log(navToggle);
+
     Toggle();
   };
 
-  // function setClick() {
-  //   Toggle();
-  // }
-  /*
-  Handles Logo animation Effects on Home Page
-  */
+  //handle hover animation for logo
+
   const handleHoverAnimEnter = () => {
     logoAnimation.current.classList.remove("animation-slide-default");
     logoAnimation.current.classList.add("animation-side-up");

@@ -5,7 +5,7 @@ import { animateScroll as scroll } from "react-scroll";
 import emailjs from "@emailjs/browser";
 import Footer from "../../Components/Footer/Footer.js";
 import AOS from "aos";
-import Location from "../LocationMap/Location.jsx";
+
 import { Link } from "react-router-dom";
 import ContactMain from "../../Components/Contact/ContactMain";
 import App from "./app.svg";

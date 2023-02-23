@@ -10,8 +10,7 @@ import Companies from "../Components/Companies/Companies.js";
 import Projects from "../Components/Projects/Projects.js";
 import AOS from "aos";
 import { animateScroll as scroll } from "react-scroll";
-// import SalesPitch from "../Components/SalesPitch/SalesPitch.js";
-// import Copy from "../Components/Copy/Copy.js";
+
 import Footer from "../Components/Footer/Footer.js";
 
 //This contains the homepage components

@@ -108,7 +108,10 @@
     }
   }
 }
-
+.error-disp {
+  font-size: 14px;
+  color: #ff0000;
+}
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -142,6 +145,19 @@
   border-radius: 20px;
   flex-direction: column;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.301);
+  animation: bounce 0.5s;
+
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   .closeModal {
     width: 60%;
     padding: 10px;

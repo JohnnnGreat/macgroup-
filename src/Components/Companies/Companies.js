@@ -1,16 +1,13 @@
-import "swiper/scss";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
-import "swiper/css/autoplay";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import LogoOne from "./CompaniesList/Component6.png";
 import LogoTwo from "./CompaniesList/Component7.png";
 import LogoThree from "./CompaniesList/Component8.png";
 import LogoFour from "./CompaniesList/Component9.png";
 import "./Companies.scss";
 import AOS from "aos";
-import { Autoplay, Pagination } from "swiper";
+
 function Companies() {
+  //Initialize Aos animation
   useEffect(() => {
     AOS.init();
   }, []);
@@ -23,16 +20,16 @@ function Companies() {
         </h1>
         <div className="logos">
           <div className="con">
-            <img src={LogoOne} alt="" />
+            <img src={LogoOne} alt="LogoOne" />
           </div>
           <div className="con">
-            <img src={LogoTwo} alt="" />
+            <img src={LogoTwo} alt="LogoTwo" />
           </div>
           <div className="con">
-            <img src={LogoThree} alt="" />
+            <img src={LogoThree} alt="LogoThree" />
           </div>
           <div className="con">
-            <img src={LogoFour} alt="" />
+            <img src={LogoFour} alt="LogoFour" />
           </div>
         </div>
       </div>
@@ -40,4 +37,4 @@ function Companies() {
   );
 }
 
-export default Companies;
+export default React.memo(Companies);

@@ -3,8 +3,8 @@ import "./Brief.scss";
 import AOS from "aos";
 import { Link } from "react-router-dom";
 
-
 function Brief() {
+  //Initialize Aos animation
   useEffect(() => {
     AOS.init();
   }, []);
@@ -54,22 +54,8 @@ function Brief() {
           </div>
         </div>
       </div>
-
-      {/* <div className="core-values">
-        <h1 className="coreValue">Our Core Values</h1>
-        <div className="move">
-          <ul>
-            <li>Innovative</li>
-            <li>Efficient</li>
-          </ul>
-          <ul>
-            <li>Secure</li>
-            <li>Fast Delivery</li>
-          </ul>
-        </div>
-      </div> */}
     </div>
   );
 }
 
-export default Brief;
+export default React.memo(Brief);

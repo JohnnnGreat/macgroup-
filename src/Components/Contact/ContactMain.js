@@ -1,22 +1,26 @@
 import ContactSvg from "./Contact.svg";
 import { useState, useRef } from "react";
-import { RadioGroup, Radio } from "react-radio-group";
+
 import emailjs from "@emailjs/browser";
 import "./ContactMain.scss";
 import Select from "react-select";
-const ContactForm = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [selectedBudget, setSelectedBudget] = useState(null);
-  const [showDialogue, setShowDialogue] = useState(false);
-  const [FirstName, setFirstName] = useState("");
-  const [ErrorFName, setErrorFName] = useState(false);
-  const [LastName, setLastName] = useState("");
-  const [Phone, setPhone] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Text, setText] = useState("");
-  const [Error, setError] = useState(false);
 
+const ContactForm = () => {
+  //Initialize state for input
+  const [FirstName, setFirstName] = useState("");
+  const [LastName, setLastName] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Phone, setPhone] = useState("");
+  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedBudget, setSelectedBudget] = useState("");
+  const [Text, setText] = useState("");
+  const [errors, setErrors] = useState({});
+  const [showDialogue, setShowDialogue] = useState(false);
+  const [error, setError] = useState(false);
+  //Get the ref for form
   const form = useRef(null);
+
+  //Options for Product choice
   const options = [
     { value: "Modify Existing Product(s)", label: "Modify Existing Product" },
     { value: "Revamp a Digital Platform", label: "Revamp a Digital Platform" },
@@ -33,6 +37,8 @@ const ContactForm = () => {
       label: "Build your own mobile application",
     },
   ];
+
+  //Option for budget choice
   const budget = [
     { value: "$2k - 5k", label: "$2k - 5k" },
     { value: "$5k - 50k", label: "$5k - 50k" },
@@ -66,72 +72,76 @@ const ContactForm = () => {
     }),
   };
 
-  const onChange = (e) => {
-    const { name } = e.target;
-    console.log("clicked  ==>", name);
-  };
+  //handle input values
+  function handleFName(event) {
+    setFirstName(event.target.value);
+  }
 
-  const handleFormP = (e) => {
-    e.preventDefault();
-  };
+  function handleLName(event) {
+    setLastName(event.target.value);
+  }
 
-  const closeModal = () => {
-    setShowDialogue(false);
-  };
+  function handleEmail(event) {
+    setEmail(event.target.value);
+  }
 
-  //Handle input select
+  function handlePhone(event) {
+    setPhone(event.target.value);
+  }
 
-  const handleFName = (e) => {
-    setFirstName(e.target.value);
-  };
-  const handleLName = (e) => {
-    setLastName(e.target.value);
-  };
+  function handleText(event) {
+    setText(event.target.value);
+  }
 
-  const handlePhone = (e) => {
-    setPhone(e.target.value);
-  };
+  //Validate Form inputs
+  function validateForm() {
+    let errors = {};
+    let formIsValid = true;
 
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleText = (e) => {
-    setText(e.target.value);
-  };
-
-  //Handle Error and Validation
-
-  const ErrorHandler = () => {
-    if (
-      FirstName == "" ||
-      LastName == "" ||
-      Phone == "" ||
-      Email == "" ||
-      selectedOption == ""
-    ) {
-      setError(true);
-    } else {
-      setError(false);
+    if (!FirstName) {
+      formIsValid = false;
+      errors["firstName"] = "First name is required";
     }
 
-    console.log(Error);
-  };
-  const handleForm = () => {
-    //Open Modal on Form submit click
+    if (!LastName) {
+      formIsValid = false;
+      errors["lastName"] = "Last name is required";
+    }
 
-    ErrorHandler();
+    if (!Email) {
+      formIsValid = false;
+      errors["email"] = "Email is required";
+    }
 
-    if (Error) {
-      console.log("An Error Has Occured");
-      setShowDialogue(false);
-      alert("An erro");
-    } else {
-      setShowDialogue(true);
+    if (!Phone) {
+      formIsValid = false;
+      errors["phone"] = "Phone is required";
+    }
 
-      setTimeout(() => {
-        setShowDialogue(false);
-      }, 1000);
+    if (!selectedOption) {
+      formIsValid = false;
+      errors["product"] = "Product is required";
+    }
+
+    if (!selectedBudget) {
+      formIsValid = false;
+      errors["budget"] = "Budget is required";
+    }
+
+    setErrors(errors);
+    return formIsValid;
+  }
+
+  //Close modal when opened
+  function closeModal() {
+    setShowDialogue(false);
+  }
+
+  //Handle Form on submission
+  function handleForm(event) {
+    event.preventDefault();
+
+    if (validateForm()) {
       emailjs
         .sendForm(
           "service_btqqoig",
@@ -142,21 +152,31 @@ const ContactForm = () => {
         .then(
           (result) => {
             console.log(result.text);
+            setShowDialogue(true);
+
+            setTimeout(() => {
+              setShowDialogue(false);
+            }, 2000);
           },
           (error) => {
-            console.log(error.text);
+            setError(true);
+
+            setTimeout(() => {
+              setError(false);
+            }, 2000);
           }
         );
     }
-  };
+  }
 
   return (
     <div className="contactForm">
+      {/* Show Pop up value */}
       {showDialogue && (
         <div
           className={`modal-overlay ${showDialogue ? "show" : "removeModal"}`}
         >
-          <div className="modal">
+          <div className="modal ">
             <h2>Thank you, We have received your message!</h2>
             <button className="closeModal" onClick={closeModal}>
               Close
@@ -164,6 +184,17 @@ const ContactForm = () => {
           </div>
         </div>
       )}
+      {error && (
+        <div className={`modal-overlay ${error ? "show" : "removeModal"}`}>
+          <div className="modal ">
+            <h2>Internet Connectivity Required</h2>
+            <button className="closeModal" onClick={closeModal}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="contactForm__wrapper">
         <div className="contactForm-header">
           <h1>
@@ -175,29 +206,30 @@ const ContactForm = () => {
         <div className="contactForm-main">
           <img src={ContactSvg} alt="" />
           <div className="form-section">
-            <form ref={form} onClick={handleFormP}>
+            <form ref={form}>
               <label htmlFor="firstName">
                 {" "}
                 FIRST NAME <span className="required">*</span>
               </label>
-
+              <p className="error-disp">{errors["firstName"]}</p>
               <input
                 type="text"
                 id="firstName"
-                placeholder="JOHN"
+                placeholder="(eg. John..)"
                 onChange={handleFName}
                 value={FirstName}
                 name="user_firstname"
               />
               <label className="margin" htmlFor="lastName">
                 {" "}
-                LAST NAME <span className="required">*</span>
+                John <span className="required">*</span>
               </label>
 
+              <p className="error-disp">{errors["lastname"]}</p>
               <input
                 type="text"
                 id="lastName"
-                placeholder="DOE"
+                placeholder="(eg. Doe..)"
                 onChange={handleLName}
                 value={LastName}
                 name="user_lastname"
@@ -206,7 +238,7 @@ const ContactForm = () => {
                 {" "}
                 EMAIL <span className="required">*</span>
               </label>
-
+              <p className="error-disp">{errors["email"]}</p>
               <input
                 type="text"
                 id="email"
@@ -219,6 +251,7 @@ const ContactForm = () => {
                 {" "}
                 PHONE <span className="required">*</span>
               </label>
+              <p className="error-disp">{errors["phone"]}</p>
               <input
                 type="text"
                 id="text"
@@ -231,6 +264,7 @@ const ContactForm = () => {
                 {" "}
                 DESCRIBE YOUR PRODUCT.<span className="required">*</span>
               </label>
+              <p className="error-disp">{errors["product"]}</p>
               <Select
                 options={options}
                 value={selectedOption}
@@ -242,11 +276,13 @@ const ContactForm = () => {
                 {" "}
                 WHAT IS YOUR BUDGET?.<span className="required">*</span>
               </label>
+              <p className="error-disp">{errors["budget"]}</p>
               <Select
                 options={budget}
                 value={selectedBudget}
                 onChange={setSelectedBudget}
                 styles={customStyles}
+                name="user_budget"
               />
 
               <label htmlFor="text"> ANYTHING ELSE?</label>
@@ -254,7 +290,7 @@ const ContactForm = () => {
               <textarea
                 onChange={handleText}
                 value={Text}
-                name=""
+                name="user_text"
                 id="text"
                 cols="30"
                 rows="10"

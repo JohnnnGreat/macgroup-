@@ -1,0 +1,50 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.mail {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .mail-wrapper {
+    margin: 0 auto;
+    max-width: 75rem;
+    .main {
+      .map {
+        position: relative;
+        width: max-content;
+        &::after {
+          content: "";
+          width: 400px;
+          height: 400px;
+          background-color: rgb(77, 77, 77);
+          position: absolute;
+          top: 20px;
+          bottom: 0;
+          z-index: -1;
+          left: 20px;
+        }
+      }
+
+      .faq {
+        .faq-title {
+          padding: 1rem;
+          h2 {
+            font-size: 1.3rem;
+          }
+        }
+        .row-title-text {
+          padding: 0.5rem;
+        }
+
+        .row-content-text {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}

@@ -2,25 +2,15 @@ import React, { useEffect } from "react";
 import "./Hero.styles.scss";
 import { Link } from "react-router-dom";
 import AOS from "aos";
-import "../Hero/imageOne.jpg";
 import Typewriter from "typewriter-effect";
-import { Swiper, SwiperSlide } from "swiper/react";
 import HeroImage from "./HeroImage.gif";
-// import "swiper/scss";
-// import "swiper/scss/navigation";
-// import "swiper/scss/pagination";
-// import "swiper/css/autoplay";
-// import { Autoplay } from "swiper";
-// import ArrowDownwardSharpIcon from "@mui/icons-material/ArrowDownwardSharp";
+
 function Hero() {
-  // const slider = useRef(null);
-  // const slider = useRef(null);
   useEffect(() => {
     AOS.init();
   }, []);
-  
+
   return (
-    
     <div className="h">
       <div className="h__wrapper">
         <img class="hero-image" src={HeroImage} alt="" />
@@ -108,4 +98,3 @@ function Hero() {
 }
 
 export default React.memo(Hero);
-
