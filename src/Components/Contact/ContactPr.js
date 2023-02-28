@@ -21,9 +21,11 @@ const ContactUs = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [error, setError] = useState(false);
-  const [errors, setErrors] = useState({});
 
+  const [errors, setErrors] = useState({});
+  const [showDialogue, setShowDialogue] = useState(false);
+  const [showLoader, setShowLoader] = useState(false);
+  const [error, setError] = useState(false);
   const form = useRef(null);
 
   function handleEmail(e) {
@@ -60,6 +62,7 @@ const ContactUs = () => {
     console.log(errors);
 
     if (formValid) {
+      setShowLoader(true);
       emailjs
         .sendForm(
           "service_btqqoig",
@@ -69,42 +72,79 @@ const ContactUs = () => {
         )
         .then(
           (result) => {
+            setShowLoader(false);
             console.log(result.text);
+            setShowDialogue(true);
+
+            setTimeout(() => {
+              setShowDialogue(false);
+            }, 2000);
           },
           (error) => {
+            setShowLoader(false);
             console.log(error.text);
+            setError(true);
+
+            setTimeout(() => {
+              setError(false);
+            }, 2000);
           }
         );
-      alert("Message Sent succesfully");
     } else {
       alert("Error");
     }
   }
-
+  //Close modal when opened
+  function closeModal() {
+    setShowDialogue(false);
+  }
   const sendEmail = (e) => {
     e.preventDefault();
   };
   return (
     <div className="contact-us">
       <div className="contact-us__wrapper">
+        {showDialogue && (
+          <div
+            className={`modal-overlay ${showDialogue ? "show" : "removeModal"}`}
+          >
+            <div className="modal ">
+              <h2>Thank you, We have received your message!</h2>
+              <button className="closeModal" onClick={closeModal}>
+                Close
+              </button>
+            </div>
+          </div>
+        )}
+        {error && (
+          <div className={`modal-overlay ${error ? "show" : "removeModal"}`}>
+            <div className="modal ">
+              <h2>Internet Connection Required!</h2>
+              <button className="closeModal" onClick={closeModal}>
+                Close
+              </button>
+            </div>
+          </div>
+        )}
         <div className="text-header">
           <h1 className="main-text">Contact Us</h1>
           <h1 className="stroke-text">Contact Us</h1>
-          <h1 className="desc-text">Fill the form below.</h1>
+          <h1 className="desc-text">
+            Fill the form below so we can reach out to you.
+          </h1>
         </div>
 
         <div className="input-fields">
           <form ref={form} onSubmit={sendEmail} action="">
-            <p>{errors["email"]}</p>
+            <p className="error-dis">{errors["email"]}</p>
             <input
               name="user_email"
               type="text"
               onChange={handleEmail}
               placeholder="Email"
-              autocomplete="off"
               value={email}
             />
-            <p>{errors["subject"]}</p>
+            <p className="m error-dis">{errors["subject"]}</p>
             <input
               name="email_subject"
               onChange={handleSubject}
@@ -113,7 +153,7 @@ const ContactUs = () => {
               autocomplete="off"
               value={subject}
             />
-            <p>{errors["message"]}</p>
+            <p className="m error-dis">{errors["message"]}</p>
             <textarea
               name="email_message"
               autocomplete="off"
@@ -124,7 +164,15 @@ const ContactUs = () => {
               onChange={handleMessage}
               value={message}
             ></textarea>
-            <input type="submit" onClick={handleForm} value="Submit" />
+            <button
+              onClick={handleForm}
+              value={Text}
+              className="submit"
+              type="submit"
+            >
+              Submit
+              {showLoader && <div class="loader"></div>}
+            </button>
           </form>
         </div>
       </div>

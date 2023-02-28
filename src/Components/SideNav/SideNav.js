@@ -34,12 +34,7 @@ function SideNav({ Toggle }) {
                 Blog
               </Link>
             </li>
-            <li>
-              {" "}
-              <Link className="nav" onClick={setClick} to="/team">
-                Team
-              </Link>
-            </li>
+
             <li>
               {" "}
               <Link className="nav" onClick={setClick} to="/pricing">
@@ -69,6 +64,11 @@ function SideNav({ Toggle }) {
             </li>
             <li>
               <Link className="nav" onClick={setClick} to="/email">
+                Information
+              </Link>
+            </li>
+            <li>
+              <Link className="nav" onClick={setClick} to="/contact">
                 Contact Us
               </Link>
             </li>

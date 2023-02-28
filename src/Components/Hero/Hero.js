@@ -53,11 +53,13 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="move-down">
+
+      <a href="#scrow-d" className="move-down">
         <div className="outer-cir">
           <div className="inner-cir"></div>
         </div>
-      </div>
+      </a>
+
       <svg
         className="svgs-h"
         width="400"

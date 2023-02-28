@@ -12,7 +12,7 @@ function Companies() {
     AOS.init();
   }, []);
   return (
-    <div className="companies">
+    <div id="scrow-d" className="companies">
       <div className="companies__wrapper">
         <h1 data-aos="fade-down" data-aos-duration="2000" className="c-header">
           Our Clients.

@@ -133,7 +133,16 @@ $ft-clr: #2f2f2f;
           align-items: center;
           flex-direction: column;
           justify-content: center;
-          cursor: pointer;
+          padding: 10px;
+          .s-icons {
+            display: flex;
+            column-gap: 10px;
+            margin-top: 10px;
+
+            .linkedln {
+              color: rgb(73, 73, 73);
+            }
+          }
           .tag {
             text-align: center;
             font-weight: 600;

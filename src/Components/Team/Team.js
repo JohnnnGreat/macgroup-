@@ -4,7 +4,7 @@ import AOS from "aos";
 import { NavLink } from "react-router-dom";
 import Timothy from "./imagesteam//MainTimothy.jpg";
 import Akin from "./imagesteam/Timothy.jpg";
-import Babson from "./imagesteam/BABSON.png";
+import Babson from "./imagesteam/BABSON.jpg";
 import CEO from "./imagesteam/CEoEdit.jpg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
@@ -52,8 +52,19 @@ function Team() {
                 <h1 className="tag">Samuel Adiele</h1>
                 <p className="m-desc ">Chief Executive Officer</p>
                 <div className="s-icons">
-                  <LinkedInIcon fontSize="medium" />
-                  <MailIcon />
+                  <a
+                    target="_blank"
+                    href=" https://www.linkedin.com/in/samuel-adiele-b6154616b/"
+                  >
+                    <LinkedInIcon className="linkedln" fontSize="medium" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="mailto:sam.adiele@macgrouptech.com
+"
+                  >
+                    <MailIcon className="linkedln" fontSize="medium" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -62,6 +73,22 @@ function Team() {
               <div className="card">
                 <h1 className="tag ">Zinwota Timothy</h1>
                 <p className="m-desc ">Chief Technical Officer</p>
+                <div className="s-icons">
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/timtimgabriel/ "
+                  >
+                    <LinkedInIcon className="linkedln" fontSize="medium" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="mailto:timothy@macgrouptech.com
+
+"
+                  >
+                    <MailIcon className="linkedln" fontSize="medium" />
+                  </a>
+                </div>
               </div>
             </div>
             <div className="members-cont">
@@ -69,6 +96,17 @@ function Team() {
               <div className="card">
                 <h1 className="tag ">Akinwumi Ogundipe</h1>
                 <p className="m-desc ">Lead designer</p>
+                <div className="s-icons">
+                  <a href=" ">
+                    <LinkedInIcon className="linkedln" fontSize="medium" />
+                  </a>
+                  <a
+                    href="
+"
+                  >
+                    <MailIcon className="linkedln" fontSize="medium" />
+                  </a>
+                </div>
               </div>
             </div>
             <div className="members-cont">
@@ -76,6 +114,18 @@ function Team() {
               <div className="card">
                 <h1 className="tag">Babatunde Samson</h1>
                 <p className="m-desc ">Head of Content</p>
+                <div className="s-icons">
+                  <a target="_blank" href=" ">
+                    <LinkedInIcon className="linkedln" fontSize="medium" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="
+"
+                  >
+                    <MailIcon className="linkedln" fontSize="medium" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -104,8 +154,8 @@ function Team() {
             className="linetwo"
           ></div>
           <div data-aos="fade-up" data-aos-duration="2000" className="email">
-            <NavLink className="email-btn" to="/email">
-              Email
+            <NavLink className="email-btn" to="/contact">
+              Contact Us
             </NavLink>
           </div>
         </div>

@@ -1,11 +1,17 @@
 .main {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  @media (max-width: 780px) {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    padding-top: 10rem;
+  }
 }
 
 .mail {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,36 +19,66 @@
   .mail-wrapper {
     margin: 0 auto;
     max-width: 75rem;
+    padding: 100px 10px;
+    @media (max-width: 700px) {
+      padding: 50px 10px;
+    }
     .main {
       .map {
         position: relative;
         width: max-content;
-        &::after {
-          content: "";
-          width: 400px;
-          height: 400px;
-          background-color: rgb(77, 77, 77);
-          position: absolute;
-          top: 20px;
-          bottom: 0;
-          z-index: -1;
-          left: 20px;
+
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        .map-wrap {
+          width: max-content;
+          position: relative;
+          .get-dir {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 10px 15px;
+            font-weight: 600;
+            border: 1px solid #000000;
+            border-radius: 17px;
+          }
         }
       }
 
       .faq {
-        .faq-title {
-          padding: 1rem;
-          h2 {
-            font-size: 1.3rem;
+        @media (max-width: 800px) {
+          margin-top: 3rem;
+        }
+
+        .faqs-header {
+          width: 100%;
+          text-align: center;
+          padding: 3rem 0;
+          h1 {
+            font-size: 55px;
+            font-weight: 600;
           }
         }
+
         .row-title-text {
           padding: 0.5rem;
+          color: rgb(0, 0, 0);
+          font-weight: 500;
         }
 
         .row-content-text {
           padding: 0.5rem;
+          color: rgb(51, 51, 51);
+        }
+
+        .faq-row-wrapper {
+          background-color: rgb(243, 243, 243);
+          padding: 10px;
+          border: 1px solid rgb(211, 210, 210);
         }
       }
     }

@@ -30,7 +30,6 @@ function HomePage() {
       <Values />
       <Team />
       <Footer />
-      <Footer />
     </>
   );
 }

@@ -411,6 +411,9 @@ $desc-clr: #c2c2c2;
           font-size: 50px;
           letter-spacing: 1px;
           color: $txt-clr;
+          @media (max-width: 567px) {
+            font-size: 40px;
+          }
         }
 
         .description-se {
@@ -489,6 +492,10 @@ $spe-bl: black;
           font-size: 50px;
           letter-spacing: 1px;
           color: $spe-bl;
+
+          @media (max-width: 567px) {
+            font-size: 40px;
+          }
         }
 
         .description-se {

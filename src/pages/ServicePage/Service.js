@@ -24,7 +24,7 @@ function Service() {
       <Hero
         headerText={
           <>
-            Have a look of our
+            Have a look at our
             <span className="bold-s"> Services.</span>{" "}
           </>
         }
@@ -136,11 +136,11 @@ function Service() {
 
       <ServiceSpecial
         titleOne={"Web Development"}
-        descOne={`Looking to take your business online? Our eCommerce solutions
-        are designed to help you create a seamless and efficient online
-        shopping experience for your customers. With our eCommerce
-        services, you'll be able to easily manage your inventory,
-        process payments, and fulfill orders.`}
+        descOne={`Your website is the first impression that potential customers will
+        have of your business, so it's crucial that it makes a good one.
+        We offer professional web development services that will help you
+        create a website that is not only visually stunning but also
+        highly functional and easy to navigate.`}
         imageOne={Web}
         routeOne="/webdevelopment"
         titleTwo={"Content Writing"}
@@ -374,148 +374,4 @@ const ServiceSpecial = ({
   );
 };
 
-export const ContactUs = ({ title, shadow, desc }) => {
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-
-  const [Error, setError] = useState(false);
-
-  const [Response, setResponse] = useState(false);
-  const [ErrorResponse, setErrorResponse] = useState(false);
-  // const [ValidationError, setValidationError] = useState(false);
-  const form = useRef(null);
-  const ErrorRemove = useRef(null);
-  const sendEmail = (e) => {
-    e.preventDefault();
-  };
-
-  // let email = "";
-  // let subject = "";
-  // let message = "";
-  function handleEmail(e) {
-    setEmail(e.target.value);
-  }
-  const handleMessage = (e) => {
-    setMessage(e.target.value);
-  };
-
-  const handleSubject = (e) => {
-    setSubject(e.target.value);
-  };
-
-  function handleSubmit() {
-    emailjs
-      .sendForm(
-        "service_btqqoig",
-        "template_sprcbxj",
-        form.current,
-        "8dnyCGiR6nE3cE-by"
-      )
-      .then(
-        (result) => {
-          setResponse(true);
-
-          setTimeout(() => {
-            setResponse(false);
-          }, 4000);
-        },
-        (error) => {
-          setErrorResponse(true);
-
-          setTimeout(() => {
-            setErrorResponse(false);
-          }, 4000);
-        }
-      );
-
-    (function() {
-      setEmail("");
-      setMessage("");
-      setSubject("");
-    })();
-  }
-
-  return (
-    <>
-      {/* <Location /> */}
-      <div className="contact-us-s">
-        <div className="contact-us-s__wrapper">
-          <div className="text-header">
-            <h1
-              data-aos-duration="2000"
-              data-aos="fade-left"
-              className="main-text"
-            >
-              {title}
-            </h1>
-            <h1
-              data-aos-duration="2000"
-              data-aos="fade-right"
-              className="stroke-text"
-            >
-              {shadow}
-            </h1>
-            <h1 className="desc-text">{desc}</h1>
-          </div>
-
-          <div className="input-fields">
-            {Response ? (
-              <div className="showSuccessRes">
-                <h1>
-                  We have received your message. We will respond to you shortly.
-                </h1>
-              </div>
-            ) : null}
-
-            {ErrorResponse ? (
-              <div className="showErrorRes">
-                <h1>An unexpected error occured.</h1>
-              </div>
-            ) : null}
-            <form ref={form} onSubmit={sendEmail} action="">
-              <input
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                name="user_email"
-                type="text"
-                placeholder="Email"
-                onChange={handleEmail}
-                value={email}
-              />
-              <input
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                name="email_subject"
-                type="text"
-                placeholder="Subject"
-                onChange={handleSubject}
-                value={subject}
-              />
-              <textarea
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                name="email_message"
-                id="message"
-                cols="30"
-                rows="10"
-                placeholder="Message"
-                value={message}
-                onChange={handleMessage}
-              ></textarea>
-
-              <input
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                type="submit"
-                value="Submit"
-                onClick={handleSubmit}
-              />
-            </form>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
 export default React.memo(Service);

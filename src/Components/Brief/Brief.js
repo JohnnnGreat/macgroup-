@@ -49,7 +49,7 @@ function Brief() {
               clients achieve their objectives.
             </p>
             <div data-aos="fade-up" data-aos-duration="1000" className="btn">
-              <Link to="/about">Read More</Link>
+              <Link to="/about-us">Read More</Link>
             </div>
           </div>
         </div>

@@ -20,17 +20,15 @@ import NoPageError from "./pages/404Page/404Page.jsx";
 import ContactPage from "./pages/ContactPage/ContactCus";
 import PricingMessage from "./pages/PricingContact/PricingContact";
 import AboutPage from "./pages/About/About.jsx";
-
+import Terms from "./pages/Terms-Prici/Terms";
+import Privacy from "./pages/Terms-Prici/Privacy";
 // import PricingMessage from "./Components/Contact/ContactPr.js";
 function App() {
   const [navOpen, setNavOpen] = useState(false);
-  // const [navClick, setNavClick] = useState(false);
 
   const sideN = useRef(null);
   function NavToggle() {
     setNavOpen(!navOpen);
-    console.log(`${navOpen} nav open`);
-    console.log(sideN);
   }
 
   return (
@@ -52,6 +50,8 @@ function App() {
           <Route exact path="/contact" element={<PricingMessage />}></Route>
           <Route exact path="/branding" element={<Branding />}></Route>
           <Route exact path="/pricing" element={<Pricing />}></Route>
+          <Route exact path="/termsandconditions" element={<Terms />}></Route>
+          <Route exact path="/privacy" element={<Privacy />}></Route>
 
           <Route
             exact

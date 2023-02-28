@@ -17,6 +17,7 @@ const ContactForm = () => {
   const [errors, setErrors] = useState({});
   const [showDialogue, setShowDialogue] = useState(false);
   const [error, setError] = useState(false);
+  const [showLoader, setShowLoader] = useState(false);
   //Get the ref for form
   const form = useRef(null);
 
@@ -33,8 +34,8 @@ const ContactForm = () => {
       label: "Establish Relevancy in the Market Industry",
     },
     {
-      value: "Build your own mobile application",
-      label: "Build your own mobile application",
+      value: "Build your own apps",
+      label: "Build your own apps",
     },
   ];
 
@@ -142,6 +143,7 @@ const ContactForm = () => {
     event.preventDefault();
 
     if (validateForm()) {
+      setShowLoader(true);
       emailjs
         .sendForm(
           "service_btqqoig",
@@ -151,6 +153,7 @@ const ContactForm = () => {
         )
         .then(
           (result) => {
+            setShowLoader(false);
             console.log(result.text);
             setShowDialogue(true);
 
@@ -159,6 +162,7 @@ const ContactForm = () => {
             }, 2000);
           },
           (error) => {
+            setShowLoader(false);
             setError(true);
 
             setTimeout(() => {
@@ -187,7 +191,7 @@ const ContactForm = () => {
       {error && (
         <div className={`modal-overlay ${error ? "show" : "removeModal"}`}>
           <div className="modal ">
-            <h2>Internet Connectivity Required</h2>
+            <h2>Internet connection required! </h2>
             <button className="closeModal" onClick={closeModal}>
               Close
             </button>
@@ -222,10 +226,10 @@ const ContactForm = () => {
               />
               <label className="margin" htmlFor="lastName">
                 {" "}
-                John <span className="required">*</span>
+                LAST NAME <span className="required">*</span>
               </label>
 
-              <p className="error-disp">{errors["lastname"]}</p>
+              <p className="error-disp">{errors["lastName"]}</p>
               <input
                 type="text"
                 id="lastName"
@@ -295,6 +299,7 @@ const ContactForm = () => {
                 cols="30"
                 rows="10"
               ></textarea>
+
               <button
                 onClick={handleForm}
                 value={Text}
@@ -302,6 +307,7 @@ const ContactForm = () => {
                 type="submit"
               >
                 Submit
+                {showLoader && <div class="loader"></div>}
               </button>
             </form>
           </div>

@@ -4,15 +4,42 @@ import Faq from "react-faq-component";
 import "./Contact.scss";
 import Footer from "../../Components/Footer/Footer";
 function ContactCus() {
+  //Get Direction function
+
+  const LAT = 33.9914619;
+  const LON = -118.238958;
+  const getDirection = (e) => {
+    e.preventDefault();
+
+    navigator.geolocation.getCurrentPosition((position) => {
+      const LATITUDE = position.coords.latitude;
+      const LONGITUDE = position.coords.longitude;
+
+      const URL = `https://www.google.com/maps/dir/?api=1&destination=33.9914619,-118.238958&origin=${LATITUDE},${LONGITUDE}`;
+      window.open(URL);
+    });
+  };
   return (
     <>
       <div className="mail">
         <div className="mail-wrapper">
           <div className="main">
             <div className="map">
-              <Location />
+              <div className="map-wrap">
+                <Location />
+                <button className="get-dir" onClick={getDirection}>
+                  Get Direction
+                </button>
+              </div>
             </div>
             <div className="faq">
+              <div className="faqs-header">
+                <h1>Frequently asked questions.</h1>
+                <p>
+                  Here are some frequently asked questions (FAQs) for MacGroup
+                  International Tech Services:
+                </p>
+              </div>
               <Faqs />
             </div>
           </div>
@@ -62,29 +89,62 @@ const Faqs = () => {
   };
 
   const data = {
-    title: "Frequently Asked Questions",
     rows: [
       {
-        title: "What is Lorem Ipsum?",
+        title:
+          "What kind of services does MacGroup International Tech Services provide?",
         content:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+          "We provide a range of digital solutions, including eCommerce development, app development, digital marketing, content writing, and branding services.",
       },
       {
-        title: "Why do we use it?",
+        title:
+          "Can you provide examples of eCommerce development projects you have completed?",
         content:
-          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+          "Yes, we have worked on a variety of eCommerce projects, including developing online stores for small businesses, optimizing existing eCommerce platforms, and integrating eCommerce functionality into existing websites.",
       },
       {
-        title: "Where does it come from?",
+        title: "What kinds of apps do you develop?",
         content:
-          "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+          "We develop custom mobile apps for iOS and Android platforms, including native apps, hybrid apps, and web apps.",
+      },
+      {
+        title: "How can you help with digital marketing?",
+        content:
+          "Our digital marketing services include search engine optimization (SEO), pay-per-click (PPC) advertising, social media marketing, email marketing, and content marketing. We work with clients to create and implement a customized digital marketing strategy that fits their unique needs.",
+      },
+      {
+        title: "Do you offer content writing services?",
+        content:
+          "Yes, we offer professional content writing services, including blog posts, articles, website copy, and marketing materials.",
+      },
+      {
+        title: "What kind of branding services do you offer?",
+        content:
+          "Our branding services include logo design, brand identity development, and brand strategy consulting. We work with clients to create a cohesive brand image that aligns with their business goals and values.",
+      },
+      {
+        title: "How long does it take to complete a project?",
+        content:
+          "The timeline for each project varies depending on the scope of work and complexity of the project. We work closely with clients to establish project milestones and deadlines and communicate regularly throughout the project.",
+      },
+      {
+        title:
+          "How much does it cost to work with MacGroup International Tech Services?",
+        content:
+          "The cost of each project is determined on a case-by-case basis, depending on the scope of work and specific client needs. We provide detailed project proposals and cost estimates upfront, so clients know exactly what to expect before work begins.",
+      },
+      {
+        title:
+          "How can I get started with MacGroup International Tech Services?",
+        content:
+          "Simply reach out to us via our website or email, and we'll schedule a consultation to discuss your project needs and how we can help.",
       },
     ],
   };
 
   return (
     <div className="faq">
-      <Faq data={data} styles={styles} />;
+      <Faq data={data} styles={styles} />
     </div>
   );
 };

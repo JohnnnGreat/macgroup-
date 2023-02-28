@@ -1,8 +1,13 @@
 import { Hero } from "../ServicePage/Service.js";
+import React, { useEffect } from "react";
 import "../ServicePage/Service.scss";
+import { animateScroll as scroll } from "react-scroll";
 import "./About.scss";
 import Footer from "../../Components/Footer/Footer.js";
 function About() {
+  useEffect(() => {
+    scroll.scrollToTop();
+  }, []);
   return (
     <>
       <Hero headerText={<>About Us</>} />

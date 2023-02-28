@@ -62,14 +62,6 @@ function Pricing() {
                 {selectedPackage} among our package lists.
               </p>
               <h2 className="other-info">Other Information:</h2>
-              <h1>
-                <span>Price: </span>
-                {selectedPrice}
-              </h1>
-              <h1>
-                <span>Duration: </span>
-                {selectedPrice}
-              </h1>
 
               <p className="redirected">You will be redirected shortly!</p>
             </div>
@@ -190,7 +182,7 @@ function Pricing() {
                   <ul>
                     <li>
                       SHopify / Joomla / WooCommerce Store(WIth 70 product
-                      posted before launch) <span>$500</span>
+                      posted before launch)
                     </li>
                     <li>
                       Online Payment Systems Integration( Stripe, PayPal,
@@ -281,19 +273,22 @@ function Pricing() {
                 <div className="packages">
                   <ul>
                     <li>
-                      Instagram and Facebook <span>$650</span>
+                      Copywriting<span>$230 per hour</span>
                     </li>
                     <li>
-                      Tiktok <span>$500</span>
+                      SEO Content Writing <span>$200 per hour</span>
                     </li>
                     <li>
-                      Youtube <span>$200</span>
+                      Blog Writing <span>150 per post</span>
                     </li>
                     <li>
-                      Pinterest and Twitter <span>$400</span>
+                      Press Release Writing <span>$200 (300-500 words)</span>
                     </li>
                     <li>
-                      Yelp <span>$200</span>
+                      Article Writing <span>$230 per article</span>
+                    </li>
+                    <li>
+                      Social Media Content Writing <span>$230 per article</span>
                     </li>
                   </ul>
                 </div>

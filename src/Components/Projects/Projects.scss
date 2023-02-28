@@ -62,7 +62,7 @@
         }
       }
       .card-tag {
-        height: 70px;
+        height: 100px;
         width: 100%;
         position: absolute;
         bottom: 0;
@@ -73,7 +73,16 @@
           font-size: 1rem;
           margin-left: 1rem;
           margin-top: 0.9rem;
+          font-weight: 600;
           //   text-decoration: underline;
+        }
+
+        p {
+          color: #ebebeb;
+          font-weight: 400;
+          font-size: 0.8rem;
+          margin-left: 1rem;
+          margin-top: 0.3rem;
         }
       }
     }

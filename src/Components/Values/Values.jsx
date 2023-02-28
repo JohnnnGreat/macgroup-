@@ -32,7 +32,7 @@ function Values() {
             <div className="first">
               <h1 className="box-num">1</h1>
             </div>
-            <h1 className="box-text">Innovative</h1>
+            <h1 className="box-text">Innovation</h1>
             <p className="box-desc">
               We are committed to fostering a culture of innovation that is
               always looking for new and creative solutions to the challenges
@@ -45,7 +45,7 @@ function Values() {
             <div className="first">
               <h1 className="box-num">2</h1>
             </div>
-            <h1 className="box-text">Efficient</h1>
+            <h1 className="box-text">Efficiency</h1>
             <p className="box-desc">
               Efficiency is a core value that drives everything we do at our
               digital agency. We believe in streamlining processes and systems
@@ -57,7 +57,7 @@ function Values() {
             <div className="first">
               <h1 className="box-num">3</h1>
             </div>
-            <h1 className="box-text">Secure</h1>
+            <h1 className="box-text">Security</h1>
             <p className="box-desc">
               At our digital agency, the security of our clients' data and
               information is of the utmost importance. We maintain the highest

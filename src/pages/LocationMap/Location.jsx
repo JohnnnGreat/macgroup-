@@ -13,7 +13,7 @@ function Location({ location, zoomLevel }) {
         height: "400px",
         width: "400px",
         margin: "auto",
-        border: "2px solid grey",
+        border: "1px solid grey",
       }}
     >
       <GoogleMapReact

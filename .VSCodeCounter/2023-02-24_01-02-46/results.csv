@@ -1,0 +1,87 @@
+"filename", "language", "JavaScript", "XML", "SCSS", "JavaScript JSX", "CSS", "Markdown", "JSON", "HTML", "comment", "blank", "total"
+"c:\Users\JOHN\macgroup-\README.md", "Markdown", 0, 0, 0, 0, 0, 38, 0, 0, 0, 33, 71
+"c:\Users\JOHN\macgroup-\package-lock.json", "JSON", 0, 0, 0, 0, 0, 0, 81560, 0, 0, 1, 81561
+"c:\Users\JOHN\macgroup-\package.json", "JSON", 0, 0, 0, 0, 0, 0, 68, 0, 0, 1, 69
+"c:\Users\JOHN\macgroup-\postcss.config.js", "JavaScript", 6, 0, 0, 0, 0, 0, 0, 0, 0, 1, 7
+"c:\Users\JOHN\macgroup-\public\AssetsFolder\illustrations\arrow.svg", "XML", 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\JOHN\macgroup-\public\AssetsFolder\illustrations\grids-dark.svg", "XML", 0, 20, 0, 0, 0, 0, 0, 0, 0, 1, 21
+"c:\Users\JOHN\macgroup-\public\AssetsFolder\illustrations\grids.svg", "XML", 0, 20, 0, 0, 0, 0, 0, 0, 0, 1, 21
+"c:\Users\JOHN\macgroup-\public\AssetsFolder\illustrations\quadrant.svg", "XML", 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\JOHN\macgroup-\public\Logo.svg", "XML", 0, 4, 0, 0, 0, 0, 0, 0, 0, 1, 5
+"c:\Users\JOHN\macgroup-\public\index.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 31, 5, 3, 39
+"c:\Users\JOHN\macgroup-\public\manifest.json", "JSON", 0, 0, 0, 0, 0, 0, 25, 0, 0, 1, 26
+"c:\Users\JOHN\macgroup-\public\svgs\Frame 18.svg", "XML", 0, 75, 0, 0, 0, 0, 0, 0, 0, 1, 76
+"c:\Users\JOHN\macgroup-\public\svgs\FrameEdit.svg", "XML", 0, 26, 0, 0, 0, 0, 0, 0, 0, 1, 27
+"c:\Users\JOHN\macgroup-\public\svgs\Rectangle 30.svg", "XML", 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\JOHN\macgroup-\public\svgs\hero-circle.svg", "XML", 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\JOHN\macgroup-\src\App.css", "CSS", 0, 0, 0, 0, 29, 0, 0, 0, 0, 7, 36
+"c:\Users\JOHN\macgroup-\src\App.js", "JavaScript", 78, 0, 0, 0, 0, 0, 0, 0, 6, 11, 95
+"c:\Users\JOHN\macgroup-\src\Components\Brand\Brand.js", "JavaScript", 89, 0, 0, 0, 0, 0, 0, 0, 3, 8, 100
+"c:\Users\JOHN\macgroup-\src\Components\Brand\Brand.scss", "SCSS", 0, 0, 316, 0, 0, 0, 0, 0, 2, 60, 378
+"c:\Users\JOHN\macgroup-\src\Components\Brief\Brief.js", "JavaScript", 58, 0, 0, 0, 0, 0, 0, 0, 1, 3, 62
+"c:\Users\JOHN\macgroup-\src\Components\Brief\Brief.scss", "SCSS", 0, 0, 295, 0, 0, 0, 0, 0, 3, 41, 339
+"c:\Users\JOHN\macgroup-\src\Components\Companies\Companies.js", "JavaScript", 37, 0, 0, 0, 0, 0, 0, 0, 1, 3, 41
+"c:\Users\JOHN\macgroup-\src\Components\Companies\Companies.scss", "SCSS", 0, 0, 71, 0, 0, 0, 0, 0, 0, 10, 81
+"c:\Users\JOHN\macgroup-\src\Components\Contact\Contact.svg", "XML", 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\Users\JOHN\macgroup-\src\Components\Contact\ContactMain.js", "JavaScript", 280, 0, 0, 0, 0, 0, 0, 0, 10, 31, 321
+"c:\Users\JOHN\macgroup-\src\Components\Contact\ContactMain.scss", "SCSS", 0, 0, 188, 0, 0, 0, 0, 0, 9, 21, 218
+"c:\Users\JOHN\macgroup-\src\Components\Contact\ContactPr.js", "JavaScript", 168, 0, 0, 0, 0, 0, 0, 0, 1, 15, 184
+"c:\Users\JOHN\macgroup-\src\Components\Contact\ContactPr.scss", "SCSS", 0, 0, 187, 0, 0, 0, 0, 0, 1, 22, 210
+"c:\Users\JOHN\macgroup-\src\Components\Copy\Copy.js", "JavaScript", 52, 0, 0, 0, 0, 0, 0, 0, 0, 8, 60
+"c:\Users\JOHN\macgroup-\src\Components\Copy\Copy.scss", "SCSS", 0, 0, 201, 0, 0, 0, 0, 0, 1, 43, 245
+"c:\Users\JOHN\macgroup-\src\Components\Footer\Footer.js", "JavaScript", 86, 0, 0, 0, 0, 0, 0, 0, 0, 5, 91
+"c:\Users\JOHN\macgroup-\src\Components\Footer\Footer.scss", "SCSS", 0, 0, 233, 0, 0, 0, 0, 0, 0, 42, 275
+"c:\Users\JOHN\macgroup-\src\Components\Header\Header.js", "JavaScript", 92, 0, 0, 0, 0, 0, 0, 0, 2, 7, 101
+"c:\Users\JOHN\macgroup-\src\Components\Header\Header.scss", "SCSS", 0, 0, 144, 0, 0, 0, 0, 0, 9, 25, 178
+"c:\Users\JOHN\macgroup-\src\Components\Hero\Hero.js", "JavaScript", 97, 0, 0, 0, 0, 0, 0, 0, 0, 6, 103
+"c:\Users\JOHN\macgroup-\src\Components\Hero\Hero.styles.scss", "SCSS", 0, 0, 186, 0, 0, 0, 0, 0, 3, 23, 212
+"c:\Users\JOHN\macgroup-\src\Components\Projects\Projects.js", "JavaScript", 68, 0, 0, 0, 0, 0, 0, 0, 0, 2, 70
+"c:\Users\JOHN\macgroup-\src\Components\Projects\Projects.scss", "SCSS", 0, 0, 61, 0, 0, 0, 0, 0, 12, 9, 82
+"c:\Users\JOHN\macgroup-\src\Components\SalesPitch\SalesPitch.js", "JavaScript", 35, 0, 0, 0, 0, 0, 0, 0, 0, 2, 37
+"c:\Users\JOHN\macgroup-\src\Components\SalesPitch\SalesPitch.scss", "SCSS", 0, 0, 112, 0, 0, 0, 0, 0, 0, 17, 129
+"c:\Users\JOHN\macgroup-\src\Components\SideNav\SideNav.js", "JavaScript", 118, 0, 0, 0, 0, 0, 0, 0, 2, 6, 126
+"c:\Users\JOHN\macgroup-\src\Components\SideNav\SideNav.scss", "SCSS", 0, 0, 82, 0, 0, 0, 0, 0, 0, 12, 94
+"c:\Users\JOHN\macgroup-\src\Components\Team\Team.js", "JavaScript", 133, 0, 0, 0, 0, 0, 0, 0, 0, 4, 137
+"c:\Users\JOHN\macgroup-\src\Components\Team\Team.scss", "SCSS", 0, 0, 399, 0, 0, 0, 0, 0, 1, 49, 449
+"c:\Users\JOHN\macgroup-\src\Components\Values\Values.jsx", "JavaScript JSX", 0, 0, 0, 86, 0, 0, 0, 0, 0, 3, 89
+"c:\Users\JOHN\macgroup-\src\Components\Values\Values.styles.scss", "SCSS", 0, 0, 115, 0, 0, 0, 0, 0, 2, 16, 133
+"c:\Users\JOHN\macgroup-\src\Components\Websites\Website.js", "JavaScript", 6, 0, 0, 0, 0, 0, 0, 0, 0, 2, 8
+"c:\Users\JOHN\macgroup-\src\Components\Websites\Website.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\JOHN\macgroup-\src\Logo.svg", "XML", 0, 4, 0, 0, 0, 0, 0, 0, 0, 1, 5
+"c:\Users\JOHN\macgroup-\src\index.css", "CSS", 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+"c:\Users\JOHN\macgroup-\src\index.js", "JavaScript", 6, 0, 0, 0, 0, 0, 0, 0, 0, 1, 7
+"c:\Users\JOHN\macgroup-\src\pages\404Page\404.styles.scss", "SCSS", 0, 0, 26, 0, 0, 0, 0, 0, 1, 5, 32
+"c:\Users\JOHN\macgroup-\src\pages\404Page\404Page.jsx", "JavaScript JSX", 0, 0, 0, 24, 0, 0, 0, 0, 0, 2, 26
+"c:\Users\JOHN\macgroup-\src\pages\About\About.jsx", "JavaScript JSX", 0, 0, 0, 42, 0, 0, 0, 0, 0, 3, 45
+"c:\Users\JOHN\macgroup-\src\pages\About\About.scss", "SCSS", 0, 0, 14, 0, 0, 0, 0, 0, 0, 2, 16
+"c:\Users\JOHN\macgroup-\src\pages\ContactPage\Contact.scss", "SCSS", 0, 0, 53, 0, 0, 0, 0, 0, 0, 6, 59
+"c:\Users\JOHN\macgroup-\src\pages\ContactPage\ContactCus.js", "JavaScript", 81, 0, 0, 0, 0, 0, 0, 0, 4, 6, 91
+"c:\Users\JOHN\macgroup-\src\pages\Email.js", "JavaScript", 22, 0, 0, 0, 0, 0, 0, 0, 0, 2, 24
+"c:\Users\JOHN\macgroup-\src\pages\HomePage.js", "JavaScript", 33, 0, 0, 0, 0, 0, 0, 0, 1, 5, 39
+"c:\Users\JOHN\macgroup-\src\pages\LocationMap\Location.jsx", "JavaScript JSX", 0, 0, 0, 38, 0, 0, 0, 0, 1, 5, 44
+"c:\Users\JOHN\macgroup-\src\pages\LocationMap\Location.styles.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\JOHN\macgroup-\src\pages\PricingContact\PricingContact.js", "JavaScript", 14, 0, 0, 0, 0, 0, 0, 0, 0, 2, 16
+"c:\Users\JOHN\macgroup-\src\pages\PricingContact\PricingContact.scss", "SCSS", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\JOHN\macgroup-\src\pages\Pricing\Pricing.js", "JavaScript", 336, 0, 0, 0, 0, 0, 0, 0, 3, 14, 353
+"c:\Users\JOHN\macgroup-\src\pages\Pricing\Pricing.scss", "SCSS", 0, 0, 344, 0, 0, 0, 0, 0, 28, 50, 422
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\App\AppDev.js", "JavaScript", 105, 0, 0, 0, 0, 0, 0, 0, 0, 4, 109
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\Branding\Branding.js", "JavaScript", 154, 0, 0, 0, 0, 0, 0, 0, 0, 5, 159
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\Branding\Branding.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\Commerce.svg", "XML", 0, 55, 0, 0, 0, 0, 0, 0, 0, 1, 56
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\Commerce\Commerce.js", "JavaScript", 151, 0, 0, 0, 0, 0, 0, 0, 0, 5, 156
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\Commerce\Commerce.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\ContentWriting\Content.js", "JavaScript", 105, 0, 0, 0, 0, 0, 0, 0, 0, 4, 109
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\Design.svg", "XML", 0, 37, 0, 0, 0, 0, 0, 0, 0, 1, 38
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\DigitalMarketing\DMarketing.js", "JavaScript", 148, 0, 0, 0, 0, 0, 0, 0, 0, 5, 153
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\Service.js", "JavaScript", 485, 0, 0, 0, 0, 0, 0, 0, 15, 22, 522
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\Service.scss", "SCSS", 0, 0, 463, 0, 0, 0, 0, 0, 4, 55, 522
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\Side-S.svg", "XML", 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\WebDev\Webdev.js", "JavaScript", 146, 0, 0, 0, 0, 0, 0, 0, 1, 5, 152
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\WebDev\Webdev.scss", "SCSS", 0, 0, 324, 0, 0, 0, 0, 0, 2, 41, 367
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\app.svg", "XML", 0, 43, 0, 0, 0, 0, 0, 0, 0, 1, 44
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\hero-circle.svg", "XML", 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\marketing.svg", "XML", 0, 37, 0, 0, 0, 0, 0, 0, 0, 1, 38
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\web.svg", "XML", 0, 43, 0, 0, 0, 0, 0, 0, 0, 1, 44
+"c:\Users\JOHN\macgroup-\src\pages\ServicePage\writing.svg", "XML", 0, 31, 0, 0, 0, 0, 0, 0, 0, 1, 32
+"c:\Users\JOHN\macgroup-\tailwind.config.js", "JavaScript", 7, 0, 0, 0, 0, 0, 0, 0, 1, 1, 9
+"Total", "-", 3196, 414, 3827, 190, 38, 38, 81653, 31, 135, 828, 90350
