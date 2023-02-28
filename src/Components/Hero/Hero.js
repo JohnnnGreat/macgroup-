@@ -47,7 +47,7 @@ function Hero() {
             </p>
           </div>
           <div className="btn-cta">
-            <Link className="pricing-btn" to="/pricing">
+            <Link className="pricing-btn" to="/services">
               GET STARTED
             </Link>
           </div>

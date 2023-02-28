@@ -179,7 +179,7 @@
   flex-direction: column;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.301);
   animation: bounce 0.5s;
-
+  padding: 10px;
   @keyframes bounce {
     0% {
       transform: scale(1);
@@ -199,7 +199,7 @@
     margin-top: 2rem;
   }
   h2 {
-    font-size: 1.3rem;
+    font-size: 1rem;
 
     text-align: center;
   }

@@ -179,17 +179,19 @@ function Pricing({ setSubjectValue }) {
                 <div className="p-h">
                   <h1>E-Commerce</h1>
                 </div>
-                <h1 className="price">$1,800.00</h1>
+                <h1 className="price">$3,300.00</h1>
                 <div className="packages">
                   <ul>
                     <li>
-                      SHopify / Joomla / WooCommerce Store(WIth 70 product
+                      Ebay/Shopify / Joomla / WooCommerce Store(WIth 70 product
                       posted before launch)
                     </li>
                     <li>
                       Online Payment Systems Integration( Stripe, PayPal,
                       ShoPay, etc.)
                     </li>
+                    <li>General SEO</li>
+                    <li>Monthly Inventory Report</li>
                   </ul>
                 </div>
                 <div className="quote">

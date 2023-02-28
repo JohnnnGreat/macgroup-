@@ -54,15 +54,15 @@ function Footer() {
             </ul>
           </div>
           <div className="blog">
-            <h1 className="blog-f">BLOG</h1>
-            <p className="desc">
+            <h1 className="blog-f">SOCIAL MEDIA</h1>
+            {/* <p className="desc">
               We have a whole library of tech related blog posts that may suit
               your interests. Read for more insights to the latest technologies
               and our services.
             </p>
             <a className="blog-btn" href="/">
               Go To Blog
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

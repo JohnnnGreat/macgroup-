@@ -34,8 +34,8 @@ const ContactForm = () => {
       label: "Establish Relevancy in the Market Industry",
     },
     {
-      value: "Build your own apps",
-      label: "Build your own apps",
+      value: "Build your own app",
+      label: "Build your own app",
     },
   ];
 
@@ -166,7 +166,7 @@ const ContactForm = () => {
               setSelectedOption("");
               setSelectedBudget("");
               setText("");
-            }, 2000);
+            }, 3000);
           },
           (error) => {
             setShowLoader(false);
@@ -174,7 +174,7 @@ const ContactForm = () => {
 
             setTimeout(() => {
               setError(false);
-            }, 2000);
+            }, 3000);
           }
         );
     }
@@ -188,7 +188,10 @@ const ContactForm = () => {
           className={`modal-overlay ${showDialogue ? "show" : "removeModal"}`}
         >
           <div className="modal ">
-            <h2>Thank you, We have received your message!</h2>
+            <h2>
+              Thank you for your message! We appreciate you reaching out and
+              will be responding shortly. Have a great day!
+            </h2>
             <button className="closeModal" onClick={closeModal}>
               Close
             </button>
