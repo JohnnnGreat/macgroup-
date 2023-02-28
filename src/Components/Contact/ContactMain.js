@@ -159,6 +159,13 @@ const ContactForm = () => {
 
             setTimeout(() => {
               setShowDialogue(false);
+              setFirstName("");
+              setLastName("");
+              setEmail("");
+              setPhone("");
+              setSelectedOption("");
+              setSelectedBudget("");
+              setText("");
             }, 2000);
           },
           (error) => {

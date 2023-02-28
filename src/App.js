@@ -25,10 +25,16 @@ import Privacy from "./pages/Terms-Prici/Privacy";
 // import PricingMessage from "./Components/Contact/ContactPr.js";
 function App() {
   const [navOpen, setNavOpen] = useState(false);
-
+  const [subject, setSubject] = useState("");
   const sideN = useRef(null);
   function NavToggle() {
     setNavOpen(!navOpen);
+  }
+
+  function setContactSubject(sub) {
+    setSubject("");
+    setSubject(sub);
+    console.log(subject);
   }
 
   return (
@@ -49,7 +55,11 @@ function App() {
           <Route exact path="/email" element={<ContactPage />}></Route>
           <Route exact path="/contact" element={<PricingMessage />}></Route>
           <Route exact path="/branding" element={<Branding />}></Route>
-          <Route exact path="/pricing" element={<Pricing />}></Route>
+          <Route
+            exact
+            path="/pricing"
+            element={<Pricing setSubjectValue={setContactSubject} />}
+          ></Route>
           <Route exact path="/termsandconditions" element={<Terms />}></Route>
           <Route exact path="/privacy" element={<Privacy />}></Route>
 

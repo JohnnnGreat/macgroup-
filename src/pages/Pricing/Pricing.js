@@ -5,7 +5,7 @@ import AOS from "aos";
 import { animateScroll as scroll } from "react-scroll";
 import Footer from "../../Components/Footer/Footer.js";
 
-function Pricing() {
+function Pricing({ setSubjectValue }) {
   const [selectedPackage, setSelectedPackage] = useState("");
   const [selectedPrice, setSelectedPrice] = useState("");
   const [showDialogue, setShowDialogue] = useState(false);
@@ -38,6 +38,8 @@ function Pricing() {
     setSelectedPackage(packageName);
     setSelectedPrice(price);
     setShowDialogue(true);
+    setSubjectValue("");
+    setSubjectValue(packageName);
     //Close Modal and Navigate to Email Page after 2 seconds
 
     setTimeout(() => {

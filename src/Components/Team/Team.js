@@ -6,6 +6,8 @@ import Timothy from "./imagesteam//MainTimothy.jpg";
 import Akin from "./imagesteam/Timothy.jpg";
 import Babson from "./imagesteam/BABSON.jpg";
 import CEO from "./imagesteam/CEoEdit.jpg";
+import Jenna from "./imagesteam/jeny.jpg";
+import Brandone from "./imagesteam/Brandone.jpg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
 function Team() {
@@ -92,16 +94,20 @@ function Team() {
               </div>
             </div>
             <div className="members-cont">
-              <img src={Akin} alt="" />
+              <img src={Akin} alt="akin" />
               <div className="card">
                 <h1 className="tag ">Akinwumi Ogundipe</h1>
                 <p className="m-desc ">Lead designer</p>
                 <div className="s-icons">
-                  <a href=" ">
+                  <a
+                    target="_blank"
+                    href=" https://www.linkedin.com/in/akinwumi-ao"
+                  >
                     <LinkedInIcon className="linkedln" fontSize="medium" />
                   </a>
                   <a
-                    href="
+                    target="_blank"
+                    href="mailto:akin@macgrouptech.com
 "
                   >
                     <MailIcon className="linkedln" fontSize="medium" />
@@ -128,32 +134,58 @@ function Team() {
                 </div>
               </div>
             </div>
+            <div className="members-cont">
+              <img src={Jenna} alt="" />
+              <div className="card">
+                <h1 className="tag">Jenna Adiele</h1>
+                <p className="m-desc ">Vice President</p>
+                <div className="s-icons">
+                  <a target="_blank" href=" ">
+                    <LinkedInIcon className="linkedln" fontSize="medium" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="
+"
+                  >
+                    <MailIcon className="linkedln" fontSize="medium" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="members-cont">
+              <img src={Brandone} alt="" />
+              <div className="card">
+                <h1 className="tag">Brandon Adiele</h1>
+                <p className="m-desc ">Vice President</p>
+                <div className="s-icons">
+                  <a target="_blank" href=" ">
+                    <LinkedInIcon className="linkedln" fontSize="medium" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="
+"
+                  >
+                    <MailIcon className="linkedln" fontSize="medium" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="line"></div>
         <div className="contact">
-          <div
-            data-aos="fade-up"
-            data-aos-duration="2000"
-            className="start-project"
-          >
+          <div className="start-project">
             <h1>Start a Project</h1>
           </div>
           <div className="contact-us">
-            <h1 data-aos="fade-up" data-aos-duration="2000" className="cont-us">
-              Contact Us
-            </h1>
-            <h2 data-aos="fade-up" data-aos-duration="2000" className="sub">
-              Lets start your next digital project
-            </h2>
+            <h1 className="cont-us">Contact Us</h1>
+            <h2 className="sub">Lets start your next digital project</h2>
           </div>
 
-          <div
-            data-aos="fade-up"
-            data-aos-duration="2000"
-            className="linetwo"
-          ></div>
-          <div data-aos="fade-up" data-aos-duration="2000" className="email">
+          <div className="linetwo"></div>
+          <div className="email">
             <NavLink className="email-btn" to="/contact">
               Contact Us
             </NavLink>
