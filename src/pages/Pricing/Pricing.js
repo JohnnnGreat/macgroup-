@@ -69,10 +69,10 @@ function Pricing({ setSubjectValue }) {
     setShowLoader(true);
     emailjs
       .sendForm(
-        "service_btqqoig",
-        "template_8tagbbl",
+        "service_67p71v4",
+        "template_1cpnl6g",
         form.current,
-        "8dnyCGiR6nE3cE-by"
+        "NhFQzm8AH31I7jKJz"
       )
       .then(
         (result) => {
@@ -91,6 +91,13 @@ function Pricing({ setSubjectValue }) {
         },
         (error) => {
           setShowLoader(false);
+          setTimeout(() => {
+            setShowDialogue(false);
+            setStatus(false);
+            setName("");
+            setPhone("");
+            setEmail("");
+          }, 4000);
         }
       );
   }
@@ -119,7 +126,7 @@ function Pricing({ setSubjectValue }) {
                 <input
                   type="text"
                   name="user_package"
-                  value={`For: ${packageName}`}
+                  value={`For- ${packageName}`}
                   className="packageName"
                 />
                 <input
@@ -389,7 +396,7 @@ function Pricing({ setSubjectValue }) {
                 <div className="quote">
                   <button
                     onClick={() => {
-                      ShowModal("Social Media", "$1, 950.00");
+                      ShowModal("Content Writing", "$1, 950.00");
                     }}
                   >
                     Choose Plan

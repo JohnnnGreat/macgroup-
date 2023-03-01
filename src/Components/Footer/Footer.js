@@ -70,7 +70,7 @@ function Footer() {
               <a href="" target="_blank">
                 <FacebookIcon className="icons-sm" fontSize="medium" />
               </a>
-              <a target="_blank" href="">
+              <a target="_blank" href="https://www.instagram.com/invites/contact/?i=1xq25m5xrfqwm&utm_content=qwqkijj">
                 {" "}
                 <InstagramIcon className="icons-sm" fontSize="medium" />
               </a>

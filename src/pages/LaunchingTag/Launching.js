@@ -1,5 +1,6 @@
 import "./Launching.scss";
 import CEO from "./CEoEdit.jpg";
+import CloseIcon from "@mui/icons-material/Close";
 function Launching({ LaunchingMessage }) {
   function handleClose() {
     LaunchingMessage(false);
@@ -7,6 +8,7 @@ function Launching({ LaunchingMessage }) {
   return (
     <div className="launching">
       <div className="card">
+        <div className="box-s"></div>
         <p className="launching-text">Dear valued clients, </p>
         <p className="launching-text">
           I am thrilled to announce the MacGroup International Tech Services
@@ -35,7 +37,7 @@ function Launching({ LaunchingMessage }) {
         </p>
         <p className="launching-text">Sincerely,</p>
         <button onClick={handleClose} className="closeBtn">
-          X
+          <CloseIcon fontSize="medium" />
         </button>
         <div className="auth">
           <img src={CEO} alt="" />

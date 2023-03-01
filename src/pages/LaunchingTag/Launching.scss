@@ -21,7 +21,8 @@
     position: relative;
     width: 700px;
     height: max-content;
-    background: white;
+    background: rgb(245, 245, 245);
+    border-radius: 6px;
     padding: 17px 13px;
 
     @media (max-width: 567px) {

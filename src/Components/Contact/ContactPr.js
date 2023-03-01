@@ -63,10 +63,10 @@ const ContactUs = () => {
       setShowLoader(true);
       emailjs
         .sendForm(
-          "service_btqqoig",
-          "template_sprcbxj",
+          "service_67p71v4",
+          "template_pajzgdm",
           form.current,
-          "8dnyCGiR6nE3cE-by"
+          "NhFQzm8AH31I7jKJz"
         )
         .then(
           (result) => {

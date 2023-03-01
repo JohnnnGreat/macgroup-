@@ -1,9 +1,12 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import { animateScroll as scroll } from "react-scroll";
 import Faq from "react-faq-component";
 import "./Contact.scss";
 import Footer from "../../Components/Footer/Footer";
 function ContactCus() {
+  useEffect(() => {
+    scroll.scrollToTop();
+  }, []);
   return (
     <>
       <div className="mail">
