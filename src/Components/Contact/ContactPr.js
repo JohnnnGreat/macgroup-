@@ -76,6 +76,9 @@ const ContactUs = () => {
 
             setTimeout(() => {
               setShowDialogue(false);
+              setEmail("");
+              setSubject("");
+              setMessage("");
             }, 2000);
           },
           (error) => {
@@ -144,7 +147,7 @@ const ContactUs = () => {
             />
             <p className="m error-dis">{errors["subject"]}</p>
             <input
-              name="email_subject"
+              name="user_subject"
               onChange={handleSubject}
               type="text"
               placeholder="Subject"
@@ -153,7 +156,7 @@ const ContactUs = () => {
             />
             <p className="m error-dis">{errors["message"]}</p>
             <textarea
-              name="email_message"
+              name="user_message"
               autoComplete="off"
               id="message"
               cols="30"
