@@ -91,11 +91,6 @@ function Pricing({ setSubjectValue }) {
         },
         (error) => {
           setShowLoader(false);
-          // console.log(error.text);
-          // setError(true);
-          // setTimeout(() => {
-          //   setError(false);
-          // }, 2000);
         }
       );
   }
@@ -429,13 +424,13 @@ function Pricing({ setSubjectValue }) {
                     <td>$150</td>
                   </tr>
                   <tr>
-                    <td>1</td>
+                    <td>3</td>
                     <td>Digital Marketing</td>
                     <td>3 Months</td>
                     <td>$2, 500</td>
                   </tr>
                   <tr>
-                    <td>2</td>
+                    <td>4</td>
                     <td>Custom(BeSpoke) Apps (Web and Mobile)</td>
                     <td>N/A</td>
                     <td>On Demand</td>

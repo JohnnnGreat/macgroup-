@@ -28,12 +28,12 @@ function SideNav({ Toggle }) {
                 Home
               </Link>
             </li>
-            <li>
+            {/* <li>
               {" "}
               <Link className="nav" onClick={setClick} to="/blog">
                 Blog
               </Link>
-            </li>
+            </li> */}
 
             <li>
               {" "}

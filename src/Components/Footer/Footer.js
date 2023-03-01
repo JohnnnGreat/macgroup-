@@ -67,12 +67,12 @@ function Footer() {
               Go To Blog
             </a> */}
             <div className="sm-cons">
-              <a href="">
-                <FacebookIcon className="icons-sm" fontSize="large" />
+              <a href="" target="_blank">
+                <FacebookIcon className="icons-sm" fontSize="medium" />
               </a>
-              <a href="">
+              <a target="_blank" href="">
                 {" "}
-                <InstagramIcon className="icons-sm" fontSize="large" />
+                <InstagramIcon className="icons-sm" fontSize="medium" />
               </a>
             </div>
           </div>

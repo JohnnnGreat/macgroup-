@@ -70,7 +70,7 @@ const ContactUs = () => {
         )
         .then(
           (result) => {
-            // setShowLoader(false);
+            setShowLoader(false);
             console.log(result.text);
             setShowDialogue(true);
 
@@ -79,7 +79,7 @@ const ContactUs = () => {
             }, 2000);
           },
           (error) => {
-            // setShowLoader(false);
+            setShowLoader(false);
             console.log(error.text);
             setError(true);
 

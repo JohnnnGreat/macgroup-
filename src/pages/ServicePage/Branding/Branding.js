@@ -147,7 +147,7 @@ const CusDesc = () => {
             data-aos-duration="2000"
             className="explore-btn"
           >
-            <NavLink to="/pricing">Send Us a Message</NavLink>
+            <NavLink to="/contact">Send Us a Message</NavLink>
           </div>
         </div>
       </div>

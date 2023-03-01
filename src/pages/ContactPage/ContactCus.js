@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Faq from "react-faq-component";
 import "./Contact.scss";

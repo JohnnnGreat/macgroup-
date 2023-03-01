@@ -31,6 +31,10 @@
 
     .launching-text {
       margin: 10px 0;
+      text-align: justify;
+      @media (max-width: 567px) {
+        font-size: 0.9rem;
+      }
     }
   }
 

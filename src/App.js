@@ -1,9 +1,6 @@
 import "./App.css";
-import { useState, useRef, useEffect } from "react";
-
+import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "./Components/Footer/Footer.js";
-
 import Branding from "./pages/ServicePage/Branding/Branding.js";
 import DigitalMarketing from "./pages/ServicePage/DigitalMarketing/DMarketing.js";
 import AppDevelopment from "./pages/ServicePage/App/AppDev";
@@ -11,7 +8,6 @@ import ContentWriting from "./pages/ServicePage/ContentWriting/Content";
 import SideNav from "./Components/SideNav/SideNav.js";
 import ServicePage from "./pages/ServicePage/Service.js";
 import HomePage from "./pages/HomePage.js";
-// import EmailPage from "./pages/Email.js";
 import Pricing from "./pages/Pricing/Pricing.js";
 import Header from "./Components/Header/Header";
 import Commerce from "./pages/ServicePage/Commerce/Commerce";
@@ -28,7 +24,7 @@ function App() {
   const [navOpen, setNavOpen] = useState(false);
   const [launchingMessage, setLaunchingMessage] = useState(false);
   const [subject, setSubject] = useState("");
-  const sideN = useRef(null);
+
   function NavToggle() {
     setNavOpen(!navOpen);
   }
