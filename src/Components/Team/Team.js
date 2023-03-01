@@ -71,6 +71,45 @@ function Team() {
               </div>
             </div>
             <div className="members-cont">
+              <img src={Jenna} alt="" />
+              <div className="card">
+                <h1 className="tag">Jenna Adiele</h1>
+                <p className="m-desc ">Vice President</p>
+                <div className="s-icons">
+                  <a target="_blank" href=" ">
+                    <LinkedInIcon className="linkedln" fontSize="medium" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="
+"
+                  >
+                    <MailIcon className="linkedln" fontSize="medium" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="members-cont">
+              <img src={Brandone} alt="" />
+              <div className="card">
+                <h1 className="tag">Brandon Adiele</h1>
+                <p className="m-desc ">Vice President</p>
+                <div className="s-icons">
+                  <a target="_blank" href=" ">
+                    <LinkedInIcon className="linkedln" fontSize="medium" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="
+"
+                  >
+                    <MailIcon className="linkedln" fontSize="medium" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="members-cont">
               <img src={Timothy} alt="" />
               <div className="card">
                 <h1 className="tag ">Zinwota Timothy</h1>
@@ -120,44 +159,6 @@ function Team() {
               <div className="card">
                 <h1 className="tag">Babatunde Samson</h1>
                 <p className="m-desc ">Head of Content</p>
-                <div className="s-icons">
-                  <a target="_blank" href=" ">
-                    <LinkedInIcon className="linkedln" fontSize="medium" />
-                  </a>
-                  <a
-                    target="_blank"
-                    href="
-"
-                  >
-                    <MailIcon className="linkedln" fontSize="medium" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="members-cont">
-              <img src={Jenna} alt="" />
-              <div className="card">
-                <h1 className="tag">Jenna Adiele</h1>
-                <p className="m-desc ">Vice President</p>
-                <div className="s-icons">
-                  <a target="_blank" href=" ">
-                    <LinkedInIcon className="linkedln" fontSize="medium" />
-                  </a>
-                  <a
-                    target="_blank"
-                    href="
-"
-                  >
-                    <MailIcon className="linkedln" fontSize="medium" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="members-cont">
-              <img src={Brandone} alt="" />
-              <div className="card">
-                <h1 className="tag">Brandon Adiele</h1>
-                <p className="m-desc ">Vice President</p>
                 <div className="s-icons">
                   <a target="_blank" href=" ">
                     <LinkedInIcon className="linkedln" fontSize="medium" />

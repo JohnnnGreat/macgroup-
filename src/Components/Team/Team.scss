@@ -69,7 +69,6 @@ $ft-clr: #2f2f2f;
   }
   .team-bar {
     background-color: #1a1a1a;
-    background-color: #1a1a1a;
     padding: 20px 0;
     display: flex;
     align-items: center;
@@ -96,12 +95,12 @@ $ft-clr: #2f2f2f;
       display: grid;
       column-gap: 20px;
       row-gap: 20px;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(6, 1fr);
 
       @media (max-width: 567px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         margin-top: 0;
-        column-gap: 5rem;
+        column-gap: 15px;
         row-gap: 15px;
       }
 
@@ -115,7 +114,7 @@ $ft-clr: #2f2f2f;
         }
         img {
           width: 100%;
-          height: 350px;
+          height: 200px;
           transition: 300ms ease;
           object-fit: cover;
           --webkit-filter: grayscale(100%);
@@ -128,7 +127,7 @@ $ft-clr: #2f2f2f;
 
         .card {
           background: #ffffff;
-          width: 300px;
+          width: 200px;
           height: 100px;
           display: flex;
           align-items: center;
@@ -148,11 +147,13 @@ $ft-clr: #2f2f2f;
             text-align: center;
             font-weight: 600;
             color: #000000;
+            font-size: 0.9rem;
           }
 
           .m-desc {
             text-align: center;
             color: grey;
+            font-size: 0.9rem;
           }
         }
       }

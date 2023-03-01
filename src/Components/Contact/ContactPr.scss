@@ -50,8 +50,8 @@ $desc-clr: #c2c2c2;
           display: block;
           width: 100%;
           padding: 1.2rem;
-          border: 2px solid rgb(31, 31, 31);
-          border-radius: 20px;
+          border: 1px solid rgb(31, 31, 31);
+          border-radius: 3px;
           background: transparent;
           font-size: 1rem;
           transition: 300ms ease-in;
@@ -67,31 +67,27 @@ $desc-clr: #c2c2c2;
           max-width: 100%;
           min-width: 100%;
           padding: 1.2rem;
-          border: 2px solid rgb(31, 31, 31);
-          border-radius: 25px;
+          border: 1px solid rgb(31, 31, 31);
+          border-radius: 3px;
           background: transparent;
           font-size: 1.1rem;
         }
 
         [type="submit"] {
-          display: block;
           width: 100%;
-          padding: 1.2rem;
-          border: 2px solid rgb(31, 31, 31);
-          border-radius: 50px;
-          background: rgb(31, 31, 31);
-          font-size: 1.1rem;
-          transition: 300ms ease-in;
-          margin-top: 20px;
-          color: $pri-clr;
-          cursor: pointer;
-          transition: 300ms ease;
+          background: #000000;
+          padding: 1rem;
+          color: #ffffff;
+          margin-top: 10px;
           display: flex;
           align-items: center;
           justify-content: center;
           column-gap: 1rem;
+
           &:hover {
-            background: #131313;
+            background: $pri-clr;
+            color: rgb(31, 31, 31);
+            border: 1px solid rgb(31, 31, 31);
           }
         }
       }
@@ -171,36 +167,10 @@ $desc-clr: #c2c2c2;
           [type="text"] {
             display: block;
             width: 100%;
-            padding: 1rem;
-            border: 2px solid rgb(31, 31, 31);
-            border-radius: 25px;
-            background: transparent;
-            font-size: 1rem;
-            transition: 300ms ease-in;
-
-            &:focus {
-              background: rgb(31, 31, 31);
-              color: $pri-clr;
-            }
           }
 
           [type="submit"] {
-            display: block;
             width: 100%;
-            padding: 1.5rem;
-            border: 2px solid rgb(31, 31, 31);
-            border-radius: 50px;
-            background: rgb(31, 31, 31);
-            font-size: 1rem;
-            transition: 300ms ease-in;
-
-            color: $pri-clr;
-            cursor: pointer;
-            transition: 300ms ease;
-            &:hover {
-              background: $pri-clr;
-              color: rgb(31, 31, 31);
-            }
           }
         }
       }

@@ -10,23 +10,14 @@ function Values() {
   return (
     <div className="values">
       <div className="values__wrapper">
-        <h1 data-aos="fade-up" data-aos-duration="1000" className="values-text">
-          Our Values
-        </h1>
-        <p data-aos="fade-up" data-aos-duration="1000" className="values-sub">
+        <h1 className="values-text">Our Values</h1>
+        <p className="values-sub">
           At our digital agency, we believe that success starts with
           understanding the needs and goals of our clients. That's why we offer
           a range of services designed to help businesses thrive in the digital
           age.
         </p>
-        <Link
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          className="to-pricing"
-          to="/pricing"
-        >
-          See Our Pricing
-        </Link>
+
         <div className="values-box">
           <div className="box-one card">
             <div className="first">

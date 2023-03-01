@@ -4,7 +4,7 @@ import AOS from "aos";
 import { animateScroll as scroll } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import AppDev from "./contentw.jpg";
-import Neon from "../WebDev/neon.webp";
+
 import Footer from "../../../Components/Footer/Footer";
 function ContentWriting() {
   useEffect(() => {

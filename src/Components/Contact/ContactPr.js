@@ -58,8 +58,6 @@ const ContactUs = () => {
     }
 
     setErrors(errors);
-    console.log(formValid);
-    console.log(errors);
 
     if (formValid) {
       setShowLoader(true);
@@ -72,7 +70,7 @@ const ContactUs = () => {
         )
         .then(
           (result) => {
-            setShowLoader(false);
+            // setShowLoader(false);
             console.log(result.text);
             setShowDialogue(true);
 
@@ -81,7 +79,7 @@ const ContactUs = () => {
             }, 2000);
           },
           (error) => {
-            setShowLoader(false);
+            // setShowLoader(false);
             console.log(error.text);
             setError(true);
 
@@ -91,7 +89,6 @@ const ContactUs = () => {
           }
         );
     } else {
-      alert("Error");
     }
   }
   //Close modal when opened
@@ -142,6 +139,7 @@ const ContactUs = () => {
               type="text"
               onChange={handleEmail}
               placeholder="Email"
+              autoComplete="off"
               value={email}
             />
             <p className="m error-dis">{errors["subject"]}</p>
@@ -150,13 +148,13 @@ const ContactUs = () => {
               onChange={handleSubject}
               type="text"
               placeholder="Subject"
-              autocomplete="off"
+              autoComplete="off"
               value={subject}
             />
             <p className="m error-dis">{errors["message"]}</p>
             <textarea
               name="email_message"
-              autocomplete="off"
+              autoComplete="off"
               id="message"
               cols="30"
               rows="10"

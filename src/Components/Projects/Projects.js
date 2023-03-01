@@ -4,7 +4,9 @@ import ImageThree from "./image 9.jpg";
 import ImageFour from "./image 10.jpg";
 import ImageFive from "./image 11.jpg";
 import ImageSix from "./image 12.jpg";
+import { Link } from "react-router-dom";
 import "./Projects.scss";
+import { padding } from "@mui/system";
 function Projects() {
   return (
     <div className="projects">
@@ -84,6 +86,36 @@ function Projects() {
               </div>
             </div>
           </a>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+          }}
+          className="pricing-v mt-6 "
+        >
+          <p
+            style={{
+              fontSize: "1.2rem",
+              textAlign: "center",
+            }}
+          >
+            Have a look at our pricing rates.
+          </p>
+          <Link
+            style={{
+              backgroundColor: "black",
+              padding: "16px",
+              marginTop: "16px",
+              color: "rgb(211, 211, 211)",
+            }}
+            className="to-pricing"
+            to="/pricing"
+          >
+            See Our Pricing
+          </Link>
         </div>
       </div>
     </div>

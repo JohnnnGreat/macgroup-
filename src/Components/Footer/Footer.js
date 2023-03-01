@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import "./Footer.scss";
 import AOS from "aos";
 import { Link } from "react-router-dom";
+import FacebookIcon from "@mui/icons-material/Facebook";
+
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Footer() {
   useEffect(() => {
@@ -63,6 +66,15 @@ function Footer() {
             <a className="blog-btn" href="/">
               Go To Blog
             </a> */}
+            <div className="sm-cons">
+              <a href="">
+                <FacebookIcon className="icons-sm" fontSize="large" />
+              </a>
+              <a href="">
+                {" "}
+                <InstagramIcon className="icons-sm" fontSize="large" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

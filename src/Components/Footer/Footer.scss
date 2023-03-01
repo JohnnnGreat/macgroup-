@@ -272,3 +272,13 @@
     }
   }
 }
+
+.icons-sm {
+  color: #c6bfbf;
+  margin-left: 10px;
+  transition: all 300ms ease;
+
+  &:hover {
+    color: #f8df52;
+  }
+}

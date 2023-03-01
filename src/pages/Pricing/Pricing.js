@@ -1,16 +1,25 @@
 import "./Pricing.scss";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
+
 import AOS from "aos";
+import emailjs from "@emailjs/browser";
 import { animateScroll as scroll } from "react-scroll";
 import Footer from "../../Components/Footer/Footer.js";
 
 function Pricing({ setSubjectValue }) {
-  const [selectedPackage, setSelectedPackage] = useState("");
-  const [selectedPrice, setSelectedPrice] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [name, setName] = useState("");
+  const [packageName, setPackageName] = useState("");
   const [showDialogue, setShowDialogue] = useState(false);
   const [date, setDate] = useState("");
-  let navigate = useNavigate();
+  const [showLoader, setShowLoader] = useState(false);
+  const [response, setShowResponse] = useState(
+    "We are glad that you have taken the first step in working with us. We'll reach out to you shortly"
+  );
+  const [Status, setStatus] = useState(false);
+  const form = useRef(null);
+
   useEffect(() => {
     AOS.init();
     scroll.scrollToTop();
@@ -31,21 +40,69 @@ function Pricing({ setSubjectValue }) {
       return new Error("Cannot be empty");
     }
 
-    if (!price) {
-      return new Error("Cannot be empty");
-    }
+    setPackageName(packageName);
 
-    setSelectedPackage(packageName);
-    setSelectedPrice(price);
     setShowDialogue(true);
     setSubjectValue("");
     setSubjectValue(packageName);
     //Close Modal and Navigate to Email Page after 2 seconds
 
     setTimeout(() => {
-      navigate("/contact");
+      // navigate("/contact");
+      // setShowDialogue(false);
     }, 2000);
   };
+
+  function handlePhone(e) {
+    setPhone(e.target.value);
+  }
+  function handleEmail(e) {
+    setEmail(e.target.value);
+  }
+
+  function handleName(e) {
+    setName(e.target.value);
+  }
+
+  function handleForm(e) {
+    e.preventDefault();
+    setShowLoader(true);
+    emailjs
+      .sendForm(
+        "service_btqqoig",
+        "template_8tagbbl",
+        form.current,
+        "8dnyCGiR6nE3cE-by"
+      )
+      .then(
+        (result) => {
+          setShowLoader(false);
+          console.log(result.text);
+          setStatus(true);
+          // setShowDialogue(true);
+
+          setTimeout(() => {
+            setShowDialogue(false);
+            setStatus(false);
+            setName("");
+            setPhone("");
+            setEmail("");
+          }, 4000);
+        },
+        (error) => {
+          setShowLoader(false);
+          // console.log(error.text);
+          // setError(true);
+          // setTimeout(() => {
+          //   setError(false);
+          // }, 2000);
+        }
+      );
+  }
+
+  function closeForm() {
+    setShowDialogue(false);
+  }
 
   return (
     <>
@@ -55,17 +112,55 @@ function Pricing({ setSubjectValue }) {
         >
           <div className="modal-card">
             <div className="first-card">
-              <h1 className="package-h">Package Information</h1>
+              <h1 className="package-h">{packageName}</h1>
               <h2 className="package-d">{date}</h2>
             </div>
+            <p>
+              Fill in the your details in the form below, so we can reach out to
+              you.
+            </p>
             <div className="desc-card">
-              <p className="desc-p">
-                Thank you for your interest in our package. You have selected{" "}
-                {selectedPackage} among our package lists.
-              </p>
-              <h2 className="other-info">Other Information:</h2>
+              <form ref={form}>
+                <input
+                  type="text"
+                  name="user_package"
+                  value={`For: ${packageName}`}
+                  className="packageName"
+                />
+                <input
+                  type="text"
+                  name="user_name"
+                  autoComplete="Off"
+                  placeholder="Full Name"
+                  value={name}
+                  onChange={handleName}
+                />
+                <input
+                  type="text"
+                  name="user_email"
+                  placeholder="Email Address"
+                  autoComplete="Off"
+                  value={email}
+                  onChange={handleEmail}
+                />
+                <input
+                  type="text"
+                  name="user_phone"
+                  placeholder="Phone Number"
+                  autoComplete="Off"
+                  value={phone}
+                  onChange={handlePhone}
+                />
 
-              <p className="redirected">You will be redirected shortly!</p>
+                <button className="submit-btn" onClick={handleForm}>
+                  Submit
+                  {showLoader && <div class="loader"></div>}
+                </button>
+                <button onClick={closeForm} className="close-btn">
+                  X
+                </button>
+              </form>
+              {Status && <p class="resp">{response}</p>}
             </div>
 
             {/* <button className="closeModal" onClick={closeModal}>
@@ -311,7 +406,7 @@ function Pricing({ setSubjectValue }) {
         </div>
         <div className="other-packages">
           <div className="packages-wrapper">
-            <h1 className="heading"> Other Packages</h1>
+            <h1 className="heading"> Special Packages.</h1>
             <div className="scroll">
               <div className="sc">
                 <table>
@@ -321,6 +416,18 @@ function Pricing({ setSubjectValue }) {
                     <th>Duration</th>
                     <th>Price</th>
                   </thead>
+                  <tr>
+                    <td>1</td>
+                    <td> Shopify(With 70 Products uploaded)</td>
+                    <td>N/A</td>
+                    <td>$1, 850</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td> Graphics Design-Postcard Size, Other Dimension</td>
+                    <td>Negotiable</td>
+                    <td>$150</td>
+                  </tr>
                   <tr>
                     <td>1</td>
                     <td>Digital Marketing</td>
@@ -336,10 +443,17 @@ function Pricing({ setSubjectValue }) {
                 </table>
               </div>
             </div>
+            <button
+              className="special-plans"
+              onClick={() => {
+                ShowModal("Special Plans", "0000");
+              }}
+            >
+              Select this plan
+            </button>
             <p className="disc">
               <span>Disclaimer: </span> The aforementioned packages are listed
-              among the special packages available at MacGroup, and therefore,
-              must be duly indicated when sending us a mail. Thank you.
+              among the special packages available at MacGroup.
             </p>
           </div>
         </div>

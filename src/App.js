@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer/Footer.js";
@@ -22,9 +22,11 @@ import PricingMessage from "./pages/PricingContact/PricingContact";
 import AboutPage from "./pages/About/About.jsx";
 import Terms from "./pages/Terms-Prici/Terms";
 import Privacy from "./pages/Terms-Prici/Privacy";
-// import PricingMessage from "./Components/Contact/ContactPr.js";
+import LaunchingMessage from "./pages/LaunchingTag/Launching.js";
+
 function App() {
   const [navOpen, setNavOpen] = useState(false);
+  const [launchingMessage, setLaunchingMessage] = useState(false);
   const [subject, setSubject] = useState("");
   const sideN = useRef(null);
   function NavToggle() {
@@ -36,6 +38,20 @@ function App() {
     setSubject(sub);
     console.log(subject);
   }
+
+  useEffect(() => {
+    const hasShownMessage = localStorage.getItem("hasShownMessageToday");
+
+    if (!hasShownMessage) {
+      setLaunchingMessage(true);
+      localStorage.setItem("hasShownMessageToday", true);
+    } else {
+      setLaunchingMessage(true);
+      setTimeout(() => {
+        setLaunchingMessage(false);
+      }, 10000);
+    }
+  }, []);
 
   return (
     <BrowserRouter>
@@ -49,6 +65,10 @@ function App() {
         />
 
         {navOpen ? <SideNav Toggle={NavToggle} /> : null}
+        {launchingMessage && (
+          <LaunchingMessage LaunchingMessage={setLaunchingMessage} />
+        )}
+
         <Routes>
           <Route exact path="/" element={<HomePage />}></Route>
           <Route exact path="/services" element={<ServicePage />}></Route>

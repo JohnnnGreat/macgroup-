@@ -1,37 +1,15 @@
-import React from "react";
-import Location from "../LocationMap/Location.jsx";
+import React, { useState } from "react";
+
 import Faq from "react-faq-component";
 import "./Contact.scss";
 import Footer from "../../Components/Footer/Footer";
 function ContactCus() {
-  //Get Direction function
-
-  const LAT = 33.9914619;
-  const LON = -118.238958;
-  const getDirection = (e) => {
-    e.preventDefault();
-
-    navigator.geolocation.getCurrentPosition((position) => {
-      const LATITUDE = position.coords.latitude;
-      const LONGITUDE = position.coords.longitude;
-
-      const URL = `https://www.google.com/maps/dir/?api=1&destination=33.9914619,-118.238958&origin=${LATITUDE},${LONGITUDE}`;
-      window.open(URL);
-    });
-  };
   return (
     <>
       <div className="mail">
         <div className="mail-wrapper">
           <div className="main">
-            <div className="map">
-              <div className="map-wrap">
-                <Location />
-                <button className="get-dir" onClick={getDirection}>
-                  Get Direction
-                </button>
-              </div>
-            </div>
+            <div className="map"></div>
             <div className="faq">
               <div className="faqs-header">
                 <h1>Frequently asked questions.</h1>

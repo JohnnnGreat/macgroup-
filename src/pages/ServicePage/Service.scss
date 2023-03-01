@@ -39,19 +39,12 @@ $desc-clr: #c2c2c2;
       .gradient__line-s {
         height: 10px;
         width: 100%;
-        background: #f8df52;
+        background: #fb9b00;
         position: absolute;
         bottom: 0;
         right: 0;
       }
-      .gradient__line-s {
-        height: 10px;
-        width: 100%;
-        background: #f8df52;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-      }
+
       &__first {
         display: flex;
         rotate: 90deg;
@@ -86,7 +79,7 @@ $desc-clr: #c2c2c2;
         }
         .bold-s {
           font-weight: 800;
-          color: #f8df52;
+          color: #fb9b00;
         }
       }
     }
@@ -96,7 +89,6 @@ $desc-clr: #c2c2c2;
 @media (max-width: 567px) {
   .service {
     height: 70vh;
-    padding: 0 10px;
 
     .service__wrapper {
       max-width: 40rem !important;
@@ -160,38 +152,6 @@ $desc-clr: #c2c2c2;
   color: rgba(0, 0, 0, 0);
   z-index: 30;
   z-index: 30;
-}
-
-.intrs-yellow {
-  width: 100px;
-  height: 100px;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  background-color: #f8df52;
-
-  position: absolute;
-  border-radius: 50%;
-  // animation: blink 900ms ease infinite;
-  // animation: blink 900ms ease infinite;
-  opacity: 1;
-  transform-origin: 50% 50%;
-  pointer-events: none;
-  opacity: 0.6;
-}
-.intrs-pink {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  background-color: rgb(233, 218, 10);
-
-  border-radius: 50%;
-  animation: blink 800ms 800ms ease infinite;
-  opacity: 1;
-  transform-origin: 50% 50%;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
 }
 
 .id-s {

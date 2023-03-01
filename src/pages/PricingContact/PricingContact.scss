@@ -12,3 +12,20 @@
     display: none;
   }
 }
+
+.map-wrap {
+  width: 100%;
+  position: relative;
+  .get-dir {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    font-weight: 600;
+    border: 1px solid #000000;
+    border-radius: 17px;
+    z-index: 10;
+  }
+}

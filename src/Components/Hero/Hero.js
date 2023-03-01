@@ -15,12 +15,7 @@ function Hero() {
       <div className="h__wrapper">
         <img class="hero-image" src={HeroImage} alt="" />
         <div className="hero-main">
-          <div
-            className="f-text"
-            data-aos="fade-down"
-            data-aos-duration="2000"
-            data-aos-delay="200"
-          >
+          <div className="f-text">
             <h1>What We Offer</h1>
           </div>
           <div data-aos="fade-up" className="m-text">
