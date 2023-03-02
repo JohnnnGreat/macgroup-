@@ -65,9 +65,7 @@ const Brand = () => {
 
         <div className="line-divider" data-aos="fade-right"></div>
         <div className="check-services">
-          <h1 data-aos="fade-right" data-aos-duration="1000">
-            Check our services
-          </h1>
+          <h1>Check our services</h1>
           <Link
             data-aos="fade-left"
             data-aos-duration="1000"

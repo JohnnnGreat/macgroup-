@@ -151,7 +151,7 @@ $service-btn: #0000;
   position: absolute;
   top: 0;
 
-  @media (max-width: 567px) {
+  @media (max-width: 800px) {
     display: none;
   }
 }
@@ -165,11 +165,8 @@ $service-btn: #0000;
   left: -20%;
   top: 60%;
   bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
 
-  h1 {
+  @media h1 {
     font-size: 2rem;
     font-weight: 600;
     margin-right: 10px;

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Team.scss";
 import AOS from "aos";
 import { NavLink } from "react-router-dom";
-import Timothy from "./imagesteam//MainTimothy.jpg";
+import Timothy from "./imagesteam/Tim.jpg";
 import Akin from "./imagesteam/Timothy.jpg";
 import Babson from "./imagesteam/BABSON.jpg";
 import CEO from "./imagesteam/CEoEdit.jpg";
@@ -71,7 +71,7 @@ function Team() {
               </div>
             </div>
             <div className="members-cont">
-              <img src={Jenna} alt="" />
+              <img src={Jenna} alt="Jenny" />
               <div className="card">
                 <h1 className="tag">Jenna Adiele</h1>
                 <p className="m-desc ">Vice President</p>
@@ -90,12 +90,15 @@ function Team() {
               </div>
             </div>
             <div className="members-cont">
-              <img src={Brandone} alt="" />
+              <img src={Brandone} alt="Brandon" />
               <div className="card">
                 <h1 className="tag">Brandon Adiele</h1>
                 <p className="m-desc ">Vice President</p>
                 <div className="s-icons">
-                  <a target="_blank" href=" ">
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/brandonadiele "
+                  >
                     <LinkedInIcon className="linkedln" fontSize="medium" />
                   </a>
                   <a

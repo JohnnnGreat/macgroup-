@@ -27,11 +27,12 @@ $md-dsk: 1200px;
     justify-content: center;
     background: rgba(228, 228, 228, 0.836);
     align-items: center;
+
     .hero-image {
       position: absolute;
       right: -3rem;
       width: calc(550px / 16px) + rem;
-      @media (max-width: 700px) {
+      @media (max-width: 1000px) {
         display: none;
       }
     }
@@ -51,7 +52,7 @@ $md-dsk: 1200px;
         font-weight: 600;
         margin-top: -0.3rem;
         max-width: 60%;
-        @media (max-width: 700px) {
+        @media (max-width: 900px) {
           max-width: 100%;
         }
         h1 {
@@ -143,7 +144,7 @@ $md-dsk: 1200px;
   }
 }
 
-@media (max-width: 459px) {
+@media (max-width: 456px) {
   .m-text {
     h1 {
       font-size: 30px !important;
@@ -203,7 +204,36 @@ $md-dsk: 1200px;
     display: none;
   }
 }
-@media (min-width: 667px) and (max-width: 920px) {
+@media (min-width: 667px) and (max-width: 1000px) {
+  .m-text {
+    h1 {
+      font-size: 50px !important;
+    }
+  }
+
+  .h__wrapper {
+    width: 90% !important;
+  }
+  .f-text {
+    font-size: 16px !important;
+  }
+
+  .sub-text {
+    max-width: 100% !important;
+    font-size: 1rem !important;
+  }
+
+  .btn-cta {
+    .pricing-btn {
+      padding: 1rem 2rem !important;
+      font-size: 0.8rem !important;
+      letter-spacing: 2;
+    }
+  }
+  .svgs-h {
+    right: -100px !important;
+    display: none;
+  }
 }
 @media (min-width: 920px) and (max-width: 1180px) {
 }

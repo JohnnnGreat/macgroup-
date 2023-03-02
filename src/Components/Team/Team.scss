@@ -7,6 +7,7 @@ $ft-clr: #2f2f2f;
   bottom: 0;
   padding-top: calc(120px / 16px) + rem;
   padding-bottom: 40px;
+  padding: 10px;
   &__wrapper {
     max-width: 75rem;
     padding: 30px 20px;
@@ -99,6 +100,12 @@ $ft-clr: #2f2f2f;
 
       @media (max-width: 567px) {
         grid-template-columns: repeat(2, 1fr);
+        margin-top: 0;
+        column-gap: 15px;
+        row-gap: 15px;
+      }
+      @media (min-width: 567px) and (max-width: 1000px) {
+        grid-template-columns: repeat(3, 1fr);
         margin-top: 0;
         column-gap: 15px;
         row-gap: 15px;
