@@ -22,7 +22,7 @@ import LaunchingMessage from "./pages/LaunchingTag/Launching.js";
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
-  const [launchingMessage, setLaunchingMessage] = useState(false);
+  // const [launchingMessage, setLaunchingMessage] = useState(false);
   const [subject, setSubject] = useState("");
 
   function NavToggle() {
@@ -35,7 +35,7 @@ function App() {
     console.log(subject);
   }
 
-  useEffect(() => {
+  /*useEffect(() => {
     const hasShownMessage = localStorage.getItem("hasShownMessageToday");
 
     if (!hasShownMessage) {
@@ -48,7 +48,7 @@ function App() {
       }, 10000);
     }
   }, []);
-
+*/
   return (
     <BrowserRouter>
       <div className="App">
@@ -61,9 +61,9 @@ function App() {
         />
 
         {navOpen ? <SideNav Toggle={NavToggle} /> : null}
-        {launchingMessage && (
+        {/* {launchingMessage && (
           <LaunchingMessage LaunchingMessage={setLaunchingMessage} />
-        )}
+        )} */}
 
         <Routes>
           <Route exact path="/" element={<HomePage />}></Route>
@@ -104,11 +104,6 @@ function App() {
           <Route exact path="/about-us" element={<AboutPage />}>
             {" "}
           </Route>
-          {/* <Route
-              exact
-              path="/coporate-message"
-              element={<CoMessage />}
-            ></Route> */}
 
           <Route path="*" element={<NoPageError />}></Route>
         </Routes>

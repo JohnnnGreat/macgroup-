@@ -1,7 +1,7 @@
 import Footer from "../../Components/Footer/Footer";
 import MainContact from "../../Components/Contact/ContactPr.js";
 import React, { useEffect } from "react";
-import { animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";  
 import Location from "../LocationMap/Location.jsx";
 import "./PricingContact.scss";
 function PricingContact() {
