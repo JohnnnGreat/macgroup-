@@ -1,0 +1,128 @@
+:root {
+  font-size: 16px;
+}
+
+.sales-pitch {
+  z-index: 10;
+  width: 100%;
+  height: 55vh;
+  box-sizing: border-box;
+  display: grid;
+  position: relative;
+  grid-auto-flow: row dense;
+  overflow: hidden;
+  padding: 2rem calc((13 / 16) * 1rem);
+  grid-template-rows: repeat(12, calc(calc(100 / 12) * 1%));
+  grid-template-columns: repeat(24, calc(calc(100 / 24) * 1%));
+  background-color: rgba(255, 255, 255, 0.95);
+
+  @media screen and (max-width: 768px) {
+    height: 40vh;
+    padding: 0;
+  }
+
+  &__grid {
+    display: flex;
+    grid-area: 4/1/8/3;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    img {
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    grid-area: 5/5/10/15;
+    gap: 0.4rem;
+    justify-content: flex-start;
+    @media screen and (max-width: 768px) {
+      grid-area: 5/4/11/24;
+    }
+
+    p {
+      color: #414141;
+      font-weight: 700;
+      letter-spacing: 0.08rem;
+      font-size: calc((20 / 16) * 1rem);
+      line-height: calc((32 / 16) * 1rem);
+
+      @media screen and (max-width: 768px) {
+        font-weight: 400;
+        letter-spacing: unset;
+        font-size: calc((18 / 16) * 1rem);
+        line-height: calc((32 / 16) * 1rem);
+      }
+      @media screen and (max-width: 640px) {
+        font-size: calc((18 / 16) * 1rem);
+      }
+    }
+  }
+
+  &__sub-copy {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    grid-area: 3/17/5/23;
+    @media screen and (max-width: 768px) {
+      grid-area: 2/2/5/12;
+    }
+
+    P {
+      color: #414141;
+      font-weight: 700;
+      letter-spacing: 0.165rem;
+      font-size: calc((10 / 16) * 1rem);
+    }
+  }
+
+  &__grid-dark {
+    grid-area: 5/20/10/21;
+    transform: translateX(-30%);
+    @media screen and (max-width: 768px) {
+      margin-top: 30px;
+      grid-area: 8/19/12/21;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__quadrant {
+    display: flex;
+    grid-area: 5/21/9/24;
+
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+      align-items: center;
+      grid-area: 9/20/12/24;
+
+      img {
+        width: 80%;
+        height: auto;
+      }
+    }
+  }
+
+  &__arrow {
+    grid-area: 6/13/11/18;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

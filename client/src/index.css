@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "HelveticaNow";
+  src: url("../public/fonts/HelveticaNowText-Black.ttf") format("truetype");
+  src: url("../public/fonts/HelveticaNowText-Medium.ttf") format("truetype");
+  src: url("../public/fonts/HelveticaNowText-Light.ttf") format("truetype");
+}
+
+body {
+  /* font-family: HelveticaNow; */
+  font-family: "HelveticaNow", sans-serif;
+  background-color: #e7e7e7;
+}

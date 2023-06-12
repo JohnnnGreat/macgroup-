@@ -1,0 +1,241 @@
+//Font color for both hero and description text respectively
+$hero-bg-clr: #ffffff;
+$hero-dsc-clr: #ffffff;
+
+//Font text-color for both hero and description text respectively
+$hero-bg-ft: 6rem;
+$hero-dsc-ft: 0.75rem;
+$txt: #eca500;
+$md-dsk: 1200px;
+
+.h {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__wrapper {
+    width: 80%;
+    margin: auto;
+    height: 70%;
+
+    // box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.065);
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    background: rgba(228, 228, 228, 0.836);
+    align-items: center;
+
+    .hero-image {
+      position: absolute;
+      right: -3rem;
+      width: calc(550px / 16px) + rem;
+      @media (max-width: 1000px) {
+        display: none;
+      }
+    }
+    .hero-main {
+      width: 90%;
+
+      .f-text {
+        font-size: 1rem;
+
+        h1 {
+          font-weight: 500;
+          letter-spacing: 1.4px;
+        }
+      }
+
+      .m-text {
+        font-weight: 600;
+        margin-top: -0.3rem;
+        max-width: 60%;
+        @media (max-width: 900px) {
+          max-width: 100%;
+        }
+        h1 {
+          font-size: calc(56px / 16px) + rem;
+        }
+      }
+
+      .sub-text {
+        font-size: 1rem;
+        max-width: 60%;
+        margin: 1.2rem 0;
+        text-align: justify;
+      }
+
+      .btn-cta {
+        margin-top: 3rem;
+        .pricing-btn {
+          background-color: #222222;
+          color: white;
+          padding: 1.2rem 3rem;
+          text-decoration: none;
+
+          font-size: 0.9rem;
+          letter-spacing: 2.5px;
+
+          &:hover {
+            background-color: #303030;
+          }
+        }
+      }
+    }
+  }
+
+  .move-down {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+
+    bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    .outer-cir {
+      width: 20px;
+      height: 40px;
+      border-radius: 20px;
+      border: 2px solid rgb(34, 34, 34);
+      display: flex;
+      justify-content: center;
+      .inner-cir {
+        width: 30%;
+        height: 30%;
+        background-color: rgb(0, 0, 0);
+        margin-top: 5px;
+        animation: move-down 3s linear infinite;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  @keyframes move-down {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .svgs-h {
+    position: absolute;
+    top: 0;
+    right: -100px;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .hero-logo {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    z-index: -1;
+    mix-blend-mode: overlay;
+  }
+}
+
+@media (max-width: 456px) {
+  .m-text {
+    h1 {
+      font-size: 30px !important;
+    }
+  }
+  .svgs-h {
+    right: -100px !important;
+    display: none;
+  }
+  .f-text {
+    font-size: 16px !important;
+  }
+  .h__wrapper {
+    width: 90% !important;
+  }
+  .sub-text {
+    max-width: 100% !important;
+    font-size: 1rem !important;
+  }
+
+  .btn-cta {
+    .pricing-btn {
+      padding: 1rem 2rem !important;
+      font-size: 0.8rem !important;
+      letter-spacing: 2;
+    }
+  }
+}
+@media (min-width: 450px) and (max-width: 567px) {
+  .m-text {
+    h1 {
+      font-size: 30px !important;
+    }
+  }
+
+  .h__wrapper {
+    width: 90% !important;
+  }
+  .f-text {
+    font-size: 16px !important;
+  }
+
+  .sub-text {
+    max-width: 100% !important;
+    font-size: 1rem !important;
+  }
+
+  .btn-cta {
+    .pricing-btn {
+      padding: 1rem 2rem !important;
+      font-size: 0.8rem !important;
+      letter-spacing: 2;
+    }
+  }
+  .svgs-h {
+    right: -100px !important;
+    display: none;
+  }
+}
+@media (min-width: 667px) and (max-width: 1000px) {
+  .m-text {
+    h1 {
+      font-size: 50px !important;
+    }
+  }
+
+  .h__wrapper {
+    width: 90% !important;
+  }
+  .f-text {
+    font-size: 16px !important;
+  }
+
+  .sub-text {
+    max-width: 100% !important;
+    font-size: 1rem !important;
+  }
+
+  .btn-cta {
+    .pricing-btn {
+      padding: 1rem 2rem !important;
+      font-size: 0.8rem !important;
+      letter-spacing: 2;
+    }
+  }
+  .svgs-h {
+    right: -100px !important;
+    display: none;
+  }
+}
+@media (min-width: 920px) and (max-width: 1180px) {
+}
+@media (min-width: 1200px) {
+}

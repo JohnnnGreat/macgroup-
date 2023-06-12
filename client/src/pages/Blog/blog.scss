@@ -1,0 +1,238 @@
+.posts {
+  .wrapper {
+    max-width: 60rem;
+    margin: auto;
+    margin-top: 8rem;
+
+    .b-header {
+      font-size: 49px;
+    }
+    .post {
+      margin: 8rem 0;
+      display: flex;
+      column-gap: 100px;
+      border-bottom: 1px solid #b9b9b9;
+      &:nth-child(2n + 2) {
+        flex-direction: row-reverse;
+      }
+
+      .image {
+        flex: 1;
+        position: relative;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 300px;
+          background: rgb(158, 158, 158);
+          position: absolute;
+          left: 20px;
+          top: 20px;
+          z-index: -1;
+        }
+        img {
+          width: 100%;
+          height: 300px;
+        }
+      }
+      .post-content {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        h1 {
+          font-size: calc(37px / 16px) + rem;
+          font-weight: bolder;
+        }
+
+        p {
+          font-size: 18px;
+        }
+
+        button {
+          width: max-content;
+          padding: 16px 20px;
+          font-size: 16px;
+          border: 2px solid rgb(87, 87, 87);
+          color: rgb(87, 87, 87);
+
+          &:hover {
+            background: rgb(192, 192, 192);
+            border: 2px solid rgb(192, 192, 192);
+          }
+        }
+      }
+    }
+  }
+}
+
+//Main Post Page
+
+.page {
+  .wrapper {
+    display: flex;
+    max-width: 70rem;
+    margin: auto;
+    margin-top: 6rem;
+
+    gap: 50px;
+    .content {
+      background-color: #f8f8f8;
+      padding: 10px;
+      flex: 5;
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+      .user {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        font-size: 15px;
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      h1 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 2;
+      }
+
+      .p-desc {
+        margin-top: 2rem;
+        line-height: 30px;
+        text-align: justify;
+      }
+    }
+    .menu {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .post {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        button {
+          width: max-content;
+          padding: 12px 15px;
+          font-size: 15px;
+          border: 2px solid rgb(87, 87, 87);
+          color: rgb(87, 87, 87);
+          margin-top: 13px;
+
+          &:hover {
+            background: rgb(192, 192, 192);
+            border: 2px solid rgb(192, 192, 192);
+          }
+        }
+      }
+    }
+  }
+}
+
+//Write
+.write-page {
+  .wrapper {
+    max-width: 75rem;
+    margin: auto;
+    margin-top: 7rem;
+    display: flex;
+    gap: 20px;
+  }
+
+  .content {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    input {
+      padding: 10px;
+      background: transparent;
+      border: 1px solid grey;
+      outline: none;
+    }
+
+    .container {
+      height: 400px;
+      //   overflow: auto;
+      border: 1px solid grey;
+      .editor {
+        height: 100%;
+        border: none;
+      }
+    }
+  }
+  .menu {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      border: 1px solid grey;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+      .file {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      span {
+        line-height: 2;
+      }
+
+      h1 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.2rem;
+        :first-child {
+          cursor: pointer;
+          border: 1px solid grey;
+
+          padding: 10px;
+        }
+
+        :last-child {
+          padding: 10px 15px;
+          background: rgb(32, 32, 32);
+          color: white;
+        }
+      }
+
+      .cat {
+        display: flex;
+        gap: 20px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

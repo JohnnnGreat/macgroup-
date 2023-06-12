@@ -1,0 +1,56 @@
+.launching {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: rgba(10, 10, 10, 0.37);
+  backdrop-filter: blur(10px);
+  z-index: 30;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .closeBtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 1.5rem;
+  }
+  .card {
+    top: 0;
+    position: relative;
+    width: 700px;
+    height: max-content;
+    background: rgb(245, 245, 245);
+    border-radius: 6px;
+    padding: 17px 13px;
+
+    @media (max-width: 567px) {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .launching-text {
+      margin: 10px 0;
+      text-align: justify;
+      @media (max-width: 567px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .auth {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 60%;
+    }
+
+    .main-name {
+      font-weight: 600;
+    }
+  }
+}

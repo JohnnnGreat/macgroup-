@@ -1,0 +1,31 @@
+.img-pr {
+  width: 1000px;
+  position: absolute;
+  top: 0;
+  left: -300px;
+  rotate: 15deg;
+  filter: grayscale(100%);
+  --webkit-filter: grayscale(100%);
+  opacity: 0.7;
+
+  @media (max-width: 780px) {
+    display: none;
+  }
+}
+
+.map-wrap {
+  width: 100%;
+  position: relative;
+  .get-dir {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    font-weight: 600;
+    border: 1px solid #000000;
+    border-radius: 17px;
+    z-index: 10;
+  }
+}

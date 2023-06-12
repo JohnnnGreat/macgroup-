@@ -1,0 +1,80 @@
+.companies {
+  height: 400px;
+  display: grid;
+  place-content: center;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 567px) {
+    height: 500px;
+  }
+  .companies__wrapper {
+    margin: auto;
+    max-width: 80rem;
+
+    position: relative;
+    @media (max-width: 567px) {
+    }
+    .c-header {
+      font-size: 2.3rem;
+      font-weight: 500;
+      margin: 3rem 0;
+      position: relative;
+      color: rgb(29, 29, 29);
+
+      &::after {
+        content: "";
+        background: rgb(233, 232, 232);
+        width: 200px;
+        height: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-radius: 200px;
+      }
+
+      @media (max-width: 567px) {
+        padding: 6px;
+        font-size: 2 rem;
+      }
+    }
+    .logos {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 10rem;
+
+      @media (max-width: 567px) {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 0;
+        column-gap: 5rem;
+        row-gap: 15px;
+      }
+      .con {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100px;
+          height: 100px;
+          filter: grayscale(100%);
+          --webkit-filter: grayscale(100%);
+
+          &:hover {
+            filter: grayscale(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+.c-header::before {
+  background: red !important;
+  position: absolute !important;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  right: 0;
+}

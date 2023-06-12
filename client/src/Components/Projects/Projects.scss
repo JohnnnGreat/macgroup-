@@ -1,0 +1,90 @@
+.projects {
+  padding: 4rem 0;
+  overflow: hidden;
+  background: white;
+  &__wrapper {
+    max-width: 75rem;
+    margin: auto;
+    padding: 10px;
+
+    .projects-header {
+      font-size: 4.3rem;
+      color: rgb(37, 37, 37);
+      margin-top: 1rem;
+      position: relative;
+      font-weight: 600;
+
+      @media (max-width: 567px) {
+        font-size: 3rem;
+      }
+      @media (min-width: 567px) and (max-width: 800px) {
+        font-size: 3.5rem;
+      }
+
+      //   &::after {
+      //     content: "";
+      //     width: 250px;
+      //     height: 20px;
+      //     background: rgb(209, 209, 209);
+      //     position: absolute;
+      //     top: 0;
+      //     left: 0;
+      //     border-radius: 100px;
+      //     margin-bottom: 5px;
+      //   }
+    }
+
+    .projects-desc {
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .projects-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 1.2rem;
+
+      @media (max-width: 567px) {
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 567px) and (max-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .image-container {
+        position: relative;
+        overflow: hidden;
+        img {
+          transition: 1s ease;
+          &:hover {
+            transform: scale(1.25) translateY(0);
+          }
+        }
+      }
+      .card-tag {
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.801);
+
+        h1 {
+          color: #ffffff;
+          font-size: 1rem;
+          margin-left: 1rem;
+          margin-top: 0.9rem;
+          font-weight: 600;
+          //   text-decoration: underline;
+        }
+
+        p {
+          color: #ebebeb;
+          font-weight: 400;
+          font-size: 0.8rem;
+          margin-left: 1rem;
+          margin-top: 0.3rem;
+        }
+      }
+    }
+  }
+}
